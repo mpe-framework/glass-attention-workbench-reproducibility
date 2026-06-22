@@ -1,0 +1,83 @@
+\section{The Born Filter Instrument}
+\label{sec:born-filter}
+
+\subsection{Definition}
+
+The Born filter is a per-head measurement instrument defined for a controlled
+input pair and a context morphism.
+Given two input states $s_0$ and $s_1$ related by a morphism $\varphi$
+(concretely, a targeted token swap between the two states), let $h(s)$ denote
+the output of attention head $h$ at a chosen residual stream position when the
+input is state $s$.
+
+Decompose $h(s_0)$ into symmetric and antisymmetric components under $\varphi$:
+\begin{align}
+h_S &= \tfrac{1}{2}\bigl(h(s_0) + h(s_1)\bigr), \\
+h_A &= \tfrac{1}{2}\bigl(h(s_0) - h(s_1)\bigr).
+\end{align}
+The \emph{Born filter defect} for head $h$ at state $s_0$ is
+$d(h, s_0) = \|h_A\| = \tfrac{1}{2}\|h(s_0) - h(s_1)\|$ --- the norm of the
+antisymmetric component, measuring how much the head's output changes when the
+morphism is applied to the input.
+
+For an ordered pair of states $(s_\text{success},\, s_\text{fail})$, each
+with its own morphism image under $\varphi$, define per-pair defects:
+\begin{align}
+d_\text{success}(h) &= \tfrac{1}{2}\bigl\|h(s_\text{success})
+                        - h(\varphi(s_\text{success}))\bigr\|, \\
+d_\text{fail}(h)    &= \tfrac{1}{2}\bigl\|h(s_\text{fail})
+                        - h(\varphi(s_\text{fail}))\bigr\|.
+\end{align}
+The \emph{Born filter ratio} is:
+\[
+R(h) = \frac{d_\text{success}(h)}{d_\text{fail}(h)}.
+\]
+$R(h) \gg 1$ means the head discriminates the success-state pair far more
+than the fail-state pair.
+$R(h) \to \infty$ when $d_\text{fail}(h)$ collapses to zero --- the head has
+become invariant under $\varphi$ on the fail state and can no longer
+distinguish $s_\text{fail}$ from $\varphi(s_\text{fail})$.
+$R(h) < 1$ means the head discriminates more on the fail pair.
+
+\subsection{Relation to the Beck--Chevalley Condition}
+
+The Beck--Chevalley (BC) condition in categorical logic requires that a
+chosen square of morphisms commutes: applying $\varphi$ before versus after
+a functor $h$ yields the same result.
+The BC defect is the norm of the failure of this commutativity:
+$\|h(\varphi(s)) - \varphi(h(s))\|$.
+
+Under the choice of morphism used in the G-track experiments --- a token swap
+$\varphi$ that is its own inverse ($\varphi^2 = \mathrm{id}$) and acts
+linearly on the residual stream --- the Born filter defect $d(h, s)$ equals
+the BC defect for the head-morphism pair at state $s$.
+The Born filter ratio is therefore the ratio of BC defects across the
+success/fail state pair: how much more the head violates BC commutativity
+in the success-state than in the fail-state.
+
+This paper does not claim that the Born filter subsumes the causal abstraction
+framework of \citet{geiger2021causal} or the contextuality measure of
+\citet{lo2024contextuality}.
+The Born filter, Geiger et al.'s interchange interventions, and Lo et al.'s
+Bell-test contextuality measure all probe related but distinct structural
+properties of attention heads.
+Connections among these instruments are left to future work.
+
+\subsection{Use in This Paper}
+
+The Born filter is used in the G-track experiments only.
+It is not applied directly to T5-small in the S-track; the S-track uses logit
+decomposition (S-059b) and weight-level intervention (S-061) to characterize
+and repair the failure.
+
+In the G-track (\S\ref{sec:phase-diagram}), the Born filter ratio characterizes
+three qualitatively distinct regimes of head behavior as a function of the
+controlled FIN embedding weight: slow-collapse (${\approx}2\times$),
+sharp-collapse (up to $867\times$ at the transition edge), and no-collapse
+($<1\times$).
+The three-regime phase diagram, the super-amplification structure at the
+transition boundary, and the causal/diagnostic head distinction are all
+described in \S\ref{sec:phase-diagram}.
+The G-track uses the Born filter as a transparent instrument in controlled
+geometry where every parameter is designed; results are structural analogy,
+not quantitative predictions for T5-small.

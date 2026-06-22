@@ -1,0 +1,33 @@
+% Abstract — final version. Parallax lever and R²=1.0 are not used.
+% All numbers from sealed S-track experiments (S-043, S-047, S-049, S-050b, S-051, S-059b, S-061).
+% G-track described as controlled structural reference only.
+\begin{abstract}
+We report a bounded mechanistic case study of a compositional generalization failure
+in T5-small fine-tuned on SCAN \texttt{add\_prim\_jump}.
+At the checkpoint studied, the model fails on 56.8\% of compound-jump test commands
+despite the encoder marking \texttt{jump} as categorically out-of-distribution
+($p=0.0000$).
+The dominant failure mode is substituted-walk: the model generates the correct cycle
+structure but substitutes \texttt{I\_WALK} for \texttt{I\_JUMP} at every action slot.
+Decoder cross-attention routing to the relevant encoder position shows no detected
+difference between the stored fail and success comparison groups ($p=0.9208$),
+indicating that routing is not the primary discriminator in this comparison.
+The failure is localized to the value projection.
+Value-direction evidence and subsequent repair experiments identify decoder heads L4H6
+and L5H5 as repair-relevant pro-walk value-projection sites.
+Logit decomposition shows near-cancellation: a cross-attention total of $-171.25$
+logit units is opposed by $+165.25$ units of FFN/residual correction, leaving a net
+margin of $-6.005$ ($28.52\times$ reconstruction fraction).
+Output embedding norm asymmetry ($\|\texttt{I\_WALK}\|\approx 520$ versus
+$\|\texttt{I\_JUMP}\|\approx 424$) amplifies this small pro-walk residual to
+$P(\texttt{I\_WALK})=0.914$.
+A targeted rank-1 modification to $W_V$ at L4H6 and L5H5 shifts the sampled
+fail-group margin by $+2.902$ logit units and flips 16 of 30 sampled failures,
+using perturbations of approximately 8\% of each edited head's $W_V$ Frobenius norm,
+with monotonic dose-response.
+Controlled toy geometry (G-track) independently demonstrates near-cancellation
+divergence and value-direction substitution; these results provide structural analogy,
+not calibrated prediction.
+All results are from one checkpoint on one SCAN split; the repair is partial; and
+broad specificity against unrelated commands is not established.
+\end{abstract}

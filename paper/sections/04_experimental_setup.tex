@@ -1,0 +1,176 @@
+\section{Experimental Setup}
+\label{sec:setup}
+
+\subsection{Two-Track Methodology}
+
+All experiments were run on two fully independent tracks that shared no weights, embeddings,
+or training procedure.
+The \emph{production track} (S-track) operates on a T5-small transformer fine-tuned on
+the SCAN \texttt{add\_prim\_jump} benchmark and measures real model behavior under controlled
+probing conditions.
+The \emph{controlled geometry track} (G-track) operates on a NumPy-only toy model with
+explicit PPMI--SVD embeddings and fully inspectable weight matrices.
+
+The two tracks serve different epistemic roles. The S-track produces the primary mechanistic
+account: it identifies where the failure occurs, quantifies the near-cancellation structure,
+and delivers the weight-level repair.
+The G-track serves as a controlled analogue: it independently demonstrates that the same
+classes of failure mode --- value-direction miscalibration, near-cancellation, and
+compensatory over-correction --- can be induced and measured in a setting where every
+parameter is known.
+The comparison between tracks is analogical and mechanistic, not architectural.
+No PPMI--SVD embedding was supplied to T5; no T5 weight was used in the G-track.
+
+\subsection{Production Track: T5-small on SCAN \texttt{add\_prim\_jump}}
+
+\paragraph{Model and checkpoint.}
+The production model is T5-small \citep{raffel2020t5}, which has 6 encoder layers,
+6 decoder layers, 8 attention heads per layer, and 512-dimensional hidden states.
+The model was fine-tuned from standard pretrained weights on the SCAN
+\texttt{add\_prim\_jump} training split \citep{lake2018scan} using 5 training epochs,
+AdamW optimizer with learning rate $1 \times 10^{-4}$, and batch size 32.
+Final training loss: 0.0189. The checkpoint used for all experiments is
+\texttt{043\_t5\_scan\_checkpoint/}. No further fine-tuning was applied after saving
+this checkpoint. All S-track experiments S-043 through S-062 use this same checkpoint.
+
+\paragraph{Dataset and split.}
+The SCAN \texttt{add\_prim\_jump} split is designed to test compositional generalization
+\citep{lake2018scan}: the primitive \texttt{jump} appears in training only in its primitive
+form, while all compositional uses of \texttt{jump} are withheld and appear only at test
+time. Test examples therefore require the model to compose a primitive it has seen only
+in isolation.
+The compound-jump test set contains 7706 examples. At the checkpoint used, the model
+achieves 43.2\% accuracy (3330/7706 correct), for a failure rate of 56.8\%
+(4376 confirmed failures, experiment S-043).
+
+\paragraph{Failure group definition.}
+The primary object of study is the \emph{substituted-walk} failure: model outputs that
+have the correct action-slot structure but fill the action slot with \texttt{I\_WALK}
+instead of \texttt{I\_JUMP}. This is a structured, selective failure.
+The fail group used for experiments S-059b through S-062 consists of $n=30$
+substituted-walk examples sampled with SEED=42.
+
+\paragraph{Experiment sequence.}
+S-track experiments S-043 through S-062 constitute the full production analysis,
+documented in \texttt{EXPERIMENT\_INDEX.md}.
+S-041 and S-042 were confounded and are recorded as design lessons.
+S-050 was a buggy run (tokenization error) superseded by S-050b.
+S-058, S-059, and S-060 contain methodological findings recorded as method lessons
+(see \S\ref{sec:preregistration}).
+The scripts for S-041 through S-057 are committed to the \texttt{S-Track} branch.
+The scripts for S-058 through S-062 were executed in Google Colab notebooks;
+the canonical numerical results are sealed in the corresponding methods reports
+in \texttt{findings/}.
+
+\paragraph{Sealed provenance and figure-source discipline.}
+All S-track numerical results cited in this paper are sealed in
+\texttt{findings/METHODS\_REPORT\_SXXX.md} on the \texttt{main} branch.
+Result JSON files used during figure production were inspected where available;
+the public provenance record is the sealed methods reports, figure CSVs, and figure
+production log committed in the repository.
+All paper figure scripts read their plotted numeric values from the committed CSV
+files in \texttt{paper/data/}; no figure script contains hardcoded experimental values.
+
+\subsection{G-Track: Controlled NumPy Geometry}
+
+\paragraph{Design and independence.}
+The G-track model is implemented entirely in NumPy and runs on CPU without GPU
+or external framework dependencies.
+It uses explicit PPMI--SVD embeddings computed from a small controlled vocabulary.
+The full weight structure is inspectable: every matrix in the attention and FFN stack
+is set directly rather than learned from data.
+No G-track weight, embedding, or training procedure was shared with or informed by
+the T5-small checkpoint.
+
+\paragraph{Role in this paper.}
+The G-track experiments relevant to this paper are G-054, G-055, G-056, and G-057:
+\begin{itemize}
+  \item \textbf{G-054} (SEED=54): Phase diagram. Parameter sweep of \texttt{FIN\_WEIGHT}
+    producing the three-regime collapse structure (slow-collapse, sharp-collapse,
+    no-collapse) used in \S8 and Fig.~\ref{fig:phase-diagram}.
+  \item \textbf{G-055} (SEED=55): Global head causal diagnostic. Confirms that a
+    global attention head is not causally responsible for the failure; near-identity
+    baseline established (4\% ablation change).
+  \item \textbf{G-056} (SEED=56): Suppressive head causal test. FIN-inversion
+    mechanism confirmed above the FIN-annihilation threshold; 42\% ablation change
+    versus 4\% baseline.
+  \item \textbf{G-057} (SEED=57): Near-cancellation demonstration. Gamma sweep
+    confirms that reconstruction fraction diverges as $\gamma \to 1.0$, independently
+    demonstrating that near-cancellation is a real and accessible regime.
+    FFN over-correction at $\gamma=2.0$ reproduces the G-056 FIN-inversion result
+    (51.3\% ablation change), extending the mechanism from value matrices to the FFN path.
+\end{itemize}
+Scripts are committed to the \texttt{G-Track} branch.
+Sealed results are in \texttt{findings/METHODS\_REPORT\_GXXX.md} on \texttt{main}.
+G-057 results used in this paper are taken from the sealed methods report;
+no G-057 JSON artifact was recovered from the run archive. The gamma-sweep table in
+\texttt{findings/METHODS\_REPORT\_G057.md} is the canonical record for Fig.~\ref{fig:two-track}.
+
+\paragraph{Embedding-source distinction.}
+The G-track used PPMI--SVD embeddings as a controlled reference geometry.
+T5-small used a standard learned embedding.
+The significance of the two-track convergence is precisely that the systems did not
+share an embedding implementation yet independently exhibited the same failure-mode
+structure: value-direction miscalibration, near-cancellation, and compensatory
+over-correction. The G-track served as a glass reference geometry --- a controlled
+setting in which failure modes could be induced and measured under known conditions.
+The comparison is structural and mechanistic, not a claim that the PPMI geometry
+predicts T5 behavior quantitatively.
+
+\subsection{Pre-Registration, Kill Conditions, and Null-Result Policy}
+\label{sec:preregistration}
+
+Experiments were pre-registered with explicit kill conditions and hypotheses before
+each run. Kill conditions are written into the proposal documents
+in \texttt{workbench/proposals/} and are recorded in the corresponding methods report
+regardless of outcome. The following experiments returned methodological findings rather
+than hypothesis-level results; all three are preserved in the record as method lessons,
+not as failed science.
+
+\begin{itemize}
+  \item \textbf{S-058} (activation patching): K2 fires. All patch arms produced
+    100\% failure flip regardless of which head was patched. Conclusion: donor-context
+    injection is a confound; the transplanted hidden state injects representational
+    context, not a head-specific signal. The within-example hook-based patching
+    approach is invalidated for this measurement task.
+    This result redirected the design toward weight-level repair (S-061).
+
+  \item \textbf{S-059} (logit decomposition, V0.1.0): Methodological error detected.
+    The decomposition was computed on pre-RMSNorm activations, producing a
+    reconstruction fraction of ${\approx}32{,}193\times$ instead of ${\approx}1.0$.
+    All hypothesis verdicts from this run are invalid. The corrected run (S-059b,
+    post-LayerNorm activations) produces reconstruction fraction $28.5\times$,
+    confirming genuine near-cancellation structure.
+    All values cited in this paper from the logit decomposition are S-059b
+    (post-LayerNorm corrected) figures.
+
+  \item \textbf{S-060} (causal ablation): Method lesson. Hook-based within-example
+    subtraction disrupted RMSNorm rescaling. L6H2 and L6H6 showed sign-reversed
+    $\Delta$margin (ablating these heads \emph{worsened} the margin, not improved it),
+    identifying them as compensatory rather than causal heads. L4H6 and L5H5 showed
+    positive specificity ($+0.13$ and $+0.23$ respectively on non-OOD examples).
+    This established the compensation structure and directed S-061 to intervene at
+    L4H6 and L5H5 via weight modification, not hook subtraction.
+\end{itemize}
+
+\subsection{What This Does Not Establish}
+
+This experimental setup is designed to trace one selected failure mode in one model
+at one checkpoint on one benchmark split.
+The following are explicitly \emph{not} established by these experiments:
+
+\begin{itemize}
+  \item That the failure mode or repair mechanism generalizes to other T5-small
+    checkpoints, other SCAN splits, other sequence-to-sequence models, or
+    natural-language tasks.
+  \item That the G-track controlled geometry proves the S-track production mechanism.
+    The G-track provides controlled analogue evidence; the tracks converge on the same
+    structural description, but the G-track was not supplied with T5 weights or inputs.
+  \item That the rank-1 $W_V$ repair (S-061) has broad specificity.
+    Specificity was checked on $n=2$ jump-around success examples (S-062); the
+    non-jump-around control group (walk around, run around, look around) was
+    not tested.
+  \item That pre-LayerNorm logit decomposition (S-059 V0.1.0, $32{,}193\times$)
+    is a valid instrument for mechanism claims. Only post-LayerNorm values
+    (S-059b, $28.5\times$) are used.
+\end{itemize}

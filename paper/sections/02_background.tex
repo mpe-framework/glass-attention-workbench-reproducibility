@@ -1,0 +1,92 @@
+\section{Background and Related Work}
+\label{sec:background}
+
+\subsection{SCAN and Compositional Generalization}
+
+Compositional generalization --- the capacity to correctly interpret novel
+combinations of known components --- is a core requirement for systematic
+language understanding.
+\citet{lake2018scan} introduced the SCAN benchmark specifically to test this
+capacity in sequence-to-sequence models: each SCAN split is constructed so
+that certain compositional uses of a primitive are withheld entirely from
+training and reserved for the test set.
+The \texttt{add\_prim\_jump} split used in this paper is particularly severe.
+The primitive \texttt{jump} appears during training only in its primitive
+form; all compound uses (\texttt{jump left}, \texttt{jump around right},
+and so on) appear exclusively at test time.
+A model that has learned the compositional pattern for trained primitives
+must apply it to \texttt{jump} at inference without ever having seen
+\texttt{jump} in a compound context.
+
+T5-small \citep{raffel2020t5} is a text-to-text transformer pretrained on
+a large web corpus and fine-tuned for SCAN in the standard way.
+At the checkpoint studied here, the encoder develops a representation that
+distinguishes \texttt{jump} categorically from trained primitives
+($p=0.0000$, \S\ref{sec:locating}), yet the decoder fails on 56.8\% of
+compound-jump test commands.
+The encoder is aware of the OOD token; the failure is downstream.
+Prior work on SCAN has largely focused on architectural modifications or
+training procedures that improve compositional generalization accuracy.
+This paper does not propose an improvement to SCAN performance; it asks
+instead what specific mechanism produces one structured failure mode at one
+checkpoint, and whether a targeted weight-level intervention can partially
+repair it.
+
+\subsection{Mechanistic Interpretability and Causal Interventions}
+
+The goal of mechanistic interpretability is to identify the internal
+computational structures that produce a model's behavior.
+\citet{geiger2021causal} formalize this through causal abstraction: a
+high-level causal model is \emph{faithful} to a neural network if the
+network's activations implement the causal model's variables in a way
+that is consistent under interchange interventions --- replacing an
+internal activation with the corresponding activation from a different
+input and testing whether the output changes as the causal model predicts.
+The method provides a principled vocabulary for saying not just that a model
+succeeds or fails, but \emph{why}, by identifying the subnetwork that
+implements the causal variable of interest.
+
+This paper is in the same methodological tradition: identify a structural
+failure, locate the responsible site, and confirm the localization with a
+targeted causal intervention.
+The intervention instrument differs from activation patching.
+Experiment S-058 (\S\ref{sec:setup}) found that replacing an activation with
+a success-group donor confounds the measurement: the substituted activation
+carries success-context information broadly across the representation, not
+specifically through the targeted head.
+The rank-1 $W_V$ modification used in \S\ref{sec:repair} instead intervenes
+at weight level, redirecting the value projection mapping before the forward
+pass so that LayerNorm rescaling operates on the already-corrected residual.
+This avoids the confound and allows the dose-response to be attributed to
+the specific value-projection direction at the predicted causal site.
+
+\subsection{Categorical and Geometric Background}
+
+A parallel research program applies categorical and quantum-information
+structure to distributional semantics.
+\citet{coecke2010mathematical} developed a compositional distributional model
+of meaning using monoidal categories, grounding sentence meaning in the same
+categorical framework as vector-space word meaning.
+\citet{abramsky2004categorical} established the categorical semantics of
+quantum protocols using compact closed structure, which has since connected
+distributional semantics to quantum information-theoretic methods.
+\citet{lo2024contextuality} bring this line of work to large language models
+by applying Bell-test-style contextuality measures to BERT attention heads:
+they ask whether joint attention distributions satisfy the constraints of a
+classical probability model, finding that contextuality is present and
+correlates with linguistic structure.
+
+The controlled geometry track (G-track) in this paper is motivated by a
+related question: can a categorical coherence condition serve as a per-head
+measurement instrument for how faithfully an attention head preserves
+semantic structure across an input transformation?
+The Born filter instrument (\S3) is defined as the defect of such a condition
+for a controlled input pair.
+The G-track results (\S\ref{sec:phase-diagram}) characterize this instrument's
+behavior in engineered geometry where all parameters are known; the
+relationship between G-track findings and T5-small behavior is structural
+analogy, not a formal claim about T5-small's categorical properties.
+No claim is made here that the Born filter subsumes or derives from the Geiger
+et al.\ causal abstraction framework or the Lo et al.\ contextuality measure;
+these are separate instruments that share the motivation of asking structural
+questions about neural network internals.
