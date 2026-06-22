@@ -15,7 +15,7 @@ ablation change, equal to a near-identity control. S-057 then identified L3H4 in
 as a *suppressive* head — partial jump specificity, but negative cosines to both I_WALK
 and I_JUMP. G-055 does not answer whether a suppressive head is also diagnostic, or
 whether its active subtraction of FIN content from the residual creates causal downstream
-effects. Sandbox_017 required G-056 to run before S-058 is finalized.
+effects. [internal dev-file path removed in public export] required G-056 to run before S-058 is finalized.
 
 ---
 
@@ -57,7 +57,7 @@ a residual-removal artifact — it is specific to what the suppressive head was 
 Born filter ratio profile with suppressive head active:
 
 | L0 | L1 | L2 | L3 | L4 | L5 | L6 |
-|----|----|----|----|----|----|----|----|  
+|----|----|----|----|----|----|----|----|
 | 2.894 | 2.895 | 2.897 | 2.897 | 4.216 | 8.058 | 8.092 |
 
 Layer 2 ratio (2.897) is slightly above layer 1 (2.895) — no downward kink. The
@@ -202,7 +202,7 @@ S-058 was gated on G-056. The gate is now open.
    regime without direct ablation. S-058 must include an L3H4 control ablation.
 
 3. **S-058 primary experiment:** activation patching at L4H6/L5H2/L5H5. Unchanged.
-   Primary hypothesis (sandbox_017): `P(I_JUMP) > P(I_WALK)` at action-slot divergence
+   Primary hypothesis ([internal dev-file path removed in public export]): `P(I_JUMP) > P(I_WALK)` at action-slot divergence
    in ≥50% of patched fail examples.
 
 4. **S-058 required control (new from G-056):** Ablate L3H4 in isolation (zero its
@@ -276,9 +276,7 @@ from fail representations in a way that the targeted patch can only partially co
 **Current state of both tracks after S-058:**
 
 **G-track:** Sealed through G-056. G-057 candidate: W_V correction geometry at toy scale —
-use the norm-amplification mechanism formula (G-052) to compute the minimum W_V rotation needed to flip
-cosine alignment from I_WALK to I_JUMP at the production norm ratio (520:424). This would
-formalize the theoretical correction target and directly inform S-059 design. No G-track
+use [retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md] to compute the minimum W_V rotation needed. No G-track
 action required until S-059 results are available or Troy brings a new question.
 
 **S-track:** Sealed through S-058. Next experiment (S-059 candidate): targeted W_V correction
