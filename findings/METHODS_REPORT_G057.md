@@ -230,7 +230,7 @@ toy even if the magnitude requires a more causal head to exceed threshold.
 
 **G-track is sealed through G-057.** The mechanistic arc now covers:
 - G-051: W_V miscalibration — Born filter magnitude separates miscalibrated from calibrated
-- G-052: Norm-amplification mechanism — logit gap = N·cos(θ), S-track logits reproduced
+- G-052: Parallax lever — [retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]
 - G-053: Monotonic decay is the default; mid-layer peak requires specialist-head collapse
 - G-054: Phase transition at FIN_WEIGHT≈0.5; three-regime structure; 867× at transition edge
 - G-055: Neutral global head is diagnostic (4% ablation change)
@@ -251,7 +251,7 @@ toy even if the magnitude requires a more causal head to exceed threshold.
 1. **H4 confirmed (FFN over-correction reproduces G-056 inversion):** The inversion
    mechanism generalizes. This strengthens the case that W_V intervention at L4H6/L5H5
    (which changes the FIN-direction mapping) will propagate through specialist amplification
-   as in G-056. The G-052 norm-amplification formula predicts the exact rotation angle needed.
+   as in G-056. The G-052 parallax formula predicts the exact rotation angle needed.
 
 2. **H5 directional sign-reversal confirmed (magnitude null):** S-060's L6H2/L6H6
    sign-reversal has a controlled toy-scale directional analog. The sign-reversal is a
@@ -261,7 +261,7 @@ toy even if the magnitude requires a more causal head to exceed threshold.
 
 3. **Near-cancellation architecture implication for W_V repair:** At the operating point
    (production near-cancellation), small changes to the upstream signal (L4H6/L5H5) are
-   magnified. The G-052 norm-amplification formula may underestimate the required W_V rotation if
+   magnified. The G-052 parallax formula may underestimate the required W_V rotation if
    near-cancellation amplifies the effective sensitivity. S-061 should test both the
    formula-predicted rotation and a sweep around it.
 
