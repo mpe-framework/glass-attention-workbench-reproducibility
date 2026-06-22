@@ -144,7 +144,7 @@ expects a pre-generated `.bbl`. Generate it locally (`bibtex main` after
 the first `pdflatex` pass), include it in the tarball, and do not rely on
 arXiv to produce it. The `.bbl` is currently excluded from git tracking
 by `paper/.gitignore`; that is intentional for the repo (the file is
-regeneerable), but before packaging the tarball it must be present on disk.
+regenerable), but before packaging the tarball it must be present on disk.
 
 ---
 
