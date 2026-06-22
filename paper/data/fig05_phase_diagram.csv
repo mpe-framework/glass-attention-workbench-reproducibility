@@ -1,0 +1,10 @@
+fin_weight,peak_ratio,peak_layer,regime
+0.0,1.9976,11,slow-collapse
+0.1,2.0379,6,slow-collapse
+0.2,2.0910,6,slow-collapse
+0.3,867.4514,6,sharp-collapse
+0.5,0.1154,1,no-collapse
+0.7,0.0608,1,no-collapse
+1.0,0.0986,1,no-collapse
+1.5,0.0481,1,no-collapse
+2.0,0.0697,1,no-collapse

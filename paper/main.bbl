@@ -1,0 +1,50 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abramsky and Coecke(2004)]{abramsky2004categorical}
+Samson Abramsky and Bob Coecke.
+\newblock A categorical semantics of quantum protocols.
+\newblock In \emph{Proceedings of the 19th Annual IEEE Symposium on Logic in
+  Computer Science (LICS)}, pages 415--425, 2004.
+\newblock arXiv:quant-ph/0402130.
+
+\bibitem[Coecke et~al.(2010)Coecke, Sadrzadeh, and
+  Clark]{coecke2010mathematical}
+Bob Coecke, Mehrnoosh Sadrzadeh, and Stephen Clark.
+\newblock Mathematical foundations for a compositional distributional model of
+  meaning.
+\newblock \emph{Linguistic Analysis}, 36\penalty0 (1--4):\penalty0 345--384,
+  2010.
+
+\bibitem[Geiger et~al.(2021)Geiger, Lu, Icard, and Potts]{geiger2021causal}
+Atticus Geiger, Hanson Lu, Thomas Icard, and Christopher Potts.
+\newblock Causal abstractions of neural networks.
+\newblock \emph{Advances in Neural Information Processing Systems}, 2021.
+
+\bibitem[Lake and Baroni(2018)]{lake2018scan}
+Brenden~M. Lake and Marco Baroni.
+\newblock Generalization without systematicity: On the compositional skills of
+  sequence-to-sequence recurrent networks.
+\newblock In \emph{Proceedings of the 35th International Conference on Machine
+  Learning (ICML)}, 2018.
+
+\bibitem[Lo et~al.(2024)Lo, Sadrzadeh, and Mansfield]{lo2024contextuality}
+Shih-Han Lo, Mehrnoosh Sadrzadeh, and Shane Mansfield.
+\newblock Quantum-like contextuality in large language models.
+\newblock \emph{Proceedings of the Royal Society A}, 2024.
+\newblock arXiv:2412.16806.
+
+\bibitem[Raffel et~al.(2020)Raffel, Shazeer, Roberts, Lee, Narang, Matena,
+  Zhou, Li, and Liu]{raffel2020t5}
+Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael
+  Matena, Yanqi Zhou, Wei Li, and Peter~J. Liu.
+\newblock Exploring the limits of transfer learning with a unified text-to-text
+  transformer.
+\newblock \emph{Journal of Machine Learning Research}, 21:\penalty0 1--67,
+  2020.
+
+\end{thebibliography}

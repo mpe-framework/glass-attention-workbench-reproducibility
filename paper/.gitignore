@@ -1,0 +1,11 @@
+# LaTeX build artifacts
+*.aux
+# main.bbl is intentionally tracked (required for arXiv submission)
+# *.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+main.pdf

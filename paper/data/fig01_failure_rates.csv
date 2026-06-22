@@ -1,0 +1,9 @@
+feature,fail_rate_present,fail_rate_absent,lift,auc,chi2_p,significant
+has_around,0.873,0.224,0.648,0.806,0.0000,True
+has_thrice,0.617,0.484,0.133,0.610,0.0811,False
+is_left,0.585,0.483,0.102,0.558,0.2472,False
+has_after,0.598,0.515,0.083,0.572,0.2968,False
+has_and,0.520,0.592,-0.072,0.535,0.3761,False
+has_twice,0.513,0.609,-0.096,0.553,0.2264,False
+has_opposite,0.442,0.677,-0.235,0.682,0.0014,True
+has_direction,0.546,0.833,-0.287,0.514,0.3291,False

@@ -1,0 +1,4 @@
+component,logit_contribution,label
+cross_attention,-171.25,Cross-attention (L4H6 + L5H5 dominant)
+ffn_correction,+165.25,FFN correction (L6H2/L6H6 compensatory)
+net_margin,-6.005,Net action-slot margin

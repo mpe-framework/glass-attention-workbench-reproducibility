@@ -1,0 +1,17 @@
+type,layer,group_or_metric,value
+per_layer,0,fail,0.0677268605945861
+per_layer,1,fail,0.1498143155739525
+per_layer,2,fail,0.1500838168006325
+per_layer,3,fail,0.1168816811905588
+per_layer,4,fail,0.1124765490129860
+per_layer,5,fail,0.0379116099141772
+per_layer,0,success,0.0734626716146929
+per_layer,1,success,0.1423252341740292
+per_layer,2,success,0.1570808074905093
+per_layer,3,success,0.0995820698771624
+per_layer,4,success,0.1055083331484358
+per_layer,5,success,0.0375162159806039
+summary,,fail_mean_xattn,0.1058158053864053
+summary,,success_mean_xattn,0.1025792218536601
+summary,,h1_p,0.9208036909748900
+summary,,max_div_layer,4
