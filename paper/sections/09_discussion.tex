@@ -1,0 +1,207 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{\texorpdfstring{The Locate $\to$ Explain $\to$ Repair Chain as Mechanistic Account}{The Locate to Explain to Repair Chain as Mechanistic Account}}
+
+The paper reports a three-stage mechanistic account of a T5-small compositional
+generalization failure on SCAN \texttt{add\_prim\_jump}.
+
+\textbf{Locate.}
+The failure is structural and concentrated: \texttt{has\_around} commands fail at 87.3\%
+versus 22.4\% without \texttt{around} (S-047, lift $+0.648$, AUC$=0.806$).
+The substituted-walk mode --- correct cycle count, wrong action token --- constitutes
+26\% of \texttt{has\_around}=1 failures (S-049).
+Decoder cross-attention routing to the \texttt{around} encoder position is statistically
+indistinguishable between fail and success cases ($p=0.9208$, S-049).
+Value-direction evidence identifies L4H6 and L5H5 as the heads most strongly
+contributing in the \texttt{I\_WALK} direction at the action-slot divergence step
+(S-051 Option~C; S-059b ranks 6 and 8 among pro-walk contributors).
+
+\textbf{Explain.}
+Two mechanisms account for the output.
+The cross-attention total at the action slot pushes $-171.25$ logit units toward
+\texttt{I\_WALK}; FFN/embedding correction pushes $+165.25$ units back, leaving a
+net margin of $-6.005$ --- near-cancellation with a $28.52\times$ reconstruction
+fraction (S-059b).
+The residual pro-walk margin, once established, is amplified to extreme probabilities
+($P(\texttt{I\_WALK})=0.914$) by output embedding norm asymmetry:
+$\|\texttt{I\_WALK}\|\approx 520$ versus $\|\texttt{I\_JUMP}\|\approx 424$ (S-050b);
+equalizing the norms collapses $P(\texttt{I\_WALK})$ from $0.914$ to $0.323$ (S-051).
+
+\textbf{Repair.}
+A rank-1 modification to $W_V$ at L4H6 and L5H5 --- redirecting the mapping of the OOD
+\texttt{jump} encoder representation from a pro-walk value direction to a pro-jump one ---
+improves the fail-group margin in every arm at every $\alpha$ value tested (H1, H2, and H3
+pass; kill conditions are clear within the tested samples).
+At $\alpha=1.0$, the joint correction shifts the mean fail margin by $+2.902$ logit units
+and flips 16/30 sampled failures, using a perturbation of approximately 8\% of each
+head's $W_V$ Frobenius norm (S-061).
+The dose-response is monotonically linear --- no peak and reversal --- confirming that
+the weight-level instrument avoids the LN-rescaling disruption that confounded the
+hook-based ablation in S-060.
+
+Together, the three stages form a closed chain: a localized structural failure,
+explained by identifiable head-level mechanisms at weight resolution, partially repaired
+by a targeted intervention at the predicted site.
+The weight-level repair is the claim that distinguishes this account from a correlational
+description.
+
+\subsection{Near-Cancellation and Its Implications for Interpretability}
+
+The near-cancellation structure ($-171.25$ vs $+165.25$ logit units) has a direct
+implication for how mechanistic attributions should be interpreted.
+
+\paragraph{Decomposition rank $\neq$ causal rank.}
+The L6 cluster (L6H2, L5H6, L6H6, L6H5) dominates the cross-attention logit
+decomposition (S-059b, ranks 1--4 by $|\delta\text{logit}|$) but shows negative
+ablation specificity under within-example neutralization (S-060): removing L6H2
+($\Delta\text{specificity}=-0.937$) or L6H6 ($-0.394$) worsens the margin.
+These heads are compensatory correctors within the near-cancellation structure.
+Their decomposition rank reflects the size of their contribution to the pro-walk signal,
+not their causal role in producing the failure.
+In a near-cancellation regime, large-contribution heads are not necessarily error sources
+--- they may be part of the opposing correction.
+
+\paragraph{Instrument sensitivity.}
+Near-cancellation also means that causal interventions produce non-linear effects.
+S-060's hook-based ablation of large-norm heads (L6H2 $\|\text{contrib}\|\approx 1985$)
+changed the RMS of the residual stream, altering the LN scale factor for all remaining
+components and producing sign-reversed $\Delta$margin.
+The weight-level repair in S-061 avoids this because the correction is baked into
+$W_V$ before the forward pass: LayerNorm operates on the already-corrected residual
+and the dose-response remains clean.
+The contrast between S-060 (non-monotone, sign-reversed) and S-061 (monotone, linear)
+demonstrates that the choice of intervention instrument matters as much as the choice
+of intervention target.
+
+\paragraph{Sensitivity at the phase boundary.}
+The G-054 phase diagram shows that near-cancellation regimes are precisely where the
+Born filter signal is most sensitive to small parameter changes: at \texttt{FIN\_WEIGHT}
+$=0.3$, the Born filter ratio reaches $867\times$ because a near-zero denominator
+amplifies a finite numerator.
+This is the same lesson illustrated by the L6 cluster: large decomposition terms can sit
+inside a compensatory cancellation structure, so decomposition rank alone should not be
+read as causal rank.
+
+\subsection{Two-Track Methodology: Relation Between S-Track and G-Track}
+
+The two-track methodology --- S-track (T5-small production experiments) and G-track
+(controlled NumPy toy geometry) --- serves a structural analogy function, not a
+calibrated prediction function.
+
+The S-track is the primary evidence base.
+All mechanistic claims about T5-small (routing integrity, value substitution, norm
+asymmetry, near-cancellation, W$_V$ repair) rest on S-track measurements at a specific
+checkpoint (S-043) on the SCAN \texttt{add\_prim\_jump} split.
+
+The G-track demonstrates that the same structural phenomena are accessible in controlled
+geometry where roles are designed and mechanisms can be isolated.
+G-054 exhibits three regimes of Born filter amplification organized by a single
+parameter.
+G-055 shows a neutral global head is diagnostic; G-056 shows a suppressive head becomes
+causal above the FIN-annihilation threshold via a re-routing mechanism, not signal
+removal.
+G-057 reproduces near-cancellation divergence and the S-060 sign-reversal directionality
+in a controlled setting.
+
+The convergence between tracks is structural.
+Both independently exhibit near-cancellation: cross-attention signal nearly canceled by
+opposing correction, small residual determines the output.
+Both exhibit value-direction substitution: a head reads the correct input position but
+its value projection returns the wrong direction.
+The G-track Born filter ratios, $\alpha$ thresholds, and $\gamma$ sweep values are not
+calibrated to S-track logit magnitudes; no formula mapping G-track quantities to
+T5-small logit predictions is claimed.
+The G-track is a glass reference model --- transparent, controllable, and structurally
+analogous --- not a miniature of T5-small.
+
+\subsection{Limitations}
+
+\begin{itemize}
+  \item \textbf{Single checkpoint, single split.}
+    All S-track results are from one trained checkpoint (S-043) on one SCAN split
+    (\texttt{add\_prim\_jump}).
+    Whether the locate/explain/repair chain generalizes to other checkpoints, training
+    runs, or OOD splits is not established.
+    This study establishes that a locate--explain--repair chain is achievable for one
+    concrete T5-small/SCAN failure mode; cross-checkpoint, cross-seed, cross-split, and
+    larger-model replication are the natural next tests of generality, not part of the
+    present claim.
+
+  \item \textbf{Sampled fail group.}
+    The core experiments (S-059b, S-060, S-061) use a 30-example substituted-walk fail
+    group (SEED=42).
+    The 16/30 flip count at $\alpha=1.0$ is a result within this sampled group, not a
+    population-level repair rate for the 4376 compound-jump failures in the full test set.
+
+  \item \textbf{Partial repair.}
+    At $\alpha=1.0$, 14/30 examples do not flip.
+    The mean fail margin shifts from $-6.511$ to approximately $-3.6$ --- still pro-walk
+    on average.
+    The repair addresses L4H6 and L5H5 only; the L6 cluster, whose causal status is
+    unresolved, is not modified.
+
+  \item \textbf{Broad specificity not established.}
+    S-062 tested 2 \texttt{jump around} success examples and found 0/2 regressions.
+    The pre-registered broader specificity control --- \texttt{walk around},
+    \texttt{run around}, \texttt{look around} commands where the OOD \texttt{jump}
+    direction should not be active --- was not tested.
+    H4 is indeterminate.
+
+  \item \textbf{L6 cluster causal status unresolved.}
+    L6H2, L5H6, L6H6, and L6H5 dominate the cross-attention logit decomposition but
+    show negative ablation specificity under within-example neutralization.
+    Whether they are compensatory correctors (as the near-cancellation account suggests)
+    or whether a different instrument would reveal a causal role remains open.
+
+  \item \textbf{G-track is not proof of the production mechanism.}
+    The G-track results are established in controlled NumPy geometry with engineered
+    embeddings.
+    They provide structural analogy and demonstrate accessible mechanisms; they do not
+    prove that T5-small's decoder operates by the same mechanism at the same parameters.
+    Quantitative G-track values are not predictions of T5-small behavior.
+\end{itemize}
+
+\subsection{Future Work}
+
+The most immediate open question is specificity: do the $W_V$ corrections at L4H6 and
+L5H5 affect commands that do not involve the OOD \texttt{jump} encoder direction?
+S-062 tested $n=2$ \texttt{jump around} success examples and found no regressions;
+broader specificity is not established (H4 indeterminate).
+A concrete future experiment: apply the same joint L4H6$+$L5H5 rank-1 $W_V$ edit at
+$\alpha=1.0$ to non-\texttt{jump} \texttt{around} commands --- \texttt{walk around},
+\texttt{run around}, and \texttt{look around} --- which share the four-cycle
+\texttt{around} structure but do not invoke the OOD \texttt{jump} encoder direction.
+Success is defined conservatively: no increased failure rate, no OOD collapse, and no
+systematic margin degradation on those controls.
+This would close H4 and establish whether the repair is truly targeted.
+
+A second question is the L6 cluster.
+Soft scaling (multiply head output by $\alpha < 1$ rather than zeroing) or post-LN
+intervention (operate on the LN-normalized residual stream directly) would reduce the
+confound from LN-rescaling disruption and allow a cleaner causal test of whether
+L6H2/L6H6 are genuinely compensatory or causally involved in the pro-walk signal.
+
+Third, the repair at $\alpha=1.0$ moves 14/30 examples to a still-pro-walk margin of
+approximately $-3.6$.
+A higher $\alpha$, a different correction direction (computed from the fail-vs-success
+encoder difference rather than the mean fail direction alone), or targeting additional
+heads in the L6 cluster may be needed for a more complete repair.
+
+Beyond this failure instance, the locate/explain/repair methodology is applicable to
+other OOD primitives in SCAN (if trained analogously), to other SCAN splits, and to
+other sequence-to-sequence models where compositional generalization fails in a
+structured way.
+The Born filter instrument (\S\ref{sec:phase-diagram}) provides a structural fingerprint
+for measuring which heads are in near-cancellation regimes for OOD inputs, which may
+be more informative as a pre-deployment diagnostic than probing accuracy alone.
+
+Finally, this workbench developed a geometric construction --- the parallax lever ---
+relating the logit gap between action tokens to the embedding norm ratio and cosine
+alignment angle: $\Delta\text{logit} \approx N \cdot \|e\| \cdot \cos\theta$.
+The construction was used during experimental design but the calibrated formula was
+retired as an active paper claim (the reconstruction fraction of $28.52\times$ and the
+near-cancellation structure make a simple linear calibration inadequate).
+It is recorded here as workbench prior art for the geometric relationship between norm
+asymmetry, cosine alignment, and softmax token selection in sequence-to-sequence decoders,
+and as a future validation target; it is not part of this paper's evidentiary chain.
