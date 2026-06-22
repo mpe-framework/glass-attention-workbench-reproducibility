@@ -294,7 +294,7 @@ Quote precisely — do not summarize beyond what is written here.
    → layer-5 amplification (sharp-collapse regime, G-054) → failure output. This chain
    was complete as of S-051 and has not changed.
 
-3. **S-058 is drafted but NOT run until G-056 reports back.** Sandbox_017 (supervisor)
+3. **S-058 is drafted but NOT run until G-056 reports back.** [internal dev-file path removed in public export]
    requires this sequencing: if G-056 finds that suppressive early heads are causal,
    then L3H4 must be included in the S-058 intervention design. If G-056 finds suppressive
    heads are diagnostic, S-058 focuses cleanly on L4H6/L5H2/L5H5. Pre-register S-058
@@ -307,7 +307,7 @@ Quote precisely — do not summarize beyond what is written here.
    same direction pattern where possible, same action-slot location. Only the primitive
    differs (jump vs. trained primitive).
 
-   **S-058 pre-registered primary hypothesis (sandbox_017 formulation):**
+   **S-058 pre-registered primary hypothesis ([internal dev-file path removed in public export] formulation):**
    After activation patching L4H6/L5H2/L5H5, `P(I_JUMP) > P(I_WALK)` at the
    action-slot divergence point in at least 50% of patched fail examples.
    This is a per-example token-competition criterion, not aggregate accuracy.
