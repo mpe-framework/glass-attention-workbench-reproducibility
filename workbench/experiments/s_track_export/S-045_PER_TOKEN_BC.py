@@ -1,1 +1,443 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiIKUy0wNDVfUEVSX1RPS0VOX0JDLnB5IOKAlCBQZXItVG9rZW4gQkMgRGVmZWN0IGF0IEp1bXAgUG9zaXRpb24KQXBwbGllZCBDYXRlZ29yaWNhbCBQaHlzaWNzIFdvcmtiZW5jaApUcm95IFRlbm8gfCBNYXkgMjAyNiB8IE9wZW4gQWNjZXNzCgpQcmUtcmVnaXN0ZXJlZDogd29ya2JlbmNoL3Byb3Bvc2Fscy9TLTA0NV9QRVJfVE9LRU5fQkNfUFJPUE9TQUwubWQKVmFsaWRhdGVkIGF0IHRveSBzY2FsZSBieSBHLTA0NyAobW9ycGhpc20tdHlwZSBkaXN0aW5jdGlvbiBmaW5kaW5nKS4KRE8gTk9UIG1vZGlmeSBoeXBvdGhlc2VzIGFmdGVyIHNlZWluZyByZXN1bHRzLgoK4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAClNFVFVQIChydW4gb25jZSBpbiBDb2xhYik6CiAgcGlwIGluc3RhbGwgdG9yY2ggdHJhbnNmb3JtZXJzIHNlbnRlbmNlcGllY2UgbnVtcHkgc2NpcHkgLXEKClJFUVVJUkVTIChib3RoIG11c3QgYmUgcHJlc2VudCBpbiB3b3JraW5nIGRpcmVjdG9yeSBvciBEcml2ZSk6CiAgMDQzX3Q1X3NjYW5fY2hlY2twb2ludC8gICAg4oCUIGZpbmUtdHVuZWQgVDUgd2VpZ2h0cyBmcm9tIFMtMDQzCiAgMDQzX2ZhbWlseV9hYl9yZXN1bHRzLmpzb24g4oCUIHBlci1leGFtcGxlIEJDIGRhdGEgZnJvbSBTLTA0My9TLTA0NAoKSWYgdGhlIGNoZWNrcG9pbnQgd2FzIGxvc3QgKENvbGFiIHNlc3Npb24gZXhwaXJ5KSwgcmUtcnVuIFMtMDQzIFBoYXNlIDMKKHRyYWluaW5nIG9ubHksIH4zMC02MCBtaW4gb24gVDQpLiBTYXZlIHRvIERyaXZlIHNvIHRoaXMgZG9lc24ndCByZXBlYXQ6CiAgIWNwIC1yIDA0M190NV9zY2FuX2NoZWNrcG9pbnQgL2NvbnRlbnQvZHJpdmUvTXlEcml2ZS8KClJ1bnRpbWU6IH41LTE1IG1pbiBvbiBUNCBHUFUgKGVuY29kZXIgZm9yd2FyZCBwYXNzZXMgb25seSwgbm8gZ2VuZXJhdGlvbikK4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgpXSEFUIFRISVMgU0NSSVBUIEFTS1M6CiAgUy0wNDQgc2hvd2VkIHRoYXQgbWVhbi1wb29sIEJDIGRlZmVjdCBkb2VzIG5vdCBzZXBhcmF0ZSBmYWlsdXJlcyBmcm9tCiAgc3VjY2Vzc2VzIHdpdGhpbiB0aGUganVtcC1jb21wb3VuZCBncm91cCAoSDEgbnVsbCwgcD0wLjk5OTksIGQ94oiSMC40MTApLgogIFRoZSBkaXJlY3Rpb24gd2FzIHJldmVyc2VkOiBzdWNjZXNzZXMgaGFkIGhpZ2hlciBtZWFuLXBvb2wgZGlzdGFuY2UuCiAgRGlhZ25vc2lzOiBtZWFuLXBvb2wgaXMgY29uZm91bmRlZCBieSBqdW1wLXRva2VuIGRlbnNpdHkg4oCUIGNvbW1hbmRzCiAgd2l0aCBtb3JlIGp1bXAgdG9rZW5zIHJlbGF0aXZlIHRvIHRvdGFsIGxlbmd0aCBzY29yZSBoaWdoZXIsIGJ1dCB0aG9zZQogIHRlbmQgdG8gYmUgc2hvcnRlciBjb21tYW5kcyBUNSBnZXRzIHJpZ2h0LgoKICBHLTA0NyAoZ2VvbWV0cnkgdHJhY2spIGNvbmZpcm1lZCB0aGUgY29uZm91bmQgbWVjaGFuaXNtIGF0IHRveSBzY2FsZQogIGFuZCBpZGVudGlmaWVkIHRoZSBmaXg6IGNyb3NzLXNlcXVlbmNlIHBlci10b2tlbiBtZWFzdXJlbWVudCBhdCB0aGUKICBqdW1wIHRva2VuIHBvc2l0aW9uIGVsaW1pbmF0ZXMgdGhlIGNvdW50IGNvbmZvdW5kLiBUaGUgUy10cmFjayBhbHJlYWR5CiAgdXNlcyBjcm9zcy1zZXF1ZW5jZSAoc2VwYXJhdGUgZm9yd2FyZCBwYXNzZXMgZm9yICJqdW1wIFgiIGFuZCAid2FsayBYIikuCiAgVGhlIG9ubHkgY2hhbmdlOiBleHRyYWN0IHRoZSBoaWRkZW4gc3RhdGUgYXQgdGhlIGp1bXAvd2FsayBwb3NpdGlvbihzKQogIGluc3RlYWQgb2YgbWVhbi1wb29saW5nIG92ZXIgdGhlIHdob2xlIHNlcXVlbmNlLgoKICBIMTogcGVyLXRva2VuIGRlZmVjdCBhdCBsYXllciA1IGlzIGhpZ2hlciBmb3IgZmFpbHVyZXMgdGhhbiBzdWNjZXNzZXMuCiAgSDIvSDM6IHBlci10b2tlbiBkZWZlY3QgaXMgTk9UIGNvcnJlbGF0ZWQgd2l0aCBjb21tYW5kIGxlbmd0aCBvciBuX2p1bXBzLgogIEg0OiBtb25vdG9uZSBwZXItdG9rZW4gbGF5ZXIgcHJvZmlsZSBmb3IgZmFpbHVyZXMgKGxheWVycyAx4oaSNSkuCiIiIgoKaW1wb3J0IG51bXB5IGFzIG5wCmltcG9ydCBqc29uCmltcG9ydCBvcwppbXBvcnQgc3lzCmZyb20gc2NpcHkgaW1wb3J0IHN0YXRzCgpTQ1JJUFRfSUQgICAgID0gIlMtMDQ1X1BFUl9UT0tFTl9CQ19WMC4xLjAiCk5fTEFZRVJTICAgICAgPSA2ClBFQUtfTEFZRVIgICAgPSA0ICAgICAgICAgICMgMC1pbmRleGVkOyBsYXllciA1ICgxLWluZGV4ZWQpLCBwZWFrIGZyb20gUy0wNDMKTUFYX0lOUFVUX0xFTiA9IDUwCkNIRUNLUE9JTlRfRElSID0gIjA0M190NV9zY2FuX2NoZWNrcG9pbnQiCkRBVEFfRklMRSAgICAgID0gIjA0M19mYW1pbHlfYWJfcmVzdWx0cy5qc29uIgoKcHJpbnQoZiJcbnsnPScqNzB9IikKcHJpbnQoZiIgIHtTQ1JJUFRfSUR9IikKcHJpbnQoZiIgIFBlci1Ub2tlbiBCQyBEZWZlY3QgYXQgSnVtcCBQb3NpdGlvbjogRmFpbHVyZXMgdnMgU3VjY2Vzc2VzIikKcHJpbnQoZiIgIENyb3NzLXNlcXVlbmNlIG1lYXN1cmVtZW50IOKAlCBjb3JyZWN0ZWQgaW5zdHJ1bWVudCBmb3IgUy0wNDQgSDEiKQpwcmludChmInsnPScqNzB9IikKCiMg4pSA4pSAIFByZXJlcXVpc2l0ZXMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACmlmIG5vdCBvcy5wYXRoLmV4aXN0cyhEQVRBX0ZJTEUpOgogICAgc3lzLmV4aXQoCiAgICAgICAgZiJcbkVSUk9SOiB7REFUQV9GSUxFIXJ9IG5vdCBmb3VuZC5cbiIKICAgICAgICBmIlJ1biBTLTA0MyBmaXJzdCwgb3IgcmVzdG9yZSBmcm9tIERyaXZlOlxuIgogICAgICAgIGYiICAhY3AgLXIgL2NvbnRlbnQvZHJpdmUvTXlEcml2ZS8wNDNfZmFtaWx5X2FiX3Jlc3VsdHMuanNvbiAuIgogICAgKQoKaWYgbm90IG9zLnBhdGguZXhpc3RzKENIRUNLUE9JTlRfRElSKToKICAgIHN5cy5leGl0KAogICAgICAgIGYiXG5FUlJPUjogQ2hlY2twb2ludCB7Q0hFQ0tQT0lOVF9ESVIhcn0gbm90IGZvdW5kLlxuIgogICAgICAgIGYiUmUtcnVuIFMtMDQzIFBoYXNlIDMgKHRyYWluaW5nLCB+MzAtNjAgbWluKSwgb3IgcmVzdG9yZTpcbiIKICAgICAgICBmIiAgIWNwIC1yIC9jb250ZW50L2RyaXZlL015RHJpdmUvMDQzX3Q1X3NjYW5fY2hlY2twb2ludCAuIgogICAgKQoKIyDilIDilIAgTG9hZCBTLTA0My9TLTA0NCBhcnRpZmFjdHMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACnByaW50KGYiXG4gIExvYWRpbmcge0RBVEFfRklMRSFyfS4uLiIpCndpdGggb3BlbihEQVRBX0ZJTEUpIGFzIGY6CiAgICBkYXRhID0ganNvbi5sb2FkKGYpCgpmYW1pbHlfYl9qdW1wID0gZGF0YVsiZmFtaWx5X2JfanVtcCJdCk5fdG90YWwgICA9IGxlbihmYW1pbHlfYl9qdW1wKQpuX2ZhaWwgICAgPSBzdW0oMSBmb3IgciBpbiBmYW1pbHlfYl9qdW1wIGlmIG5vdCByWyJjb3JyZWN0Il0pCm5fc3VjY2VzcyA9IHN1bSgxIGZvciByIGluIGZhbWlseV9iX2p1bXAgaWYgclsiY29ycmVjdCJdKQoKcHJpbnQoZiIgIHtOX3RvdGFsfSBqdW1wLWNvbXBvdW5kIGV4YW1wbGVzOiB7bl9mYWlsfSBmYWlsdXJlcywge25fc3VjY2Vzc30gc3VjY2Vzc2VzIikKCmlmIG5fZmFpbCA8IDUgb3Igbl9zdWNjZXNzIDwgNToKICAgIHN5cy5leGl0KGYiXG5JbnN1ZmZpY2llbnQgZGF0YTogbmVlZCDiiaU1IHBlciBncm91cC4iKQoKIyDilIDilIAgTG9hZCBUNSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKcHJpbnQoZiJcbiAgTG9hZGluZyBUNSBmcm9tIHtDSEVDS1BPSU5UX0RJUiFyfS4uLiIpCnRyeToKICAgIGltcG9ydCB0b3JjaAogICAgZnJvbSB0cmFuc2Zvcm1lcnMgaW1wb3J0IFQ1Rm9yQ29uZGl0aW9uYWxHZW5lcmF0aW9uLCBUNVRva2VuaXplcgpleGNlcHQgSW1wb3J0RXJyb3IgYXMgZToKICAgIHN5cy5leGl0KGYiXG5NaXNzaW5nIGxpYnJhcnk6IHtlfVxuUnVuOiBwaXAgaW5zdGFsbCB0b3JjaCB0cmFuc2Zvcm1lcnMgc2VudGVuY2VwaWVjZSIpCgpkZXZpY2UgPSB0b3JjaC5kZXZpY2UoImN1ZGEiIGlmIHRvcmNoLmN1ZGEuaXNfYXZhaWxhYmxlKCkgZWxzZSAiY3B1IikKcHJpbnQoZiIgIERldmljZToge2RldmljZX0iKQoKdG9rZW5pemVyID0gVDVUb2tlbml6ZXIuZnJvbV9wcmV0cmFpbmVkKENIRUNLUE9JTlRfRElSKQptb2RlbCAgICAgPSBUNUZvckNvbmRpdGlvbmFsR2VuZXJhdGlvbi5mcm9tX3ByZXRyYWluZWQoQ0hFQ0tQT0lOVF9ESVIpLnRvKGRldmljZSkKbW9kZWwuZXZhbCgpCnByaW50KGYiICBMb2FkZWQuIEVuY29kZXI6IHtOX0xBWUVSU30gbGF5ZXJzLCBkPTUxMiIpCgojIOKUgOKUgCBJZGVudGlmeSBqdW1wL3dhbGsgdG9rZW4gSURzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAojIEVuY29kZSBrbm93bi1nb29kIGV4YW1wbGVzIHRvIGZpbmQgdGhlIHRva2VuIElEcyByZWxpYWJseS4KIyAianVtcCIgYW5kICJ3YWxrIiBhcmUgY29tbW9uIHdvcmRzOyBlYWNoIHNob3VsZCBiZSBhIHNpbmdsZSBTZW50ZW5jZVBpZWNlIHRva2VuLgpfamlkcyA9IHRva2VuaXplci5lbmNvZGUoImp1bXAgdHdpY2UiLCBhZGRfc3BlY2lhbF90b2tlbnM9RmFsc2UpCl93aWRzID0gdG9rZW5pemVyLmVuY29kZSgid2FsayB0d2ljZSIsIGFkZF9zcGVjaWFsX3Rva2Vucz1GYWxzZSkKanVtcF9pZCA9IF9qaWRzWzBdCndhbGtfaWQgPSBfd2lkc1swXQoKcHJpbnQoZiJcbiAgVG9rZW4gSURzOiIpCnByaW50KGYiICAgICdqdW1wJyDihpIgaWQ9e2p1bXBfaWR9ICBkZWNvZGVkPXt0b2tlbml6ZXIuZGVjb2RlKFtqdW1wX2lkXSkhcn0iKQpwcmludChmIiAgICAnd2Fsaycg4oaSIGlkPXt3YWxrX2lkfSAgZGVjb2RlZD17dG9rZW5pemVyLmRlY29kZShbd2Fsa19pZF0pIXJ9IikKCmlmIGxlbihfamlkcykgPCAxIG9yIGxlbihfd2lkcykgPCAxOgogICAgc3lzLmV4aXQoIkVSUk9SOiAnanVtcCcgb3IgJ3dhbGsnIHRva2VuaXphdGlvbiBmYWlsZWQuIikKCiMg4pSA4pSAIEhlbHBlcnMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACmRlZiBnZXRfaGlkZGVuX3N0YXRlcyh0ZXh0KToKICAgICIiIlJ1biBUNSBlbmNvZGVyLiBSZXR1cm5zIChpbnB1dF9pZHMgbGlzdCwgbGlzdCBvZiBOX0xBWUVSUyBhcnJheXMgKHNlcV9sZW4sIDUxMikpLiIiIgogICAgdG9rcyA9IHRva2VuaXplcigKICAgICAgICB0ZXh0LCByZXR1cm5fdGVuc29ycz0icHQiLAogICAgICAgIG1heF9sZW5ndGg9TUFYX0lOUFVUX0xFTiwgdHJ1bmNhdGlvbj1UcnVlCiAgICApLnRvKGRldmljZSkKICAgIHdpdGggdG9yY2gubm9fZ3JhZCgpOgogICAgICAgIGVuYyA9IG1vZGVsLmVuY29kZXIoCiAgICAgICAgICAgIGlucHV0X2lkcz10b2tzWyJpbnB1dF9pZHMiXSwKICAgICAgICAgICAgYXR0ZW50aW9uX21hc2s9dG9rc1siYXR0ZW50aW9uX21hc2siXSwKICAgICAgICAgICAgb3V0cHV0X2hpZGRlbl9zdGF0ZXM9VHJ1ZSwKICAgICAgICAgICAgcmV0dXJuX2RpY3Q9VHJ1ZSwKICAgICAgICApCiAgICBpZHMgICAgPSB0b2tzWyJpbnB1dF9pZHMiXVswXS50b2xpc3QoKQogICAgaGlkZGVuID0gW2hbMF0uY3B1KCkubnVtcHkoKSBmb3IgaCBpbiBlbmMuaGlkZGVuX3N0YXRlc1sxOl1dCiAgICByZXR1cm4gaWRzLCBoaWRkZW4KCgpkZWYgcGVyX3Rva2VuX2JjX2Rpc3QoY21kX2p1bXAsIGNtZF93YWxrKToKICAgICIiIgogICAgQ3Jvc3Mtc2VxdWVuY2UgcGVyLXRva2VuIEJDIGRlZmVjdC4KCiAgICBSdW5zIGNtZF9qdW1wIGFuZCBjbWRfd2FsayBhcyBzZXBhcmF0ZSBmb3J3YXJkIHBhc3Nlcy4KICAgIEZpbmRzIGp1bXAgcG9zaXRpb25zIGluIGNtZF9qdW1wIHRva2Vucywgd2FsayBwb3NpdGlvbnMgaW4gY21kX3dhbGsgdG9rZW5zLgogICAgUmV0dXJucyBtZWFuIEwyIGRpc3RhbmNlIGFjcm9zcyB0aG9zZSBwb3NpdGlvbnMgcGVyIGxheWVyLgoKICAgIFJldHVybnM6IChkaXN0cywgbl9qdW1wX3Rva2Vucywgbl90b3RhbF90b2tlbnMpIG9yIE5vbmUgb24gYWxpZ25tZW50IGZhaWx1cmUuCiAgICAiIiIKICAgIGlkc19qLCBoX2ogPSBnZXRfaGlkZGVuX3N0YXRlcyhjbWRfanVtcCkKICAgIGlkc193LCBoX3cgPSBnZXRfaGlkZGVuX3N0YXRlcyhjbWRfd2FsaykKCiAgICBqdW1wX3Bvc2l0aW9ucyA9IFtpIGZvciBpLCB0aWQgaW4gZW51bWVyYXRlKGlkc19qKSBpZiB0aWQgPT0ganVtcF9pZF0KICAgIHdhbGtfcG9zaXRpb25zID0gW2kgZm9yIGksIHRpZCBpbiBlbnVtZXJhdGUoaWRzX3cpIGlmIHRpZCA9PSB3YWxrX2lkXQoKICAgICMgTmVlZCBhdCBsZWFzdCBvbmUganVtcCBwb3NpdGlvbiBhbmQgbWF0Y2hpbmcgY291bnRzCiAgICBpZiBub3QganVtcF9wb3NpdGlvbnM6CiAgICAgICAgcmV0dXJuIE5vbmUKICAgIGlmIGxlbihqdW1wX3Bvc2l0aW9ucykgIT0gbGVuKHdhbGtfcG9zaXRpb25zKToKICAgICAgICByZXR1cm4gTm9uZQogICAgIyBQb3NpdGlvbnMgc2hvdWxkIGJlIGlkZW50aWNhbCAob25seSB0b2tlbiBjb250ZW50IGNoYW5nZXMsIG5vdCBzdHJ1Y3R1cmUpCiAgICBpZiBqdW1wX3Bvc2l0aW9ucyAhPSB3YWxrX3Bvc2l0aW9uczoKICAgICAgICByZXR1cm4gTm9uZQoKICAgIGRpc3RzID0gbnAuemVyb3MoTl9MQVlFUlMpCiAgICBmb3IgbCBpbiByYW5nZShOX0xBWUVSUyk6CiAgICAgICAgbGF5ZXJfZGlzdHMgPSBbCiAgICAgICAgICAgIGZsb2F0KG5wLmxpbmFsZy5ub3JtKGhfaltsXVtqcF0gLSBoX3dbbF1bd3BdKSkKICAgICAgICAgICAgZm9yIGpwLCB3cCBpbiB6aXAoanVtcF9wb3NpdGlvbnMsIHdhbGtfcG9zaXRpb25zKQogICAgICAgIF0KICAgICAgICBkaXN0c1tsXSA9IG5wLm1lYW4obGF5ZXJfZGlzdHMpCgogICAgcmV0dXJuIGRpc3RzLCBsZW4oanVtcF9wb3NpdGlvbnMpLCBsZW4oaWRzX2opCgojIOKUgOKUgCBQaGFzZSAxOiBDb21wdXRlIHBlci10b2tlbiBCQyBkZWZlY3Qg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACnByaW50KGYiXG57Jz0nKjcwfSIpCnByaW50KGYiICBQSEFTRSAxIOKAlCBDT01QVVRFIFBFUi1UT0tFTiBCQyBERUZFQ1QgKHtOX3RvdGFsfSBleGFtcGxlcykiKQpwcmludChmInsnPScqNzB9IikKcHJpbnQoZiJcbiAgRW5jb2RlciBmb3J3YXJkIHBhc3NlcyBvbmx5IOKAlCBubyBnZW5lcmF0aW9uLiAiCiAgICAgIGYiRXhwZWN0IH41LTE1IG1pbiBvbiBUNC4iKQoKcmVzdWx0cyAgID0gW10Kbl9za2lwcGVkID0gMAoKZm9yIGlkeCwgciBpbiBlbnVtZXJhdGUoZmFtaWx5X2JfanVtcCk6CiAgICBpZiBpZHggJSA1MCA9PSAwOgogICAgICAgIHByaW50KGYiICAgIHtpZHh9L3tOX3RvdGFsfS4uLiIpCgogICAgb3V0ID0gcGVyX3Rva2VuX2JjX2Rpc3QoclsiY21kX2p1bXAiXSwgclsiY21kX3dhbGsiXSkKCiAgICBpZiBvdXQgaXMgTm9uZToKICAgICAgICBuX3NraXBwZWQgKz0gMQogICAgICAgIGNvbnRpbnVlCgogICAgcHRfZGlzdHMsIG5fanVtcHMsIG5fdG9rZW5zID0gb3V0CgogICAgcmVzdWx0cy5hcHBlbmQoewogICAgICAgICJjbWRfanVtcCI6ICAgICAgICAgIHJbImNtZF9qdW1wIl0sCiAgICAgICAgImNtZF93YWxrIjogICAgICAgICAgclsiY21kX3dhbGsiXSwKICAgICAgICAiY29ycmVjdCI6ICAgICAgICAgICByWyJjb3JyZWN0Il0sCiAgICAgICAgIm5fanVtcHMiOiAgICAgICAgICAgbl9qdW1wcywKICAgICAgICAibl90b2tlbnMiOiAgICAgICAgICBuX3Rva2VucywKICAgICAgICAicHRfZGlzdCI6ICAgICAgICAgICBwdF9kaXN0cy50b2xpc3QoKSwKICAgICAgICAicHRfZGlzdF9wZWFrIjogICAgICBmbG9hdChwdF9kaXN0c1tQRUFLX0xBWUVSXSksCiAgICAgICAgIm1lYW5fcG9vbF9kaXN0X3MwNDQiOiByWyJkaXN0Il1bUEVBS19MQVlFUl0sICAjIFMtMDQ0IGNvbXBhcmlzb24KICAgIH0pCgpwcmludChmIlxuICBEb25lLiBQcm9jZXNzZWQ6IHtsZW4ocmVzdWx0cyl9L3tOX3RvdGFsfSAgU2tpcHBlZDoge25fc2tpcHBlZH0iKQppZiBuX3NraXBwZWQgPiAxMDoKICAgIHByaW50KGYiICBXQVJOSU5HOiB7bl9za2lwcGVkfSBza2lwcGVkIOKAlCBjaGVjayB0b2tlbml6ZXIgYWxpZ25tZW50LiIpCgojIEVhcmx5IHNhdmUgYmVmb3JlIGFueSBhbmFseXNpcyB0aGF0IGNvdWxkIGNyYXNoCndpdGggb3BlbigiMDQ1X3Blcl90b2tlbl9yZXN1bHRzLmpzb24iLCAidyIpIGFzIGY6CiAgICBqc29uLmR1bXAocmVzdWx0cywgZiwgaW5kZW50PTIpCnByaW50KGYiICBFYXJseSBzYXZlOiAwNDVfcGVyX3Rva2VuX3Jlc3VsdHMuanNvbiIpCgojIOKUgOKUgCBTcGxpdCBieSBvdXRjb21lIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApmYWlsX3IgICAgPSBbciBmb3IgciBpbiByZXN1bHRzIGlmIG5vdCByWyJjb3JyZWN0Il1dCnN1Y2Nlc3NfciA9IFtyIGZvciByIGluIHJlc3VsdHMgaWYgclsiY29ycmVjdCJdXQpuX2YsIG5fcyAgPSBsZW4oZmFpbF9yKSwgbGVuKHN1Y2Nlc3NfcikKCmZhaWxfcHQgICAgPSBucC5hcnJheShbclsicHRfZGlzdF9wZWFrIl0gICAgICAgIGZvciByIGluIGZhaWxfcl0pCnN1Y2Nlc3NfcHQgPSBucC5hcnJheShbclsicHRfZGlzdF9wZWFrIl0gICAgICAgIGZvciByIGluIHN1Y2Nlc3Nfcl0pCmZhaWxfbXAgICAgPSBucC5hcnJheShbclsibWVhbl9wb29sX2Rpc3RfczA0NCJdIGZvciByIGluIGZhaWxfcl0pCnN1Y2Nlc3NfbXAgPSBucC5hcnJheShbclsibWVhbl9wb29sX2Rpc3RfczA0NCJdIGZvciByIGluIHN1Y2Nlc3Nfcl0pCgojIOKUgOKUgCBQZXItbGF5ZXIgcHJvZmlsZSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKcHJpbnQoZiJcbnsnPScqNzB9IikKcHJpbnQoZiIgIFBIQVNFIDIg4oCUIFBFUi1MQVlFUiBQUk9GSUxFIikKcHJpbnQoZiJ7Jz0nKjcwfSIpCnByaW50KGYiXG4gIHsnTGF5ZXInOj43fSB7J0ZhaWwgbWVhbic6PjEyfSB7J1N1Y2MgbWVhbic6PjEyfSB7J0RpZmYnOj4xMH0geydSYXRpbyc6Pjh9IikKcHJpbnQoZiIgIHsnLScqNTV9IikKCmZvciBsIGluIHJhbmdlKE5fTEFZRVJTKToKICAgIGZtID0gbnAubWVhbihbclsicHRfZGlzdCJdW2xdIGZvciByIGluIGZhaWxfcl0pCiAgICBzbSA9IG5wLm1lYW4oW3JbInB0X2Rpc3QiXVtsXSBmb3IgciBpbiBzdWNjZXNzX3JdKQogICAgbWFya2VyID0gIiDil4QgcGVhayIgaWYgbCA9PSBQRUFLX0xBWUVSIGVsc2UgIiIKICAgIHByaW50KGYiICBMYXllciB7bCsxOj4yfSAge2ZtOj4xMi40Zn0gIHtzbTo+MTIuNGZ9ICB7Zm0tc206PjEwLjRmfSAgIgogICAgICAgICAgZiJ7Zm0vKHNtKzFlLTEyKTo+OC40Zn17bWFya2VyfSIpCgojIOKUgOKUgCBIMTogcGVyLXRva2VuIGZhaWx1cmVzID4gc3VjY2Vzc2VzIGF0IHBlYWsgbGF5ZXIg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACnByaW50KGYiXG57Jz0nKjcwfSIpCnByaW50KGYiICBIMTogUEVSLVRPS0VOIEJDIERFRkVDVCBBVCBMQVlFUiB7UEVBS19MQVlFUisxfSDigJQgRkFJTFVSRVMgdnMgU1VDQ0VTU0VTIikKcHJpbnQoZiJ7Jz0nKjcwfSIpCgpwcmludChmIlxuICBGYWlsdXJlcyAgbWVhbiA9IHtmYWlsX3B0Lm1lYW4oKTouNGZ9ICAobj17bl9mfSkiKQpwcmludChmIiAgU3VjY2Vzc2VzIG1lYW4gPSB7c3VjY2Vzc19wdC5tZWFuKCk6LjRmfSAgKG49e25fc30pIikKcHJpbnQoZiIgIFMtMDQ0IHJlZmVyZW5jZTogZmFpbCBtZWFuLXBvb2w9e2ZhaWxfbXAubWVhbigpOi4yZn0gICIKICAgICAgZiJzdWNjIG1lYW4tcG9vbD17c3VjY2Vzc19tcC5tZWFuKCk6LjJmfSIpCgpzdGF0MSwgcDEgPSBzdGF0cy5tYW5ud2hpdG5leXUoZmFpbF9wdCwgc3VjY2Vzc19wdCwgYWx0ZXJuYXRpdmU9ImdyZWF0ZXIiKQpoMV9wYXNzICAgPSBwMSA8IDAuMDUKCnByaW50KGYiXG4gIE1hbm4tV2hpdG5leSBVID0ge3N0YXQxOi4xZn0gICBwID0ge3AxOi40Zn0iKQpwcmludChmIiAgSDE6IHsn4pyTIENPTkZJUk1FRCcgaWYgaDFfcGFzcyBlbHNlICfinJcgRkFJTEVEJ30gICIKICAgICAgZiIoeydwZXItdG9rZW4gZGVmZWN0IGlzIGdyYWRlZCB3aXRoaW4gZmFpbHVyZSBjYXRlZ29yeScgaWYgaDFfcGFzcyBlbHNlICdubyB3aXRoaW4tZ3JvdXAgZGlmZmVyZW5jZSd9KSIpCgppZiBoMV9wYXNzOgogICAgcHJpbnQoZiJcbiAg4oaSIFBlci10b2tlbiBCQyBkZWZlY3QgYXQganVtcCBwb3NpdGlvbiBzZXBhcmF0ZXMgZmFpbHVyZXMgZnJvbSIpCiAgICBwcmludChmIiAgICBzdWNjZXNzZXMuIFRoZSBlbmNvZGVyJ3MgcmVwcmVzZW50YXRpb24gb2YgdGhlIHVuc2VlbiBwcmltaXRpdmUiKQogICAgcHJpbnQoZiIgICAgaXMgZ3JhZGVkIOKAlCBtZWFuLXBvb2wgd2FzaGVkIG91dCB0aGUgc2lnbmFsLiBUaGUgaW5mb3JtYXRpb24iKQogICAgcHJpbnQoZiIgICAgd2FzIHByZXNlbnQgYXQgdGhlIHRva2VuIGxldmVsIGFsbCBhbG9uZy4iKQplbHNlOgogICAgcHJpbnQoZiJcbiAg4oaSIFBlci10b2tlbiBCQyBkZWZlY3QgZG9lcyBub3Qgc2VwYXJhdGUgZmFpbHVyZXMgZnJvbSBzdWNjZXNzZXMuIikKICAgIHByaW50KGYiICAgIFRoZSBlbmNvZGVyIG1hcmtzIGFsbCBqdW1wLWNvbXBvdW5kIGV4YW1wbGVzIHVuaWZvcm1seSBldmVuIGF0IikKICAgIHByaW50KGYiICAgIHRoZSB0b2tlbiBsZXZlbC4gSzEgZmlyZXM6IGRlY29kZXIgZGV0ZXJtaW5lcyBmYWlsdXJlIG9uIikKICAgIHByaW50KGYiICAgIGRlY29kZXItc2lkZSBncm91bmRzLCBub3QgZW5jb2RlciByZXByZXNlbnRhdGlvbmFsIHF1YWxpdHkuIikKCiMg4pSA4pSAIEgyL0gzOiBDb25mb3VuZCBjaGVja3Mg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACnByaW50KGYiXG57Jz0nKjcwfSIpCnByaW50KGYiICBIMi9IMzogQ09ORk9VTkQgQ0hFQ0tTIChwZXItdG9rZW4gdnMgbWVhbi1wb29sKSIpCnByaW50KGYieyc9Jyo3MH0iKQoKYWxsX3B0ICAgPSBucC5hcnJheShbclsicHRfZGlzdF9wZWFrIl0gICAgICAgIGZvciByIGluIHJlc3VsdHNdKQphbGxfbXAgICA9IG5wLmFycmF5KFtyWyJtZWFuX3Bvb2xfZGlzdF9zMDQ0Il0gZm9yIHIgaW4gcmVzdWx0c10pCmFsbF9sZW4gID0gbnAuYXJyYXkoW3JbIm5fdG9rZW5zIl0gICAgICAgICAgICBmb3IgciBpbiByZXN1bHRzXSkKYWxsX25qbXAgPSBucC5hcnJheShbclsibl9qdW1wcyJdICAgICAgICAgICAgIGZvciByIGluIHJlc3VsdHNdKQoKcl9wdF9sZW4sICBfID0gc3RhdHMuc3BlYXJtYW5yKGFsbF9wdCwgYWxsX2xlbikKcl9wdF9uam1wLCBfID0gc3RhdHMuc3BlYXJtYW5yKGFsbF9wdCwgYWxsX25qbXApCnJfbXBfbGVuLCAgXyA9IHN0YXRzLnNwZWFybWFucihhbGxfbXAsIGFsbF9sZW4pCnJfbXBfbmptcCwgXyA9IHN0YXRzLnNwZWFybWFucihhbGxfbXAsIGFsbF9uam1wKQoKcHJpbnQoZiJcbiAgU3BlYXJtYW4gciB3aXRoIHBlci10b2tlbiBkZWZlY3QgKFMtMDQ1KToiKQpwcmludChmIiAgICB2cyBjb21tYW5kIGxlbmd0aCAobl90b2tlbnMpOiByID0ge3JfcHRfbGVuOisuM2Z9IikKcHJpbnQoZiIgICAgdnMgbl9qdW1wX3Rva2VuczogICAgICAgICAgICAgciA9IHtyX3B0X25qbXA6Ky4zZn0iKQpwcmludChmIlxuICBTcGVhcm1hbiByIHdpdGggbWVhbi1wb29sIGRlZmVjdCAoUy0wNDQsIHJlZmVyZW5jZSk6IikKcHJpbnQoZiIgICAgdnMgY29tbWFuZCBsZW5ndGggKG5fdG9rZW5zKTogciA9IHtyX21wX2xlbjorLjNmfSIpCnByaW50KGYiICAgIHZzIG5fanVtcF90b2tlbnM6ICAgICAgICAgICAgIHIgPSB7cl9tcF9uam1wOisuM2Z9IikKCmgyX3Bhc3MgPSBhYnMocl9wdF9sZW4pICA8IDAuMgpoM19wYXNzID0gYWJzKHJfcHRfbmptcCkgPCAwLjIKCnByaW50KGYiXG4gIEgyIChsZW5ndGggY29uZm91bmQgZWxpbWluYXRlZCk6IHsn4pyTIENPTkZJUk1FRCcgaWYgaDJfcGFzcyBlbHNlICfinJcgRkFJTEVEJ30gICIKICAgICAgZiJ8cnwgPSB7YWJzKHJfcHRfbGVuKTouM2Z9ICh7JzwgMC4yJyBpZiBoMl9wYXNzIGVsc2UgJz49IDAuMid9KSIpCnByaW50KGYiICBIMyAoY291bnQgY29uZm91bmQgZWxpbWluYXRlZCk6ICB7J+KckyBDT05GSVJNRUQnIGlmIGgzX3Bhc3MgZWxzZSAn4pyXIEZBSUxFRCd9ICAiCiAgICAgIGYifHJ8ID0ge2FicyhyX3B0X25qbXApOi4zZn0gKHsnPCAwLjInIGlmIGgzX3Bhc3MgZWxzZSAnPj0gMC4yJ30pIikKCiMg4pSA4pSAIEg0OiBNb25vdG9uZSBsYXllciBwcm9maWxlIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApwcmludChmIlxueyc9Jyo3MH0iKQpwcmludChmIiAgSDQ6IE1PTk9UT05FIExBWUVSIFBST0ZJTEUgKHBlci10b2tlbiwgZmFpbHVyZXMsIGxheWVycyAxLTUpIikKcHJpbnQoZiJ7Jz0nKjcwfSIpCgpmYWlsX21lYW5zID0gbnAuYXJyYXkoWwogICAgbnAubWVhbihbclsicHRfZGlzdCJdW2xdIGZvciByIGluIGZhaWxfcl0pCiAgICBmb3IgbCBpbiByYW5nZShOX0xBWUVSUyAtIDEpICAgIyBleGNsdWRlIGxheWVyIDYgKFQ1IGNvbGxhcHNlKQpdKQpkaWZmcyAgID0gbnAuZGlmZihmYWlsX21lYW5zKQpoNF9wYXNzID0gYm9vbChucC5hbGwoZGlmZnMgPiAwKSkKCnByaW50KGYiXG4gIExheWVyIDEtNSBtZWFucyAoZmFpbHVyZXMpOiAiICsgIiAgIi5qb2luKGYie3Y6LjJmfSIgZm9yIHYgaW4gZmFpbF9tZWFucykpCnByaW50KGYiICBEaWZmZXJlbmNlczogICAgICAgICAgICAgICAgIiArICIgICIuam9pbihmInt2OisuMmZ9IiBmb3IgdiBpbiBkaWZmcykpCnByaW50KGYiICBINDogeyfinJMgQ09ORklSTUVEJyBpZiBoNF9wYXNzIGVsc2UgJ+KclyBGQUlMRUQnfSAgIgogICAgICBmIih7J21vbm90b25lJyBpZiBoNF9wYXNzIGVsc2UgJ25vbi1tb25vdG9uZSd9KSIpCgojIOKUgOKUgCBFZmZlY3Qgc2l6ZSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKcHJpbnQoZiJcbnsnPScqNzB9IikKcHJpbnQoZiIgIEVGRkVDVCBTSVpFIOKAlCBQZXItVG9rZW4gdnMgTWVhbi1Qb29sIENvbXBhcmlzb24gYXQgTGF5ZXIge1BFQUtfTEFZRVIrMX0iKQpwcmludChmInsnPScqNzB9IikKCmRlZiBjb2hlbnNfZChhLCBiKToKICAgIG5fYSwgbl9iID0gbGVuKGEpLCBsZW4oYikKICAgIGlmIG5fYSArIG5fYiA8IDM6CiAgICAgICAgcmV0dXJuIDAuMAogICAgcG9vbGVkID0gbnAuc3FydCgKICAgICAgICAoYS5zdGQoKSoqMiAqIChuX2EgLSAxKSArIGIuc3RkKCkqKjIgKiAobl9iIC0gMSkpIC8gKG5fYSArIG5fYiAtIDIpCiAgICApCiAgICByZXR1cm4gKGEubWVhbigpIC0gYi5tZWFuKCkpIC8gKHBvb2xlZCArIDFlLTEyKQoKZF9wdCA9IGNvaGVuc19kKGZhaWxfcHQsIHN1Y2Nlc3NfcHQpCmRfbXAgPSBjb2hlbnNfZChmYWlsX21wLCBzdWNjZXNzX21wKQoKZGVmIGVmZmVjdF9sYWJlbChkKToKICAgIGEgPSBhYnMoZCkKICAgIGlmIGEgPj0gMC44OiByZXR1cm4gImxhcmdlICjiiaUgMC44KSIKICAgIGlmIGEgPj0gMC41OiByZXR1cm4gIm1lZGl1bSAoMC41LTAuOCkiCiAgICBpZiBhID49IDAuMjogcmV0dXJuICJzbWFsbCAoMC4yLTAuNSkiCiAgICByZXR1cm4gIm5lZ2xpZ2libGUgKDwgMC4yKSIKCnByaW50KGYiXG4gIFBlci10b2tlbiAoUy0wNDUpOiBkID0ge2RfcHQ6Ky4zZn0gIFt7ZWZmZWN0X2xhYmVsKGRfcHQpfV0iKQpwcmludChmIiAgTWVhbi1wb29sIChTLTA0NCk6IGQgPSB7ZF9tcDorLjNmfSAgW3tlZmZlY3RfbGFiZWwoZF9tcCl9XSAgKHJlZmVyZW5jZTog4oiSMC40MTApIikKaWYgZF9wdCA+IGRfbXA6CiAgICBwcmludChmIiAgUGVyLXRva2VuIGlzIGEgc3Ryb25nZXIgcG9zaXRpdmUgc2lnbmFsIHRoYW4gbWVhbi1wb29sLiIpCmVsaWYgZF9wdCA8IDAgYW5kIGRfbXAgPCAwOgogICAgcHJpbnQoZiIgIEJvdGggZGlyZWN0aW9ucyBhcmUgcmV2ZXJzZWQgKHN1Y2Nlc3NlcyA+IGZhaWx1cmVzKS4iKQoKIyDilIDilIAgU2FtcGxlIGV4YW1wbGVzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApwcmludChmIlxueyc9Jyo3MH0iKQpwcmludChmIiAgSElHSCB2cyBMT1cgUEVSLVRPS0VOIERFRkVDVCBFWEFNUExFUyAobGF5ZXIge1BFQUtfTEFZRVIrMX0pIikKcHJpbnQoZiJ7Jz0nKjcwfSIpCgpzb3J0ZWRfZmFpbCA9IHNvcnRlZChmYWlsX3IsICAgIGtleT1sYW1iZGEgcjogclsicHRfZGlzdF9wZWFrIl0sIHJldmVyc2U9VHJ1ZSkKc29ydGVkX3N1Y2MgPSBzb3J0ZWQoc3VjY2Vzc19yLCBrZXk9bGFtYmRhIHI6IHJbInB0X2Rpc3RfcGVhayJdLCByZXZlcnNlPVRydWUpCgpwcmludChmIlxuICBUb3AtMyBmYWlsdXJlcyAoaGlnaGVzdCBwZXItdG9rZW4gZGVmZWN0LCBtb2RlbCB3cm9uZyk6IikKZm9yIHIgaW4gc29ydGVkX2ZhaWxbOjNdOgogICAgcHJpbnQoZiIgICAgcHQ9e3JbJ3B0X2Rpc3RfcGVhayddOi4yZn0gIG1wPXtyWydtZWFuX3Bvb2xfZGlzdF9zMDQ0J106LjJmfSIKICAgICAgICAgIGYiICBsZW49e3JbJ25fdG9rZW5zJ119ICBuaj17clsnbl9qdW1wcyddfSAge3JbJ2NtZF9qdW1wJ119IikKCnByaW50KGYiXG4gIFRvcC0zIHN1Y2Nlc3NlcyAoaGlnaGVzdCBwZXItdG9rZW4gZGVmZWN0LCBtb2RlbCByaWdodCk6IikKZm9yIHIgaW4gc29ydGVkX3N1Y2NbOjNdOgogICAgcHJpbnQoZiIgICAgcHQ9e3JbJ3B0X2Rpc3RfcGVhayddOi4yZn0gIG1wPXtyWydtZWFuX3Bvb2xfZGlzdF9zMDQ0J106LjJmfSIKICAgICAgICAgIGYiICBsZW49e3JbJ25fdG9rZW5zJ119ICBuaj17clsnbl9qdW1wcyddfSAge3JbJ2NtZF9qdW1wJ119IikKCnByaW50KGYiXG4gIEJvdHRvbS0zIGZhaWx1cmVzIChsb3dlc3QgcGVyLXRva2VuIGRlZmVjdCwgbW9kZWwgd3JvbmcpOiIpCmZvciByIGluIHNvcnRlZF9mYWlsWy0zOl06CiAgICBwcmludChmIiAgICBwdD17clsncHRfZGlzdF9wZWFrJ106LjJmfSAgbXA9e3JbJ21lYW5fcG9vbF9kaXN0X3MwNDQnXTouMmZ9IgogICAgICAgICAgZiIgIGxlbj17clsnbl90b2tlbnMnXX0gIG5qPXtyWyduX2p1bXBzJ119ICB7clsnY21kX2p1bXAnXX0iKQoKIyDilIDilIAgU2F2ZSB2ZXJkaWN0IOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAp2ZXJkaWN0ID0gWwogICAgZiJWRVJESUNUIOKAlCB7U0NSSVBUX0lEfSIsCiAgICBmIiIsCiAgICBmIk4gZmFpbHVyZXM6ICB7bl9mfSIsCiAgICBmIk4gc3VjY2Vzc2VzOiB7bl9zfSIsCiAgICBmIk4gc2tpcHBlZDogICB7bl9za2lwcGVkfSIsCiAgICBmIiIsCiAgICBmIkgxOiB7J+KckyBDT05GSVJNRUQnIGlmIGgxX3Bhc3MgZWxzZSAn4pyXIEZBSUxFRCd9ICAiCiAgICAgICAgZiJwPXtwMTouNGZ9ICBmYWlsPXtmYWlsX3B0Lm1lYW4oKTouNGZ9ICBzdWNjPXtzdWNjZXNzX3B0Lm1lYW4oKTouNGZ9IiwKICAgIGYiSDI6IHsn4pyTIENPTkZJUk1FRCcgaWYgaDJfcGFzcyBlbHNlICfinJcgRkFJTEVEJ30gICIKICAgICAgICBmImxlbmd0aCBjb25mb3VuZCByPXtyX3B0X2xlbjouM2Z9ICAobWVhbi1wb29sIHJlZjoge3JfbXBfbGVuOi4zZn0pIiwKICAgIGYiSDM6IHsn4pyTIENPTkZJUk1FRCcgaWYgaDNfcGFzcyBlbHNlICfinJcgRkFJTEVEJ30gICIKICAgICAgICBmImNvdW50IGNvbmZvdW5kICByPXtyX3B0X25qbXA6LjNmfSAgKG1lYW4tcG9vbCByZWY6IHtyX21wX25qbXA6LjNmfSkiLAogICAgZiJINDogeyfinJMgQ09ORklSTUVEJyBpZiBoNF9wYXNzIGVsc2UgJ+KclyBGQUlMRUQnfSAgIgogICAgICAgIGYieydtb25vdG9uZScgaWYgaDRfcGFzcyBlbHNlICdub24tbW9ub3RvbmUnfSBsYXllciBwcm9maWxlIiwKICAgIGYiIiwKICAgIGYiQ29oZW4ncyBkIChwZXItdG9rZW4gUy0wNDUpOiB7ZF9wdDorLjNmfSIsCiAgICBmIkNvaGVuJ3MgZCAobWVhbi1wb29sIFMtMDQ0KToge2RfbXA6Ky4zZn0iLApdCndpdGggb3BlbigiMDQ1X3ZlcmRpY3QudHh0IiwgInciKSBhcyBmOgogICAgZi53cml0ZSgiXG4iLmpvaW4odmVyZGljdCkgKyAiXG4iKQpwcmludChmIlxuICBTYXZlZDogMDQ1X3Blcl90b2tlbl9yZXN1bHRzLmpzb24gIDA0NV92ZXJkaWN0LnR4dCIpCgojIOKUgOKUgCBWRVJESUNUIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgApwcmludChmIlxueyc9Jyo3MH0iKQpwcmludChmIiAgVkVSRElDVCBTVU1NQVJZIOKAlCB7U0NSSVBUX0lEfSIpCnByaW50KGYieyc9Jyo3MH0iKQoKcHJpbnQoZiJcbiAgeyfinJMnIGlmIGgxX3Bhc3MgZWxzZSAn4pyXJ30gSDEgIFBlci10b2tlbiBkZWZlY3Qgc2VwYXJhdGVzIGZhaWx1cmVzIGZyb20gc3VjY2Vzc2VzICAocD17cDE6LjRmfSkiKQpwcmludChmIiAgeyfinJMnIGlmIGgyX3Bhc3MgZWxzZSAn4pyXJ30gSDIgIExlbmd0aCBjb25mb3VuZCBlbGltaW5hdGVkICAocj17cl9wdF9sZW46Ky4zZn0pIikKcHJpbnQoZiIgIHsn4pyTJyBpZiBoM19wYXNzIGVsc2UgJ+Kclyd9IEgzICBDb3VudCBjb25mb3VuZCBlbGltaW5hdGVkICAgKHI9e3JfcHRfbmptcDorLjNmfSkiKQpwcmludChmIiAgeyfinJMnIGlmIGg0X3Bhc3MgZWxzZSAn4pyXJ30gSDQgIE1vbm90b25lIGxheWVyIHByb2ZpbGUgMeKGkjUiKQpwcmludChmIlxuICBQZXItdG9rZW4gQ29oZW4ncyBkID0ge2RfcHQ6Ky4zZn0gIChtZWFuLXBvb2wgUy0wNDQgcmVmZXJlbmNlOiB7ZF9tcDorLjNmfSkiKQpwcmludCgpCgppZiBoMV9wYXNzIGFuZCBoMl9wYXNzIGFuZCBoM19wYXNzOgogICAgcHJpbnQoIiAgQkMgZGVmZWN0IGlzIGdyYWRlZCBhdCB0aGUgcGVyLXRva2VuIGxldmVsIHdpdGhpbiB0aGUgZmFpbGluZyIpCiAgICBwcmludCgiICBjYXRlZ29yeS4gTWVhbi1wb29sIChTLTA0NCkgd2FzaGVkIG91dCB0aGUgc2lnbmFsIGJ5IGRpbHV0aW5nIikKICAgIHByaW50KCIgIGp1bXAgcG9zaXRpb25zIG92ZXIgdGhlIHdob2xlIGNvbW1hbmQgc2VxdWVuY2UuIikKICAgIHByaW50KCkKICAgIHByaW50KCIgIFRoZSBlbmNvZGVyJ3MgcmVwcmVzZW50YXRpb24gb2YgdGhlIHVuc2VlbiBwcmltaXRpdmUgYXQgdGhlIikKICAgIHByaW50KCIgIGp1bXAgdG9rZW4gcG9zaXRpb24gcHJlZGljdHMgcGVyLWV4YW1wbGUgZGVjb2RlciBmYWlsdXJlLiIpCiAgICBwcmludCgiICBUaGlzIGlzIHRoZSBzdHJvbmdlc3QgUy10cmFjayByZXN1bHQgdG8gZGF0ZS4iKQogICAgcHJpbnQoKQogICAgcHJpbnQoIiAgTmV4dDogUy0wNDYg4oCUIGNhdXNhbCBiaXQgcHJvYmVzIG9uIGZyb3plbiBUNSBlbmNvZGVyIGxheWVyIDUuIikKZWxpZiBoMV9wYXNzIGFuZCBub3QgKGgyX3Bhc3MgYW5kIGgzX3Bhc3MpOgogICAgcHJpbnQoIiAgSDEgY29uZmlybWVkIGJ1dCBjb25mb3VuZCBjaGVjayBmYWlsZWQuIFRoZSBzZXBhcmF0aW9uIGlzIHJlYWwiKQogICAgcHJpbnQoIiAgYnV0IG1heSBiZSBwYXJ0aWFsbHkgZHJpdmVuIGJ5IGEgcmVzaWR1YWwgbGVuZ3RoL2NvdW50IGFydGlmYWN0LiIpCiAgICBwcmludCgiICBJbnZlc3RpZ2F0ZSBiZWZvcmUgdHJlYXRpbmcgYXMgYSBjbGVhbiByZXN1bHQuIikKZWxpZiBub3QgaDFfcGFzcyBhbmQgaDJfcGFzcyBhbmQgaDNfcGFzczoKICAgIHByaW50KCIgIEsxIGZpcmVzOiBwZXItdG9rZW4gZGVmZWN0IGRvZXMgbm90IGdyYWRlIGRpZmZpY3VsdHkgd2l0aGluIHRoZSIpCiAgICBwcmludCgiICBmYWlsaW5nIGNhdGVnb3J5LCBhbmQgY29uZm91bmRzIGFyZSBjb25maXJtZWQgZWxpbWluYXRlZC4iKQogICAgcHJpbnQoIiAgVGhlIGVuY29kZXIgbWFya3MgYWxsIGp1bXAtY29tcG91bmQgZXhhbXBsZXMgdW5pZm9ybWx5IGF0IHRoZSIpCiAgICBwcmludCgiICB0b2tlbiBsZXZlbC4gRGVjb2RlciBmYWlsdXJlIGlzIGRldGVybWluZWQgb24gZGVjb2Rlci1zaWRlIGdyb3VuZHMuIikKICAgIHByaW50KCkKICAgIHByaW50KCIgIE5leHQ6IFMtMDQ2IOKAlCBjYXVzYWwgYml0IHByb2JlcyBvbiBmcm96ZW4gVDUgZW5jb2RlciBsYXllciA1LiIpCiAgICBwcmludCgiICBJZiBwcm9iZSBhY2N1cmFjeSBpcyBoaWdoLCB0aGUgZW5jb2RlciBjb250YWlucyB0aGUgcmlnaHQgYml0cyIpCiAgICBwcmludCgiICBidXQgdGhlIGRlY29kZXIgZmFpbHMgdG8gY29tcG9zZSB0aGVtIGluIHRoaXMgY29uZGl0aW9uLiIpCmVsc2U6CiAgICBwcmludCgiICBNaXhlZCByZXN1bHQuIENoZWNrIGNvbmZvdW5kIGNvcnJlbGF0aW9ucyBhbmQgbl9za2lwcGVkIGFib3ZlLiIpCiAgICBwcmludCgiICBJZiBLMiBmaXJlZCwgaW52ZXN0aWdhdGUgdG9rZW5pemF0aW9uIGFsaWdubWVudCBiZWZvcmUgUy0wNDYuIikKCnByaW50KGYiXG57Jz0nKjcwfSIpCnByaW50KGYiICBFTkQge1NDUklQVF9JRH0iKQpwcmludChmInsnPScqNzB9XG4iKQo=
+#!/usr/bin/env python3
+"""
+S-045_PER_TOKEN_BC.py — Per-Token BC Defect at Jump Position
+Applied Categorical Physics Workbench
+Troy Teno | May 2026 | Open Access
+
+Pre-registered: workbench/proposals/S-045_PER_TOKEN_BC_PROPOSAL.md
+Validated at toy scale by G-047 (morphism-type distinction finding).
+DO NOT modify hypotheses after seeing results.
+
+─────────────────────────────────────────────────────────────────────
+SETUP (run once in Colab):
+  pip install torch transformers sentencepiece numpy scipy -q
+
+REQUIRES (both must be present in working directory or Drive):
+  043_t5_scan_checkpoint/    — fine-tuned T5 weights from S-043
+  043_family_ab_results.json — per-example BC data from S-043/S-044
+
+If the checkpoint was lost (Colab session expiry), re-run S-043 Phase 3
+(training only, ~30-60 min on T4). Save to Drive so this doesn't repeat:
+  !cp -r 043_t5_scan_checkpoint /content/drive/MyDrive/
+
+Runtime: ~5-15 min on T4 GPU (encoder forward passes only, no generation)
+─────────────────────────────────────────────────────────────────────
+
+WHAT THIS SCRIPT ASKS:
+  S-044 showed that mean-pool BC defect does not separate failures from
+  successes within the jump-compound group (H1 null, p=0.9999, d=−0.410).
+  The direction was reversed: successes had higher mean-pool distance.
+  Diagnosis: mean-pool is confounded by jump-token density — commands
+  with more jump tokens relative to total length score higher, but those
+  tend to be shorter commands T5 gets right.
+
+  G-047 (geometry track) confirmed the confound mechanism at toy scale
+  and identified the fix: cross-sequence per-token measurement at the
+  jump token position eliminates the count confound. The S-track already
+  uses cross-sequence (separate forward passes for "jump X" and "walk X").
+  The only change: extract the hidden state at the jump/walk position(s)
+  instead of mean-pooling over the whole sequence.
+
+  H1: per-token defect at layer 5 is higher for failures than successes.
+  H2/H3: per-token defect is NOT correlated with command length or n_jumps.
+  H4: monotone per-token layer profile for failures (layers 1→5).
+"""
+
+import numpy as np
+import json
+import os
+import sys
+from scipy import stats
+
+SCRIPT_ID     = "S-045_PER_TOKEN_BC_V0.1.0"
+N_LAYERS      = 6
+PEAK_LAYER    = 4          # 0-indexed; layer 5 (1-indexed), peak from S-043
+MAX_INPUT_LEN = 50
+CHECKPOINT_DIR = "043_t5_scan_checkpoint"
+DATA_FILE      = "043_family_ab_results.json"
+
+print(f"\n{'='*70}")
+print(f"  {SCRIPT_ID}")
+print(f"  Per-Token BC Defect at Jump Position: Failures vs Successes")
+print(f"  Cross-sequence measurement — corrected instrument for S-044 H1")
+print(f"{'='*70}")
+
+# ── Prerequisites ─────────────────────────────────────────────────────────────
+if not os.path.exists(DATA_FILE):
+    sys.exit(
+        f"\nERROR: {DATA_FILE!r} not found.\n"
+        f"Run S-043 first, or restore from Drive:\n"
+        f"  !cp -r /content/drive/MyDrive/043_family_ab_results.json ."
+    )
+
+if not os.path.exists(CHECKPOINT_DIR):
+    sys.exit(
+        f"\nERROR: Checkpoint {CHECKPOINT_DIR!r} not found.\n"
+        f"Re-run S-043 Phase 3 (training, ~30-60 min), or restore:\n"
+        f"  !cp -r /content/drive/MyDrive/043_t5_scan_checkpoint ."
+    )
+
+# ── Load S-043/S-044 artifacts ────────────────────────────────────────────────
+print(f"\n  Loading {DATA_FILE!r}...")
+with open(DATA_FILE) as f:
+    data = json.load(f)
+
+family_b_jump = data["family_b_jump"]
+N_total   = len(family_b_jump)
+n_fail    = sum(1 for r in family_b_jump if not r["correct"])
+n_success = sum(1 for r in family_b_jump if r["correct"])
+
+print(f"  {N_total} jump-compound examples: {n_fail} failures, {n_success} successes")
+
+if n_fail < 5 or n_success < 5:
+    sys.exit(f"\nInsufficient data: need ≥5 per group.")
+
+# ── Load T5 ───────────────────────────────────────────────────────────────────
+print(f"\n  Loading T5 from {CHECKPOINT_DIR!r}...")
+try:
+    import torch
+    from transformers import T5ForConditionalGeneration, T5Tokenizer
+except ImportError as e:
+    sys.exit(f"\nMissing library: {e}\nRun: pip install torch transformers sentencepiece")
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"  Device: {device}")
+
+tokenizer = T5Tokenizer.from_pretrained(CHECKPOINT_DIR)
+model     = T5ForConditionalGeneration.from_pretrained(CHECKPOINT_DIR).to(device)
+model.eval()
+print(f"  Loaded. Encoder: {N_LAYERS} layers, d=512")
+
+# ── Identify jump/walk token IDs ──────────────────────────────────────────────
+# Encode known-good examples to find the token IDs reliably.
+# "jump" and "walk" are common words; each should be a single SentencePiece token.
+_jids = tokenizer.encode("jump twice", add_special_tokens=False)
+_wids = tokenizer.encode("walk twice", add_special_tokens=False)
+jump_id = _jids[0]
+walk_id = _wids[0]
+
+print(f"\n  Token IDs:")
+print(f"    'jump' → id={jump_id}  decoded={tokenizer.decode([jump_id])!r}")
+print(f"    'walk' → id={walk_id}  decoded={tokenizer.decode([walk_id])!r}")
+
+if len(_jids) < 1 or len(_wids) < 1:
+    sys.exit("ERROR: 'jump' or 'walk' tokenization failed.")
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
+def get_hidden_states(text):
+    """Run T5 encoder. Returns (input_ids list, list of N_LAYERS arrays (seq_len, 512))."""
+    toks = tokenizer(
+        text, return_tensors="pt",
+        max_length=MAX_INPUT_LEN, truncation=True
+    ).to(device)
+    with torch.no_grad():
+        enc = model.encoder(
+            input_ids=toks["input_ids"],
+            attention_mask=toks["attention_mask"],
+            output_hidden_states=True,
+            return_dict=True,
+        )
+    ids    = toks["input_ids"][0].tolist()
+    hidden = [h[0].cpu().numpy() for h in enc.hidden_states[1:]]
+    return ids, hidden
+
+
+def per_token_bc_dist(cmd_jump, cmd_walk):
+    """
+    Cross-sequence per-token BC defect.
+
+    Runs cmd_jump and cmd_walk as separate forward passes.
+    Finds jump positions in cmd_jump tokens, walk positions in cmd_walk tokens.
+    Returns mean L2 distance across those positions per layer.
+
+    Returns: (dists, n_jump_tokens, n_total_tokens) or None on alignment failure.
+    """
+    ids_j, h_j = get_hidden_states(cmd_jump)
+    ids_w, h_w = get_hidden_states(cmd_walk)
+
+    jump_positions = [i for i, tid in enumerate(ids_j) if tid == jump_id]
+    walk_positions = [i for i, tid in enumerate(ids_w) if tid == walk_id]
+
+    # Need at least one jump position and matching counts
+    if not jump_positions:
+        return None
+    if len(jump_positions) != len(walk_positions):
+        return None
+    # Positions should be identical (only token content changes, not structure)
+    if jump_positions != walk_positions:
+        return None
+
+    dists = np.zeros(N_LAYERS)
+    for l in range(N_LAYERS):
+        layer_dists = [
+            float(np.linalg.norm(h_j[l][jp] - h_w[l][wp]))
+            for jp, wp in zip(jump_positions, walk_positions)
+        ]
+        dists[l] = np.mean(layer_dists)
+
+    return dists, len(jump_positions), len(ids_j)
+
+# ── Phase 1: Compute per-token BC defect ─────────────────────────────────────
+print(f"\n{'='*70}")
+print(f"  PHASE 1 — COMPUTE PER-TOKEN BC DEFECT ({N_total} examples)")
+print(f"{'='*70}")
+print(f"\n  Encoder forward passes only — no generation. "
+      f"Expect ~5-15 min on T4.")
+
+results   = []
+n_skipped = 0
+
+for idx, r in enumerate(family_b_jump):
+    if idx % 50 == 0:
+        print(f"    {idx}/{N_total}...")
+
+    out = per_token_bc_dist(r["cmd_jump"], r["cmd_walk"])
+
+    if out is None:
+        n_skipped += 1
+        continue
+
+    pt_dists, n_jumps, n_tokens = out
+
+    results.append({
+        "cmd_jump":          r["cmd_jump"],
+        "cmd_walk":          r["cmd_walk"],
+        "correct":           r["correct"],
+        "n_jumps":           n_jumps,
+        "n_tokens":          n_tokens,
+        "pt_dist":           pt_dists.tolist(),
+        "pt_dist_peak":      float(pt_dists[PEAK_LAYER]),
+        "mean_pool_dist_s044": r["dist"][PEAK_LAYER],  # S-044 comparison
+    })
+
+print(f"\n  Done. Processed: {len(results)}/{N_total}  Skipped: {n_skipped}")
+if n_skipped > 10:
+    print(f"  WARNING: {n_skipped} skipped — check tokenizer alignment.")
+
+# Early save before any analysis that could crash
+with open("045_per_token_results.json", "w") as f:
+    json.dump(results, f, indent=2)
+print(f"  Early save: 045_per_token_results.json")
+
+# ── Split by outcome ──────────────────────────────────────────────────────────
+fail_r    = [r for r in results if not r["correct"]]
+success_r = [r for r in results if r["correct"]]
+n_f, n_s  = len(fail_r), len(success_r)
+
+fail_pt    = np.array([r["pt_dist_peak"]        for r in fail_r])
+success_pt = np.array([r["pt_dist_peak"]        for r in success_r])
+fail_mp    = np.array([r["mean_pool_dist_s044"] for r in fail_r])
+success_mp = np.array([r["mean_pool_dist_s044"] for r in success_r])
+
+# ── Per-layer profile ─────────────────────────────────────────────────────────
+print(f"\n{'='*70}")
+print(f"  PHASE 2 — PER-LAYER PROFILE")
+print(f"{'='*70}")
+print(f"\n  {'Layer':>7} {'Fail mean':>12} {'Succ mean':>12} {'Diff':>10} {'Ratio':>8}")
+print(f"  {'-'*55}")
+
+for l in range(N_LAYERS):
+    fm = np.mean([r["pt_dist"][l] for r in fail_r])
+    sm = np.mean([r["pt_dist"][l] for r in success_r])
+    marker = " ◄ peak" if l == PEAK_LAYER else ""
+    print(f"  Layer {l+1:>2}  {fm:>12.4f}  {sm:>12.4f}  {fm-sm:>10.4f}  "
+          f"{fm/(sm+1e-12):>8.4f}{marker}")
+
+# ── H1: per-token failures > successes at peak layer ─────────────────────────
+print(f"\n{'='*70}")
+print(f"  H1: PER-TOKEN BC DEFECT AT LAYER {PEAK_LAYER+1} — FAILURES vs SUCCESSES")
+print(f"{'='*70}")
+
+print(f"\n  Failures  mean = {fail_pt.mean():.4f}  (n={n_f})")
+print(f"  Successes mean = {success_pt.mean():.4f}  (n={n_s})")
+print(f"  S-044 reference: fail mean-pool={fail_mp.mean():.2f}  "
+      f"succ mean-pool={success_mp.mean():.2f}")
+
+stat1, p1 = stats.mannwhitneyu(fail_pt, success_pt, alternative="greater")
+h1_pass   = p1 < 0.05
+
+print(f"\n  Mann-Whitney U = {stat1:.1f}   p = {p1:.4f}")
+print(f"  H1: {'✓ CONFIRMED' if h1_pass else '✗ FAILED'}  "
+      f"({'per-token defect is graded within failure category' if h1_pass else 'no within-group difference'})")
+
+if h1_pass:
+    print(f"\n  → Per-token BC defect at jump position separates failures from")
+    print(f"    successes. The encoder's representation of the unseen primitive")
+    print(f"    is graded — mean-pool washed out the signal. The information")
+    print(f"    was present at the token level all along.")
+else:
+    print(f"\n  → Per-token BC defect does not separate failures from successes.")
+    print(f"    The encoder marks all jump-compound examples uniformly even at")
+    print(f"    the token level. K1 fires: decoder determines failure on")
+    print(f"    decoder-side grounds, not encoder representational quality.")
+
+# ── H2/H3: Confound checks ────────────────────────────────────────────────────
+print(f"\n{'='*70}")
+print(f"  H2/H3: CONFOUND CHECKS (per-token vs mean-pool)")
+print(f"{'='*70}")
+
+all_pt   = np.array([r["pt_dist_peak"]        for r in results])
+all_mp   = np.array([r["mean_pool_dist_s044"] for r in results])
+all_len  = np.array([r["n_tokens"]            for r in results])
+all_njmp = np.array([r["n_jumps"]             for r in results])
+
+r_pt_len,  _ = stats.spearmanr(all_pt, all_len)
+r_pt_njmp, _ = stats.spearmanr(all_pt, all_njmp)
+r_mp_len,  _ = stats.spearmanr(all_mp, all_len)
+r_mp_njmp, _ = stats.spearmanr(all_mp, all_njmp)
+
+print(f"\n  Spearman r with per-token defect (S-045):")
+print(f"    vs command length (n_tokens): r = {r_pt_len:+.3f}")
+print(f"    vs n_jump_tokens:             r = {r_pt_njmp:+.3f}")
+print(f"\n  Spearman r with mean-pool defect (S-044, reference):")
+print(f"    vs command length (n_tokens): r = {r_mp_len:+.3f}")
+print(f"    vs n_jump_tokens:             r = {r_mp_njmp:+.3f}")
+
+h2_pass = abs(r_pt_len)  < 0.2
+h3_pass = abs(r_pt_njmp) < 0.2
+
+print(f"\n  H2 (length confound eliminated): {'✓ CONFIRMED' if h2_pass else '✗ FAILED'}  "
+      f"|r| = {abs(r_pt_len):.3f} ({'< 0.2' if h2_pass else '>= 0.2'})")
+print(f"  H3 (count confound eliminated):  {'✓ CONFIRMED' if h3_pass else '✗ FAILED'}  "
+      f"|r| = {abs(r_pt_njmp):.3f} ({'< 0.2' if h3_pass else '>= 0.2'})")
+
+# ── H4: Monotone layer profile ────────────────────────────────────────────────
+print(f"\n{'='*70}")
+print(f"  H4: MONOTONE LAYER PROFILE (per-token, failures, layers 1-5)")
+print(f"{'='*70}")
+
+fail_means = np.array([
+    np.mean([r["pt_dist"][l] for r in fail_r])
+    for l in range(N_LAYERS - 1)   # exclude layer 6 (T5 collapse)
+])
+diffs   = np.diff(fail_means)
+h4_pass = bool(np.all(diffs > 0))
+
+print(f"\n  Layer 1-5 means (failures): " + "  ".join(f"{v:.2f}" for v in fail_means))
+print(f"  Differences:                " + "  ".join(f"{v:+.2f}" for v in diffs))
+print(f"  H4: {'✓ CONFIRMED' if h4_pass else '✗ FAILED'}  "
+      f"({'monotone' if h4_pass else 'non-monotone'})")
+
+# ── Effect size ───────────────────────────────────────────────────────────────
+print(f"\n{'='*70}")
+print(f"  EFFECT SIZE — Per-Token vs Mean-Pool Comparison at Layer {PEAK_LAYER+1}")
+print(f"{'='*70}")
+
+def cohens_d(a, b):
+    n_a, n_b = len(a), len(b)
+    if n_a + n_b < 3:
+        return 0.0
+    pooled = np.sqrt(
+        (a.std()**2 * (n_a - 1) + b.std()**2 * (n_b - 1)) / (n_a + n_b - 2)
+    )
+    return (a.mean() - b.mean()) / (pooled + 1e-12)
+
+d_pt = cohens_d(fail_pt, success_pt)
+d_mp = cohens_d(fail_mp, success_mp)
+
+def effect_label(d):
+    a = abs(d)
+    if a >= 0.8: return "large (≥ 0.8)"
+    if a >= 0.5: return "medium (0.5-0.8)"
+    if a >= 0.2: return "small (0.2-0.5)"
+    return "negligible (< 0.2)"
+
+print(f"\n  Per-token (S-045): d = {d_pt:+.3f}  [{effect_label(d_pt)}]")
+print(f"  Mean-pool (S-044): d = {d_mp:+.3f}  [{effect_label(d_mp)}]  (reference: −0.410)")
+if d_pt > d_mp:
+    print(f"  Per-token is a stronger positive signal than mean-pool.")
+elif d_pt < 0 and d_mp < 0:
+    print(f"  Both directions are reversed (successes > failures).")
+
+# ── Sample examples ───────────────────────────────────────────────────────────
+print(f"\n{'='*70}")
+print(f"  HIGH vs LOW PER-TOKEN DEFECT EXAMPLES (layer {PEAK_LAYER+1})")
+print(f"{'='*70}")
+
+sorted_fail = sorted(fail_r,    key=lambda r: r["pt_dist_peak"], reverse=True)
+sorted_succ = sorted(success_r, key=lambda r: r["pt_dist_peak"], reverse=True)
+
+print(f"\n  Top-3 failures (highest per-token defect, model wrong):")
+for r in sorted_fail[:3]:
+    print(f"    pt={r['pt_dist_peak']:.2f}  mp={r['mean_pool_dist_s044']:.2f}"
+          f"  len={r['n_tokens']}  nj={r['n_jumps']}  {r['cmd_jump']}")
+
+print(f"\n  Top-3 successes (highest per-token defect, model right):")
+for r in sorted_succ[:3]:
+    print(f"    pt={r['pt_dist_peak']:.2f}  mp={r['mean_pool_dist_s044']:.2f}"
+          f"  len={r['n_tokens']}  nj={r['n_jumps']}  {r['cmd_jump']}")
+
+print(f"\n  Bottom-3 failures (lowest per-token defect, model wrong):")
+for r in sorted_fail[-3:]:
+    print(f"    pt={r['pt_dist_peak']:.2f}  mp={r['mean_pool_dist_s044']:.2f}"
+          f"  len={r['n_tokens']}  nj={r['n_jumps']}  {r['cmd_jump']}")
+
+# ── Save verdict ──────────────────────────────────────────────────────────────
+verdict = [
+    f"VERDICT — {SCRIPT_ID}",
+    f"",
+    f"N failures:  {n_f}",
+    f"N successes: {n_s}",
+    f"N skipped:   {n_skipped}",
+    f"",
+    f"H1: {'✓ CONFIRMED' if h1_pass else '✗ FAILED'}  "
+        f"p={p1:.4f}  fail={fail_pt.mean():.4f}  succ={success_pt.mean():.4f}",
+    f"H2: {'✓ CONFIRMED' if h2_pass else '✗ FAILED'}  "
+        f"length confound r={r_pt_len:.3f}  (mean-pool ref: {r_mp_len:.3f})",
+    f"H3: {'✓ CONFIRMED' if h3_pass else '✗ FAILED'}  "
+        f"count confound  r={r_pt_njmp:.3f}  (mean-pool ref: {r_mp_njmp:.3f})",
+    f"H4: {'✓ CONFIRMED' if h4_pass else '✗ FAILED'}  "
+        f"{'monotone' if h4_pass else 'non-monotone'} layer profile",
+    f"",
+    f"Cohen's d (per-token S-045): {d_pt:+.3f}",
+    f"Cohen's d (mean-pool S-044): {d_mp:+.3f}",
+]
+with open("045_verdict.txt", "w") as f:
+    f.write("\n".join(verdict) + "\n")
+print(f"\n  Saved: 045_per_token_results.json  045_verdict.txt")
+
+# ── VERDICT ───────────────────────────────────────────────────────────────────
+print(f"\n{'='*70}")
+print(f"  VERDICT SUMMARY — {SCRIPT_ID}")
+print(f"{'='*70}")
+
+print(f"\n  {'✓' if h1_pass else '✗'} H1  Per-token defect separates failures from successes  (p={p1:.4f})")
+print(f"  {'✓' if h2_pass else '✗'} H2  Length confound eliminated  (r={r_pt_len:+.3f})")
+print(f"  {'✓' if h3_pass else '✗'} H3  Count confound eliminated   (r={r_pt_njmp:+.3f})")
+print(f"  {'✓' if h4_pass else '✗'} H4  Monotone layer profile 1→5")
+print(f"\n  Per-token Cohen's d = {d_pt:+.3f}  (mean-pool S-044 reference: {d_mp:+.3f})")
+print()
+
+if h1_pass and h2_pass and h3_pass:
+    print("  BC defect is graded at the per-token level within the failing")
+    print("  category. Mean-pool (S-044) washed out the signal by diluting")
+    print("  jump positions over the whole command sequence.")
+    print()
+    print("  The encoder's representation of the unseen primitive at the")
+    print("  jump token position predicts per-example decoder failure.")
+    print("  This is the strongest S-track result to date.")
+    print()
+    print("  Next: S-046 — causal bit probes on frozen T5 encoder layer 5.")
+elif h1_pass and not (h2_pass and h3_pass):
+    print("  H1 confirmed but confound check failed. The separation is real")
+    print("  but may be partially driven by a residual length/count artifact.")
+    print("  Investigate before treating as a clean result.")
+elif not h1_pass and h2_pass and h3_pass:
+    print("  K1 fires: per-token defect does not grade difficulty within the")
+    print("  failing category, and confounds are confirmed eliminated.")
+    print("  The encoder marks all jump-compound examples uniformly at the")
+    print("  token level. Decoder failure is determined on decoder-side grounds.")
+    print()
+    print("  This is consistent with Sargsyan's theorem: the failure is")
+    print("  functorial (decoder), not representational (encoder).")
+    print()
+    print("  Next: S-046 — causal bit probes on frozen T5 encoder layer 5.")
+    print("  If probe accuracy is high, the encoder contains the right bits")
+    print("  but the decoder fails to compose them. in this condition.")
+else:
+    print("  Mixed result. Check confound correlations and n_skipped above.")
+    print("  If K2 fired, investigate tokenization alignment before S-046.")
+
+print(f"\n{'='*70}")
+print(f"  END {SCRIPT_ID}")
+print(f"{'='*70}\n")
