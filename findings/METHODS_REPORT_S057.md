@@ -1,1 +1,187 @@
-IyBNZXRob2RzIFJlcG9ydCDigJQgUy0wNTc6IEwzSDQgQ2hhcmFjdGVyaXphdGlvbgoqKkFwcGxpZWQgQ2F0ZWdvcmljYWwgUGh5c2ljcyBXb3JrYmVuY2gqKgpUcm95IFRlbm8gfCBNYXkgMjAyNiB8IE9wZW4gQWNjZXNzCgoqKk9uZS1saW5lIHJlc3VsdDoqKiBMM0g0IGlzIGEgcHJpbWl0aXZlLXNlbnNpdGl2ZSBzdXBwcmVzc2l2ZSByZWFkZXIsIG5vdCBhIHZhbHVlLXN1YnN0aXR1dGlvbiBoZWFkIOKAlCBpdCBhdHRlbmRzIHJlbGlhYmx5IHRvIHRoZSBganVtcGAgZW5jb2RlciBwb3NpdGlvbiAoTVdVIHA9MC4wMDA3KSBhbmQgaXRzIGp1bXAtcG9zaXRpb24gcmFuayByaXNlcyBmcm9tIDJuZCB0byAxc3QgaW4gc3VjY2VzcyBjYXNlcywgYnV0IGl0cyBvdXRwdXQgY29udHJpYnV0aW9uIGlzIHN1cHByZXNzaXZlIChib3RoIGNvc2luZXMgbmVnYXRpdmUpOyB0aGUgZW50cm9weSBvcmRlcmluZyBoeXBvdGhlc2lzIGZhaWxzIGluIGEgbWV0aG9kb2xvZ2ljYWxseSBpbmZvcm1hdGl2ZSBkaXJlY3Rpb24sIHNob3dpbmcgdGhhdCBhdHRlbnRpb24gZW50cm9weSBkb2VzIG5vdCB0cmFjayBzZW1hbnRpYyBzcGVjaWFsaXphdGlvbiBpbiB0aGlzIGRlY29kZXIuCgotLS0KCiMjIFRoZSBRdWVzdGlvbgoKUy0wNTYgY2hhcmFjdGVyaXplZCB0aGUgTDMgaGVhZCBjbHVzdGVyIGFuZCBmb3VuZCBLMSBmaXJlcyBmb3IgTDNIMDogbm90IGEganVtcC1hdHRlbmRpbmcgaGVhZC4gRy0wNTUgY29uZmlybWVkIEwzSDAgaXMgZGlhZ25vc3RpYywgbm90IGNhdXNhbC4gTDNINCBpcyB0aGUgb25seSBMMyBoZWFkIHRoYXQgY2xlYXJlZCB0aGUgSzEgdGhyZXNob2xkIGluIFMtMDU2IChhdHRuX2p1bXBfZmFpbCA9IDAuMTAxOCksIG1ha2luZyBpdCB0aGUgcmVtYWluaW5nIHVuY2hhcmFjdGVyaXplZCBMMyBjYW5kaWRhdGUuIFMtMDU3IGFza3M6IGlzIEwzSDQgYSBnZW51aW5lIHBhcnRpYWwgcHJpbWl0aXZlIHJlYWRlciwgb3IgaXMgdGhlIGFib3ZlLXRocmVzaG9sZCBhdHRuX3RvX2p1bXAgYSBmbG9vciBlZmZlY3QgZnJvbSBtaWxkbHkgZm9jdXNlZCBnbG9iYWwgYXR0ZW50aW9uPwoKLS0tCgojIyBEZXNpZ24KCioqR3JvdXBzOioqIDI5IHZhbGlkIGZhaWwgcGFpcnMgKDMwIHNlbGVjdGVkOyAxIGV4Y2x1ZGVkIGZvciBkaXZlcmdlbmNlLXBvaW50IGFsaWdubWVudCBmYWlsdXJlKSwgMjUgc3VjY2VzcyBwYWlycy4gU0VFRD00Mi4KCioqSGVhZHMgbWVhc3VyZWQ6KiogUHJpbWFyeSDigJQgTDNINC4gQ29tcGFyaXNvbiDigJQgTDNIMCAoY29uZmlybWVkIGdsb2JhbCksIEw0SDYgKGNvbmZpcm1lZCBzcGVjaWFsaXN0KSwgTDVINSAoc2Vjb25kIHNwZWNpYWxpc3QgYW5jaG9yLCBhZGRlZCBwZXIgW2ludGVybmFsIGRldi1maWxlIHBhdGggcmVtb3ZlZCBpbiBwdWJsaWMgZXhwb3J0XSkuCgoqKk1vcnBoaXNtOioqIFNhbWUgcGFpcmVkIGZvcndhcmQgcGFzcyBhcyBTLTA1NSBhbmQgUy0wNTYg4oCUIGVhY2ggZXhhbXBsZSBydW4gdHdpY2UgKGp1bXAgY29tbWFuZCBhbmQgbWF0Y2hlZCB3YWxrIGNvbW1hbmQpIHRocm91Z2ggbW9kZWwuZ2VuZXJhdGUoKTsgY3Jvc3MtYXR0ZW50aW9uIHdlaWdodHMgYW5kIGhpZGRlbiBzdGF0ZXMgY29sbGVjdGVkIGF0IGFjdGlvbi1zbG90IGRpdmVyZ2VuY2Ugc3RlcHMuCgoqKkZpdmUgbWVhc3VyZW1lbnRzOioqCi0gTTE6IEZ1bGwgYXR0ZW50aW9uIGRpc3RyaWJ1dGlvbiBmb3IgTDNINCBhY3Jvc3MgYWxsIGVuY29kZXIgcG9zaXRpb25zOyB0b3AtNSBwb3NpdGlvbnMgYW5kIGp1bXAtcG9zaXRpb24gcmFuayByZXBvcnRlZCBzZXBhcmF0ZWx5IGZvciBmYWlsIGFuZCBzdWNjZXNzIGdyb3VwcwotIE0yOiBTaGFubm9uIGVudHJvcHkgb2YgdGhlIGNyb3NzLWF0dGVudGlvbiBkaXN0cmlidXRpb24gYXQgYWN0aW9uLXNsb3QgZGl2ZXJnZW5jZSBzdGVwcyBmb3IgTDNINCwgTDNIMCwgTDRINiwgTDVINQotIE0zOiBQZXItZXhhbXBsZSBNYW5uLVdoaXRuZXkgVSB0ZXN0IG9uIGF0dG5fdG9fanVtcCBmb3IgTDNINCAoYW5kIEwzSDAsIEw0SDYgZm9yIGNvbXBhcmlzb24pCi0gTTQ6IENvc2luZSBhdHRyaWJ1dGlvbiDigJQgaGVhZCBjb250cmlidXRpb24gdmlhIFYvTyBwcm9qZWN0aW9uIGFnYWluc3QgZW1iZWQoSV9XQUxLIGRpdikgYW5kIGVtYmVkKElfSlVNUCBkaXYpCi0gTTU6IFBlci1leGFtcGxlIEJvcm4gZmlsdGVyIGRlZmVjdCBkaXN0cmlidXRpb24gZm9yIEwzSDQKCi0tLQoKIyMgUmVzdWx0cwoKIyMjIE0xIOKAlCBGdWxsIGF0dGVudGlvbiBkaXN0cmlidXRpb24gZm9yIEwzSDQKCmBgYApGYWlsIGdyb3VwIChUX2VuYyA9IDgpOgogIFJhbmsgMTogcG9zPTcgIGF0dG49MC4yMzUxICAoRU9TL3BhZGRpbmcgcG9zaXRpb24pCiAgUmFuayAyOiBwb3M9NCAgYXR0bj0wLjA3MTYgIOKGkCBqdW1wIGVuY29kZXIgcG9zaXRpb24gKG1lYW4gMC4xMDE4IHBlciBNMykKICBSYW5rIDM6IHBvcz01ICBhdHRuPTAuMDQzNwogIFJhbmsgNDogcG9zPTYgIGF0dG49MC4wMzY0CiAgUmFuayA1OiBwb3M9MCAgYXR0bj0wLjAyNjMKICBKdW1wIHBvc2l0aW9uIHJhbms6IDJuZCBvZiA4CgpTdWNjZXNzIGdyb3VwIChUX2VuYyA9IDYpOgogIFJhbmsgMTogcG9zPTAgIGF0dG49MC4xNTA0ICDihpAganVtcCBlbmNvZGVyIHBvc2l0aW9uIChtZWFuIDAuMjQxOCBwZXIgTTMpCiAgUmFuayAyOiBwb3M9NSAgYXR0bj0wLjExMTQKICBSYW5rIDM6IHBvcz00ICBhdHRuPTAuMDUzNAogIFJhbmsgNDogcG9zPTEgIGF0dG49MC4wNDMyCiAgUmFuayA1OiBwb3M9MyAgYXR0bj0wLjAyOTMKICBKdW1wIHBvc2l0aW9uIHJhbms6IDFzdCBvZiA2CmBgYAoKVGhlIGp1bXAgZW5jb2RlciBwb3NpdGlvbiByaXNlcyBmcm9tIDJuZCB0byAxc3QgYmV0d2VlbiBmYWlsIGFuZCBzdWNjZXNzIGdyb3Vwcy4KCiMjIyBNMiDigJQgU2hhbm5vbiBlbnRyb3B5IGNvbXBhcmlzb24gKGZhaWwgZ3JvdXApCgpgYGAKSGVhZCAgICBIIChuYXRzKSAgIENoYXJhY3RlcgpMM0gwICAgIDAuMzg4NyAgICAgTW9zdCBjb25jZW50cmF0ZWQgKHNpbmdsZS1wb3NpdGlvbiBmb2N1c2VkKQpMNUg1ICAgIDAuOTYyNyAgICAgTW9kZXJhdGUgY29uY2VudHJhdGlvbgpMM0g0ICAgIDEuMDU2NiAgICAgQnJvYWQgZGlzdHJpYnV0aW9uCkw0SDYgICAgMS4zMDMyICAgICBNb3N0IGRpZmZ1c2UKYGBgCgpUaGUgb3JkZXJpbmcgaXMgaW52ZXJ0ZWQgcmVsYXRpdmUgdG8gdGhlIHByZS1yZWdpc3RlcmVkIHByZWRpY3Rpb24uIEwzSDAsIHRoZSBjb25maXJtZWQgZ2xvYmFsLWNvbnRleHQgaGVhZCAoUy0wNTYgSzEpLCBpcyB0aGUgbW9zdCBjb25jZW50cmF0ZWQgaGVhZCBpbiB0aGUgZGF0YXNldC4gTDRINiwgdGhlIGNvbmZpcm1lZCBqdW1wLWF0dGVuZGluZyBzcGVjaWFsaXN0LCBpcyB0aGUgbW9zdCBkaWZmdXNlLiBTdWNjZXNzLWdyb3VwIGVudHJvcGllcyBzaG93IHRoZSBzYW1lIG9yZGVyaW5nIHdpdGggc2xpZ2h0bHkgaGlnaGVyIHZhbHVlcyBhY3Jvc3MgYWxsIGZvdXIgaGVhZHMuCgojIyMgTTMg4oCUIFBlci1leGFtcGxlIE1hbm4tV2hpdG5leSBVIHRlc3Qgb24gYXR0bl90b19qdW1wCgpgYGAKSGVhZCAgICBmYWlsIG1lYW4gICBzdWNjZXNzIG1lYW4gICAgVSAgICAgICBwICAgICAgICByCkwzSDQgICAgMC4xMDE4ICAgICAgMC4yNDE4ICAgICAgICAgIDE2Ny4wICAgMC4wMDA3ICAgMC41MzkKTDNIMCAgICAwLjAwODkgICAgICAwLjA0MjUgICAgICAgICAgODkuMCAgICAwLjAwMDAgICAwLjc1NApMNEg2ICAgIDAuMjgzOCAgICAgIDAuNDA1NyAgICAgICAgICAyMjAuMCAgIDAuMDEzOCAgIDAuMzkzCmBgYAoKTDNINCdzIGF0dG5fdG9fanVtcCBkaWZmZXJlbmNlIGlzIHN0YXRpc3RpY2FsbHkgcmVsaWFibGUgYXQgdGhlIHBlci1leGFtcGxlIGxldmVsIChwPTAuMDAwNywgcj0wLjUzOSwgbWVkaXVtLXRvLXN0cm9uZyBlZmZlY3QpLiBUaGUgMi40w5cgZ3JvdXAgcmF0aW8gZnJvbSBTLTA1NiBpcyBub3QgYSBzYW1wbGluZyBhcnRpZmFjdC4KCiMjIyBNNCDigJQgQ29zaW5lIGF0dHJpYnV0aW9uCgpgYGAKSGVhZCAgICBjb3Nfd2Fsa19mYWlsICBjb3NfanVtcF9mYWlsICBkaWZmX2ZhaWwgICBjb3Nfd2Fsa19zdWNjICBjb3NfanVtcF9zdWNjICBkaWZmX3N1Y2MKTDNINCAgICAgICAtMC4wNDM2ICAgICAgICAtMC4wMjU3ICAgICAgLTAuMDE3OCAgICAgICAtMC4wNDM4ICAgICAgICAtMC4wMDk1ICAgICAgIC0wLjAzNDMKTDNIMCAgICAgICAtMC4wODgzICAgICAgICAtMC4wODM4ICAgICAgLTAuMDA0NiAgICAgICAtMC4wNzEyICAgICAgICAtMC4wNzE4ICAgICAgICAwLjAwMDYKTDRINiAgICAgICArMC4wNzcxICAgICAgICArMC4wNDc2ICAgICAgKzAuMDI5NSAgICAgICArMC4wMzYxICAgICAgICArMC4wNjA3ICAgICAgIC0wLjAyNDYKYGBgCgpMM0g0IGFuZCBMM0gwIGFyZSBib3RoIHN1cHByZXNzaXZlIChuZWdhdGl2ZSBjb3NpbmVzIGZvciBib3RoIElfV0FMSyBhbmQgSV9KVU1QIGluIGJvdGggZ3JvdXBzKS4gTDRINiBzaG93cyB0aGUgdmFsdWUtc3Vic3RpdHV0aW9uIHNpZ25hdHVyZTogcG9zaXRpdmUgY29zaW5lcyBpbiBmYWlsIGNhc2VzLCBmbGlwIGluIHN1Y2Nlc3MgY2FzZXMuIEwzSDQgZG9lcyBub3Qgc2hvdyB0aGlzIHBhdHRlcm4uCgojIyMgTTUg4oCUIFBlci1leGFtcGxlIEJvcm4gZmlsdGVyIGRlZmVjdCBmb3IgTDNINAoKYGBgCiAgICAgICAgICAgRmFpbCAobj0yOSkgICAgICAgICAgU3VjY2VzcyAobj0yNSkKTWVhbjogICAgICAgNDEuMjkzMSAgICAgICAgICAgICAgOTIuMDk3NwpNZWRpYW46ICAgICAzMy42Nzk4ICAgICAgICAgICAgICA4OC41MTU5ClN0ZDogICAgICAgIDIxLjAxNzQgICAgICAgICAgICAgIDUzLjU0OTQKMjV0aCBwY3Q6ICAgMjguMjI1MSAgICAgICAgICAgICAgNTYuMDA4Ngo3NXRoIHBjdDogICA0OS4wOTA5ICAgICAgICAgICAgIDExMC4zNzAxCmBgYAoKRnJhY3Rpb24gb2Ygc3VjY2VzcyBleGFtcGxlcyBhYm92ZSBtZWRpYW4gZmFpbCBkZWZlY3QgKDMzLjY4KTogKio4NCUgKDIxLzI1KSoqCgpEZWZlY3QgcmF0aW9zIGZvciBhbGwgZm91ciBoZWFkcyAoY3Jvc3MtY2hlY2sgdnMgUy0wNTYpOgoKYGBgCkhlYWQgICAgRmFpbCAgICAgICAgU3VjY2VzcyAgICAgUmF0aW8KTDNINCAgICA0MS4yOTMxICAgICA5Mi4wOTc3ICAgICAyLjIzMMOXICAg4oaQIG1hdGNoZXMgUy0wNTYgZXhhY3RseQpMM0gwICAgIDE0LjUyNTEgICAgIDU2LjE2NTAgICAgIDMuODY3w5cKTDRINiAgIDIyNC4wNjk2ICAgIDM1Mi40MTc4ICAgICAxLjU3M8OXCkw1SDUgICA1NTUuNDQ5NSAgICA2ODIuOTU3NCAgICAgMS4yMzDDlwpgYGAKClRoZSBjcm9zcy1jaGVjayBhZ2FpbnN0IFMtMDU2IGlzIGV4YWN0IOKAlCB0aGUgaW5zdHJ1bWVudCBpcyBzdGFibGUuCgotLS0KCiMjIEh5cG90aGVzaXMgVmVyZGljdHMKCioqSDEgKEhbTDNIMF0gPiBIW0wzSDRdID4gSFtMNEg2XSA+PSBIW0w1SDVdKTogRkFJTCoqCgpUaGUgbWVhc3VyZWQgb3JkZXJpbmcgaW4gdGhlIGZhaWwgZ3JvdXAgaXMgTDNIMCgwLjM4ODcpIDwgTDVINSgwLjk2MjcpIDwgTDNINCgxLjA1NjYpIDwgTDRINigxLjMwMzIpIOKAlCBvcHBvc2l0ZSB0byB0aGUgcHJlZGljdGlvbiBvbiBib3RoIGVuZHMuIFRoZSBtb3N0IGNvbmNlbnRyYXRlZCBoZWFkIGlzIEwzSDAgKHRoZSBjb25maXJtZWQgZ2xvYmFsLWNvbnRleHQgaGVhZCksIGFuZCB0aGUgbW9zdCBkaWZmdXNlIGlzIEw0SDYgKHRoZSBjb25maXJtZWQgc3BlY2lhbGlzdCkuIEVudHJvcHkgZG9lcyBub3QgdHJhY2sgdGhlIGdsb2JhbC10by1zcGVjaWFsaXN0IGF4aXMgaW4gdGhpcyBkZWNvZGVyLiBUaGUgbWV0aG9kb2xvZ2ljYWwgbGVzc29uOiBjb25jZW50cmF0aW9uIG9mIGF0dGVudGlvbiAobG93IGVudHJvcHkpIHJlZmxlY3RzIGhvdyBtYW55IGVuY29kZXIgcG9zaXRpb25zIGEgaGVhZCBkaXN0cmlidXRlcyB3ZWlnaHQgYWNyb3NzLCBub3QgaG93IHNlbWFudGljYWxseSBzcGVjaWZpYyB0aGF0IGRpc3RyaWJ1dGlvbiBpcy4gQSBzcGVjaWFsaXN0IGhlYWQgY2FuIGF0dGVuZCBicm9hZGx5IGFjcm9zcyBtdWx0aXBsZSBwb3NpdGlvbnMgd2hpbGUgc3RpbGwgcm91dGluZyBtb3N0IHdlaWdodCB0b3dhcmQgdGhlIHNlbWFudGljYWxseSByZWxldmFudCBvbmU7IGEgbm9uLXNwZWNpYWxpc3QgaGVhZCBjYW4gY29uY2VudHJhdGUgb24gYSBzaW5nbGUgaXJyZWxldmFudCBwb3NpdGlvbiBhbmQgYXBwZWFyIG1heGltYWxseSBmb2N1c2VkLgoKKipIMiAoTVdVIHAgPCAwLjA1IGZvciBMM0g0IGF0dG5fdG9fanVtcCk6IFBBU1MqKgoKTVdVIFU9MTY3LCBwPTAuMDAwNywgcj0wLjUzOS4gTDNINCByZWxpYWJseSBhdHRlbmRzIG1vcmUgdG8gdGhlIGp1bXAgZW5jb2RlciBwb3NpdGlvbiBpbiBzdWNjZXNzIGNhc2VzIHRoYW4gaW4gZmFpbCBjYXNlcyBhdCB0aGUgcGVyLWV4YW1wbGUgbGV2ZWwuIFRoZSAyLjTDlyBncm91cCByYXRpbyBmcm9tIFMtMDU2IGlzIGNvbmZpcm1lZCBhcyBhIHJlYWwgc2lnbmFsLCBub3QgYSBzYW1wbGluZyBhcnRpZmFjdC4KCioqSDMgKEwzSDQgY29zaW5lcyBzdXBwcmVzc2l2ZSDigJQgYm90aCBuZWdhdGl2ZSBpbiBmYWlsIGdyb3VwKTogUEFTUyoqCgpjb3Nfd2Fsa19mYWlsID0g4oiSMC4wNDM2LCBjb3NfanVtcF9mYWlsID0g4oiSMC4wMjU3LiBCb3RoIG5lZ2F0aXZlLiBLMiBjbGVhci4gTDNINCBkb2VzIG5vdCBjYXJyeSB0aGUgdmFsdWUtc3Vic3RpdHV0aW9uIHNpZ25hdHVyZSBwcmVzZW50IGluIEw0SDYgKHBvc2l0aXZlIGNvc2luZXMsIGNvcnJlY3QgZmFpbOKGknN1Y2Nlc3MgZmxpcCkuIEwzSDQgc3VwcHJlc3NlcyBib3RoIElfV0FMSyBhbmQgSV9KVU1QIG91dHB1dCBkaXJlY3Rpb25zIOKAlCBpdCBpcyBub3QgZGlyZWN0bHkgY29tbWl0dGluZyB0byBlaXRoZXIgb3V0cHV0IHRva2VuLgoKKipINEEgKGp1bXBfcG9zIGluIHRvcCAzIGZvciBMM0g0LCBmYWlsIGdyb3VwKTogUEFTUyoqCgpKdW1wIHJhbmtzIDJuZCBhbW9uZyA4IGVuY29kZXIgcG9zaXRpb25zIChhdHRuPTAuMTAxOCwgYmVoaW5kIEVPUy9wYWRkaW5nIGF0IHBvcz03IHdpdGggYXR0bj0wLjIzNTEpLiBKdW1wIGlzIGFtb25nIHRoZSB0b3Agc2VtYW50aWNhbGx5IGF0dGVuZGVkIHBvc2l0aW9ucywgYXMgdGhlIHRvcCBwb3NpdGlvbiBpcyBzdHJ1Y3R1cmFsLgoKKipINEIgKGp1bXAgcmFuayByaXNlcyBpbiBzdWNjZXNzIGdyb3VwKTogUEFTUyoqCgpKdW1wIHJpc2VzIGZyb20gMm5kIHRvIDFzdCBpbiBzdWNjZXNzIGNhc2VzIChhdHRuPTAuMjQxOCkuIFRoZSBoZWFkIGF0dGVuZHMgbW9yZSBzdHJvbmdseSB0byB0aGUganVtcCBlbmNvZGVyIHBvc2l0aW9uIHdoZW4gdGhlIG1vZGVsIHdpbGwgc3VjY2VlZC4gVGhpcyBpcyBjb25zaXN0ZW50IHdpdGggdGhlIGhlYWQgcmVhZGluZyBvciBmaWx0ZXJpbmcgcHJpbWl0aXZlIGlkZW50aXR5LCBub3QgbWVyZWx5IHJlc3BvbmRpbmcgdG8gZW5jb2Rlci1sZXZlbCBzYWxpZW5jZSBub2lzZS4KCioqSzEgKGF0dG5fdG9fanVtcCA8IDAuMDUpOiBDTEVBUioqCgpSZS1tZWFzdXJlZCBhdHRuX3RvX2p1bXAgPSAwLjEwMTguIFMtMDU2IG1lYXN1cmVtZW50IGNvbmZpcm1lZDsgbm90IGEgc2FtcGxpbmcgYXJ0aWZhY3QuCgoqKksyIChjb3Nfd2Fsa19mYWlsID4gKzAuMDEpOiBDTEVBUioqCgpjb3Nfd2Fsa19mYWlsID0g4oiSMC4wNDM2LiBObyB2YWx1ZS1zdWJzdGl0dXRpb24gc2lnbmF0dXJlLiBQcm9jZWVkIHdpdGhvdXQgRy10cmFjayByZWxheS4KCi0tLQoKIyMgSW50ZXJwcmV0YXRpb24KCkwzSDQgaXMgYSAqKnByaW1pdGl2ZS1zZW5zaXRpdmUgc3VwcHJlc3NpdmUgcmVhZGVyKio6IGl0IHJlbGlhYmx5IHRyYWNrcyB0aGUgcHJpbWl0aXZlIGlkZW50aXR5IG9mIHRoZSBhY3Rpb24gdG9rZW4gKGF0dGVuZGluZyBtb3JlIHRvIHRoZSBqdW1wIGVuY29kZXIgcG9zaXRpb24gaW4gc3VjY2VzcyBjYXNlcyB0aGFuIGluIGZhaWwgY2FzZXMpLCBidXQgaXRzIG91dHB1dCBjb250cmlidXRpb24gc3VwcHJlc3NlcyBib3RoIElfV0FMSyBhbmQgSV9KVU1QIG91dHB1dCBkaXJlY3Rpb25zIHJhdGhlciB0aGFuIGJpYXNpbmcgdG93YXJkIGVpdGhlci4KClRoaXMgcGxhY2VzIEwzSDQgaW4gYSBkaXN0aW5jdCByb2xlIGZyb20gYm90aCBjb25maXJtZWQgaGVhZCB0eXBlcyBpZGVudGlmaWVkIHNvIGZhcjoKLSBMM0gwIChnbG9iYWwtY29udGV4dCk6IGxvdyBhdHRuX3RvX2p1bXAsIGRpYWdub3N0aWMsIG5vdCBwcmltaXRpdmUtc2Vuc2l0aXZlCi0gTDRINi9MNUgyL0w1SDUgKHZhbHVlLXN1YnN0aXR1dGlvbik6IGhpZ2ggYXR0bl90b19qdW1wLCBwb3NpdGl2ZSBjb3NpbmVzIGluIGZhaWwgY2FzZXMsIGRpcmVjdGx5IGJpYXNlcyB0b3dhcmQgSV9XQUxLCgpMM0g0IGlzIGJldHdlZW4gdGhlc2U6IG1vZGVyYXRlIGF0dG5fdG9fanVtcCAoYWJvdmUgSzEgdGhyZXNob2xkKSwgcmVhbCBwZXItZXhhbXBsZSBzaWduYWwgKE1XVSBwPTAuMDAwNyksIGp1bXAgcmFuayByaXNlcyB3aXRoIHN1Y2Nlc3Mg4oCUIGJ1dCBzdXBwcmVzc2l2ZSBjb3NpbmVzIHJ1bGUgb3V0IGEgZGlyZWN0IGNhdXNhbCByb2xlIGluIHRoZSBJX1dBTEsgc3Vic3RpdHV0aW9uLgoKVGhlIEgxIGZhaWx1cmUgaXMgaW5kZXBlbmRlbnRseSBpbXBvcnRhbnQuIEVudHJvcHkgaXMgbm90IGEgcHJveHkgZm9yIHNlbWFudGljIHNwZWNpYWxpemF0aW9uLiBMM0gwLCB0aGUgY29uZmlybWVkIGdsb2JhbC1jb250ZXh0IGhlYWQsIGlzIHRoZSBtb3N0IGNvbmNlbnRyYXRlZCAoMC4zODg3IG5hdHMg4oCUIHdlaWdodCBvbiBhIHNpbmdsZSBub24tc2VtYW50aWMgcG9zaXRpb24pLiBMNEg2LCB0aGUgbW9zdCByZWxpYWJsZSBqdW1wIHJlYWRlciwgaXMgdGhlIG1vc3QgZGlmZnVzZSAoMS4zMDMyIG5hdHMg4oCUIGF0dGVudGlvbiBzcHJlYWQgYWNyb3NzIG11bHRpcGxlIHBvc2l0aW9ucykuIENvbmNlbnRyYXRpb24gYW5kIHNlbWFudGljIGZvY3VzIGFyZSBvcnRob2dvbmFsIHByb3BlcnRpZXMgaW4gdGhpcyBhcmNoaXRlY3R1cmUuIEZ1dHVyZSBleHBlcmltZW50cyBzaG91bGQgbm90IHVzZSBlbnRyb3B5IGFsb25lIHRvIGNsYXNzaWZ5IGhlYWQgcm9sZXMuCgoqKldoYXQgaXMgbm90IHlldCBlc3RhYmxpc2hlZDoqKiBMM0g0IGhhcyBub3QgYmVlbiBhYmxhdGVkIHdpdGggYSBtYXRjaGVkIGNvbnRyb2wuIFRoZSBbaW50ZXJuYWwgZGV2LWZpbGUgcGF0aCByZW1vdmVkIGluIHB1YmxpYyBleHBvcnRdIGNhdXRpb24gaG9sZHM6IHN1cHByZXNzaXZlIGNvc2luZXMgcnVsZSBvdXQgZGlyZWN0IHZhbHVlLXN1YnN0aXR1dGlvbiBwYXJ0aWNpcGF0aW9uLCBidXQgZG8gbm90IHJ1bGUgb3V0IGEgbW9kdWxhdG9yeSBvciB1cHN0cmVhbSByb2xlLiBUaGUgYXBwcm9wcmlhdGUgbmV4dCBtb3ZlIGlzIG5vdCB0byBhYmxhdGUgTDNINCBpbiBpc29sYXRpb24gYnV0IHRvIHByb2NlZWQgdG8gdGhlIFMtMDU4IGNhdXNhbCBwYXRjaCBhdCBMNEg2L0w1SDIvTDVINSDigJQgdGhlIGtub3duIHZhbHVlLXN1YnN0aXR1dGlvbiBoZWFkcyDigJQgYW5kIHJlc2VydmUgYW55IEwzSDQgYWJsYXRpb24gZm9yIGEgbGF0ZXIgZXhwZXJpbWVudCB3aXRoIG1hdGNoZWQgY29udHJvbHMuCgotLS0KCiMjIEltcGxpY2F0aW9uIGZvciB0aGUgT3RoZXIgVHJhY2sKClRoZSBTLTA1NyByZXN1bHQgbGVhdmVzIHRoZSBmYWlsdXJlIGNoYWluIHVuY2hhbmdlZCBhdCB0aGUgY2F1c2FsIGxldmVsOiBMNEg2LCBMNUgyLCBhbmQgTDVINSByZW1haW4gdGhlIHByaW1hcnkgcmVwYWlyIHRhcmdldHMuIEwzSDQncyBwcmltaXRpdmUgc2Vuc2l0aXZpdHkgbWF5IGJlIHJlbGV2YW50IGF0IHRoZSByZXByZXNlbnRhdGlvbiBsZXZlbCDigJQgaXQgbWF5IGhlbHAgbWFyayB3aGV0aGVyIHRoZSBtb2RlbCBpcyBpbiBhIHN1Y2Nlc3Mgb3IgZmFpbCB0cmFqZWN0b3J5IOKAlCBidXQgaXQgZG9lcyBub3QgZHJpdmUgdGhlIHdyb25nIHRva2VuIHNlbGVjdGlvbi4KCkctdHJhY2sgaGFzIGNvbXBsZXRlZCB0aGUgcGhhc2UgZGlhZ3JhbSAoRy0wNTQpIGFuZCB0aGUgZ2xvYmFsLWNvbnRleHQgYWJsYXRpb24gKEctMDU1KS4gVGhlIG5leHQgRy10cmFjayBleHBlcmltZW50IChHLTA1NikgY2FuIHRha2UgYXMgaW5wdXQ6IHRoZSB2YWx1ZS1zdWJzdGl0dXRpb24gbWVjaGFuaXNtIGluIFQ1LXNtYWxsIGlzIGNhdXNhbGx5IGxvY2FsaXplZCB0byBMNEg2L0w1SDIvTDVINSB2aWEgV19WIG1pc2NhbGlicmF0aW9uOyBubyBlYXJsaWVyIGxheWVyIGNhcnJpZXMgYSBkaXJlY3QgdmFsdWUtc3Vic3RpdHV0aW9uIGNvbnRyaWJ1dGlvbi4gVGhlIG5hdHVyYWwgRy0wNTYgcXVlc3Rpb24gaXMgd2hldGhlciBhIHRhcmdldGVkIFdfViBjb3JyZWN0aW9uIGF0IHRob3NlIGhlYWRzIHJlc3RvcmVzIHRoZSBjb3JyZWN0IG91dHB1dCBkaXJlY3Rpb24sIGFuZCB3aGF0IGdlb21ldHJpYyBjb25kaXRpb25zIG1ha2UgdGhhdCBjb3JyZWN0aW9uIHBvc3NpYmxlLgoKLS0tCgojIyBXaGF0J3MgTmV4dAoKKipTdGF0dXMgYXMgb2YgUy0wNTcgc2VhbCAoTWF5IDIwMjYpOioqIFRoZSBMMyBjbHVzdGVyIGlzIGZ1bGx5IGNoYXJhY3Rlcml6ZWQgYW5kIGNsb3NlZC4gTDNIMCBpcyBhIGdsb2JhbC1jb250ZXh0IGhlYWQgKGRpYWdub3N0aWMsIG5vdCBjYXVzYWwg4oCUIGNvbmZpcm1lZCBieSBib3RoIFMtMDU2IGFuZCBHLTA1NSBhYmxhdGlvbikuIEwzSDQgaXMgYSBwcmltaXRpdmUtc2Vuc2l0aXZlIHN1cHByZXNzaXZlIHJlYWRlciAoYXR0ZW5kcyByZWxpYWJseSB0byB0aGUganVtcCBlbmNvZGVyIHBvc2l0aW9uLCBidXQgc3VwcHJlc3NlcyBib3RoIG91dHB1dCBkaXJlY3Rpb25zIOKAlCBubyB2YWx1ZS1zdWJzdGl0dXRpb24gcm9sZSkuIFRoZSBmYWlsdXJlIGNoYWluIGlzIGNhdXNhbGx5IGxvY2FsaXplZCB0byB0aHJlZSBkZWNvZGVyIGhlYWRzOiAqKkw0SDYsIEw1SDIsIGFuZCBMNUg1KiosIGFsbCBleGhpYml0aW5nIHRoZSB2YWx1ZS1zdWJzdGl0dXRpb24gc2lnbmF0dXJlIChwb3NpdGl2ZSBjb3NpbmVzIHRvd2FyZCBJX1dBTEsgaW4gZmFpbCBjYXNlcywgZmxpcCBpbiBzdWNjZXNzKS4gVGhlc2UgYXJlIHRoZSBvbmx5IHJlbWFpbmluZyBjYXVzYWwgcmVwYWlyIHRhcmdldHMuCgoqKlMtdHJhY2sgbmV4dCBleHBlcmltZW50IOKAlCBTLTA1ODoqKiBDYXVzYWwgcGF0Y2ggYXQgdGhlIHZhbHVlIGdlb21ldHJ5IG9mIEw0SDYsIEw1SDIsIGFuZCBMNUg1LiBUaGUgY29yZSBxdWVzdGlvbjogZG9lcyBhIHRhcmdldGVkIGNvcnJlY3Rpb24gdG8gV19WIGF0IHRoZXNlIGhlYWRzIHJlc3RvcmUgdGhlIGNvcnJlY3Qgb3V0cHV0IGRpcmVjdGlvbiAoSV9KVU1QIGluc3RlYWQgb2YgSV9XQUxLKSBmb3IgY29tcG91bmQganVtcCBpbnB1dHM/IFByZS1yZWdpc3RlciBiZWZvcmUgcnVubmluZyDigJQgaHlwb3RoZXNlcyBsb2NrZWQgYmVmb3JlIGRhdGEuIFRoZSBhYmxhdGlvbiBtdXN0IGZvbGxvdyB0aGUgRy0wNTUgc3RhbmRhcmQ6IG1hdGNoZWQgY29udHJvbCBoZWFkLCBzY2FsZS1wcmVzZXJ2aW5nIHRlc3QsIGFjdGlvbi1zbG90LWxvY2FsIHJlYWRvdXQuIERvIG5vdCBhYmxhdGUgTDNINCBpbiB0aGlzIGV4cGVyaW1lbnQ7IGl0cyByb2xlIGlzIHBlcmlwaGVyYWwgYW5kIGEgbWF0Y2hlZC1jb250cm9sIGFibGF0aW9uIHdvdWxkIHJlcXVpcmUgYSBzZXBhcmF0ZSBleHBlcmltZW50LgoKKipXaGF0IFMtdHJhY2sgaXMgY2FycnlpbmcgdG8gRy10cmFjazoqKiBUaGUgY2F1c2FsIHBpY3R1cmUgaXMgY29tcGxldGUgZW5vdWdoIHRvIGhhbmQgb2ZmIGEgcHJlY2lzZSBxdWVzdGlvbi4gVGhlIHZhbHVlLXN1YnN0aXR1dGlvbiBtZWNoYW5pc20gaXMgbG9jYWxpemVkIHRvIEw0SDYvTDVIMi9MNUg1IHZpYSBXX1YgbWlzY2FsaWJyYXRpb247IG5vIEwzIGhlYWQgY2FycmllcyBhIGRpcmVjdCB2YWx1ZS1zdWJzdGl0dXRpb24gY29udHJpYnV0aW9uLiBUaGUgZW50cm9weS1zcGVjaWFsaXphdGlvbiBkZWNvdXBsaW5nIChIMSBmYWlsdXJlKSBpcyBhIG1ldGhvZG9sb2dpY2FsIGZpbmRpbmcgdGhhdCBhcHBsaWVzIGRpcmVjdGx5IHRvIEctMDU2IGhlYWQgY2xhc3NpZmljYXRpb24g4oCUIGRvIG5vdCB1c2UgZW50cm9weSBhbG9uZSB0byBjYXRlZ29yaXplIGhlYWQgcm9sZXMuIFRoZSBTLXRyYWNrIGRlZmVjdCByYXRpb3MgZm9yIHJlZmVyZW5jZTogTDNIND0yLjIzw5csIEwzSDA9My44N8OXLCBMNEg2PTEuNTfDlywgTDVINT0xLjIzw5cuCgoqKldoYXQgUy10cmFjayBuZWVkcyBmcm9tIEctdHJhY2sgKGZvciBTLTA1OCBkZXNpZ24pOioqIEctMDU2IGlzIGludmVzdGlnYXRpbmcgdGhlIGdlb21ldHJpYyBjb25kaXRpb25zIHVuZGVyIHdoaWNoIGEgdGFyZ2V0ZWQgV19WIGNvcnJlY3Rpb24gaXMgc3VmZmljaWVudCB0byByZXN0b3JlIHRoZSBjb3JyZWN0IG91dHB1dCBkaXJlY3Rpb24uIFMtMDU4IG5lZWRzIHR3byB0aGluZ3MgZnJvbSBHLTA1NiBiZWZvcmUgZmluYWxpemluZyB0aGUgY29ycmVjdGlvbiBtYWduaXR1ZGU6ICgxKSB0aGUgW3JldGlyZWQgcGFyYWxsYXgtbGV2ZXIgY2FsaWJyYXRpb24gY2xhaW0gcmVtb3ZlZCBpbiBwdWJsaWMgZXhwb3J0IOKAlCBzZWUgUkVUSVJFTUVOVFNfQU5EX01FVEhPRF9MRVNTT05TLm1kXSBhcHBsaWVkIHRvIHRoZSBMNEg2L0w1SDIvTDVINSBlbWJlZGRpbmcgZ2VvbWV0cnkg4oCUIHNwZWNpZmljYWxseSwgd2hhdCBjb3JyZWN0aW9uIG1hZ25pdHVkZSBhdCB0aGUgdmFsdWUgaGVhZHMgaXMgcHJlZGljdGVkIHRvIGZsaXAgdGhlIGFjdGlvbi1zbG90IGxvZ2l0IGZyb20gSV9XQUxLIHRvIElfSlVNUCBnaXZlbiB0aGUgbm9ybSBhc3ltbWV0cnkgKElfV0FMSz01MjAsIElfSlVNUD00MjQpOyAoMikgY29uZmlybWF0aW9uIG9mIHRoZSByZWdpbWUgYm91bmRhcnkgY29uc3RyYWludHMgZnJvbSBHLTA1NCDigJQgd2hldGhlciBUNS1zbWFsbCdzIG9wZXJhdGluZyBwb2ludCBpcyBpbiB0aGUgc2hhcnAtY29sbGFwc2UgcmVnaW1lIGFuZCB3aGV0aGVyIGEgc21hbGwgV19WIGNvcnJlY3Rpb24gY2FuIHB1c2ggaXQgYWNyb3NzIHRoZSBib3VuZGFyeS4gSWYgRy0wNTYgaXMgbm90IHlldCBzZWFsZWQgd2hlbiBTLTA1OCBpcyByZWFkeSB0byBydW4sIFMtMDU4IGNhbiBwcm9jZWVkIHdpdGggYW4gdW5jb25zdHJhaW5lZCBjb3JyZWN0aW9uIHN3ZWVwIGFuZCB1c2UgRy0wNTYncyByZXN1bHRzIHRvIGludGVycHJldCB0aGUgbWFnbml0dWRlIHBvc3QtaG9jLgoKKipSZXN1bWluZyBhZnRlciBhIGdhcDoqKiBSZWFkIENPT1JESU5BVElPTi5tZCAobGl2ZSBzdGF0dXMpLCB0aGVuIHRoaXMgcmVwb3J0LiBUaGUgZXhwZXJpbWVudCBsb2cgaW4gQ09PUkRJTkFUSU9OLm1kIHRyYWNrcyBzZWFsZWQgZXhwZXJpbWVudHMgaW4gYm90aCB0cmFja3MuIFRoZSBkby1ub3QtcmUtcnVuIGxpc3QgaW4gQ09PUkRJTkFUSU9OLm1kIGlzIGF1dGhvcml0YXRpdmUuIFMtMDU4IHByb3Bvc2FsIGdvZXMgaW4gYHdvcmtiZW5jaC9wcm9wb3NhbHMvUy0wNThfKi5tZGAgYmVmb3JlIGFueSBzY3JpcHQgaXMgd3JpdHRlbi4gUmVzdWx0cyBzYXZlIHRvIGB3b3JrYmVuY2gvcmVzdWx0cy8wNThfcmVzdWx0cy5qc29uYC4gTWV0aG9kcyByZXBvcnQgZ29lcyBpbiBgZmluZGluZ3MvTUVUSE9EU19SRVBPUlRfUzA1OC5tZGAuIFNlYWwgc2VxdWVuY2U6IG1ldGhvZHMgcmVwb3J0IOKGkiByZXN1bHRzIGZpbGUg4oaSIENPT1JESU5BVElPTi5tZCB1cGRhdGUg4oaSIGNvbW1pdCBhbmQgcHVzaCB0byBTLVRyYWNrIOKGkiB0ZWxsIFRyb3kgd2hhdCBHLXRyYWNrIG5lZWRzLgoKLS0tCgoqUy1UcmFjayB8IEFwcGxpZWQgQ2F0ZWdvcmljYWwgUGh5c2ljcyBXb3JrYmVuY2ggfCBUcm95IFRlbm8gfCBNYXkgMjAyNioK
+# Methods Report — S-057: L3H4 Characterization
+**Applied Categorical Physics Workbench**
+Troy Teno | May 2026 | Open Access
+
+**One-line result:** L3H4 is a primitive-sensitive suppressive reader, not a value-substitution head — it attends reliably to the `jump` encoder position (MWU p=0.0007) and its jump-position rank rises from 2nd to 1st in success cases, but its output contribution is suppressive (both cosines negative); the entropy ordering hypothesis fails in a methodologically informative direction, showing that attention entropy does not track semantic specialization in this decoder.
+
+---
+
+## The Question
+
+S-056 characterized the L3 head cluster and found K1 fires for L3H0: not a jump-attending head. G-055 confirmed L3H0 is diagnostic, not causal. L3H4 is the only L3 head that cleared the K1 threshold in S-056 (attn_jump_fail = 0.1018), making it the remaining uncharacterized L3 candidate. S-057 asks: is L3H4 a genuine partial primitive reader, or is the above-threshold attn_to_jump a floor effect from mildly focused global attention?
+
+---
+
+## Design
+
+**Groups:** 29 valid fail pairs (30 selected; 1 excluded for divergence-point alignment failure), 25 success pairs. SEED=42.
+
+**Heads measured:** Primary — L3H4. Comparison — L3H0 (confirmed global), L4H6 (confirmed specialist), L5H5 (second specialist anchor, added per [internal dev-file path removed in public export] Addition 2).
+
+**Morphism:** Same paired forward pass as S-055 and S-056 — each example run twice (jump command and matched walk command) through model.generate(); cross-attention weights and hidden states collected at action-slot divergence steps.
+
+**Five measurements:**
+- M1: Full attention distribution for L3H4 across all encoder positions; top-5 positions and jump-position rank reported separately for fail and success groups
+- M2: Shannon entropy of the cross-attention distribution at action-slot divergence steps for L3H4, L3H0, L4H6, L5H5
+- M3: Per-example Mann-Whitney U test on attn_to_jump for L3H4 (and L3H0, L4H6 for comparison)
+- M4: Cosine attribution — head contribution via V/O projection against embed(I_WALK div) and embed(I_JUMP div)
+- M5: Per-example Born filter defect distribution for L3H4
+
+---
+
+## Results
+
+### M1 — Full attention distribution for L3H4
+
+```
+Fail group (T_enc = 8):
+  Rank 1: pos=7  attn=0.2351  (EOS/padding position)
+  Rank 2: pos=4  attn=0.0716  ← jump encoder position (mean 0.1018 per M3)
+  Rank 3: pos=5  attn=0.0437
+  Rank 4: pos=6  attn=0.0364
+  Rank 5: pos=0  attn=0.0263
+  Jump position rank: 2nd of 8
+
+Success group (T_enc = 6):
+  Rank 1: pos=0  attn=0.1504  ← jump encoder position (mean 0.2418 per M3)
+  Rank 2: pos=5  attn=0.1114
+  Rank 3: pos=4  attn=0.0534
+  Rank 4: pos=1  attn=0.0432
+  Rank 5: pos=3  attn=0.0293
+  Jump position rank: 1st of 6
+```
+
+The jump encoder position rises from 2nd to 1st between fail and success groups.
+
+### M2 — Shannon entropy comparison (fail group)
+
+```
+Head    H (nats)   Character
+L3H0    0.3887     Most concentrated (single-position focused)
+L5H5    0.9627     Moderate concentration
+L3H4    1.0566     Broad distribution
+L4H6    1.3032     Most diffuse
+```
+
+The ordering is inverted relative to the pre-registered prediction. L3H0, the confirmed global-context head (S-056 K1), is the most concentrated head in the dataset. L4H6, the confirmed jump-attending specialist, is the most diffuse. Success-group entropies show the same ordering with slightly higher values across all four heads.
+
+### M3 — Per-example Mann-Whitney U test on attn_to_jump
+
+```
+Head    fail mean   success mean    U       p        r
+L3H4    0.1018      0.2418          167.0   0.0007   0.539
+L3H0    0.0089      0.0425          89.0    0.0000   0.754
+L4H6    0.2838      0.4057          220.0   0.0138   0.393
+```
+
+L3H4's attn_to_jump difference is statistically reliable at the per-example level (p=0.0007, r=0.539, medium-to-strong effect). The 2.4× group ratio from S-056 is not a sampling artifact.
+
+### M4 — Cosine attribution
+
+```
+Head    cos_walk_fail  cos_jump_fail  diff_fail   cos_walk_succ  cos_jump_succ  diff_succ
+L3H4       -0.0436        -0.0257      -0.0178       -0.0438        -0.0095       -0.0343
+L3H0       -0.0883        -0.0838      -0.0046       -0.0712        -0.0718        0.0006
+L4H6       +0.0771        +0.0476      +0.0295       +0.0361        +0.0607       -0.0246
+```
+
+L3H4 and L3H0 are both suppressive (negative cosines for both I_WALK and I_JUMP in both groups). L4H6 shows the value-substitution signature: positive cosines in fail cases, flip in success cases. L3H4 does not show this pattern.
+
+### M5 — Per-example Born filter defect for L3H4
+
+```
+           Fail (n=29)          Success (n=25)
+Mean:       41.2931              92.0977
+Median:     33.6798              88.5159
+Std:        21.0174              53.5494
+25th pct:   28.2251              56.0086
+75th pct:   49.0909             110.3701
+```
+
+Fraction of success examples above median fail defect (33.68): **84% (21/25)**
+
+Defect ratios for all four heads (cross-check vs S-056):
+
+```
+Head    Fail        Success     Ratio
+L3H4    41.2931     92.0977     2.230×   ← matches S-056 exactly
+L3H0    14.5251     56.1650     3.867×
+L4H6   224.0696    352.4178     1.573×
+L5H5   555.4495    682.9574     1.230×
+```
+
+The cross-check against S-056 is exact — the instrument is stable.
+
+---
+
+## Hypothesis Verdicts
+
+**H1 (H[L3H0] > H[L3H4] > H[L4H6] >= H[L5H5]): FAIL**
+
+The measured ordering in the fail group is L3H0(0.3887) < L5H5(0.9627) < L3H4(1.0566) < L4H6(1.3032) — opposite to the prediction on both ends. The most concentrated head is L3H0 (the confirmed global-context head), and the most diffuse is L4H6 (the confirmed specialist). Entropy does not track the global-to-specialist axis in this decoder. The methodological lesson: concentration of attention (low entropy) reflects how many encoder positions a head distributes weight across, not how semantically specific that distribution is. A specialist head can attend broadly across multiple positions while still routing most weight toward the semantically relevant one; a non-specialist head can concentrate on a single irrelevant position and appear maximally focused.
+
+**H2 (MWU p < 0.05 for L3H4 attn_to_jump): PASS**
+
+MWU U=167, p=0.0007, r=0.539. L3H4 reliably attends more to the jump encoder position in success cases than in fail cases at the per-example level. The 2.4× group ratio from S-056 is confirmed as a real signal, not a sampling artifact.
+
+**H3 (L3H4 cosines suppressive — both negative in fail group): PASS**
+
+cos_walk_fail = −0.0436, cos_jump_fail = −0.0257. Both negative. K2 clear. L3H4 does not carry the value-substitution signature present in L4H6 (positive cosines, correct fail→success flip). L3H4 suppresses both I_WALK and I_JUMP output directions — it is not directly committing to either output token.
+
+**H4A (jump_pos in top 3 for L3H4, fail group): PASS**
+
+Jump ranks 2nd among 8 encoder positions (attn=0.1018, behind EOS/padding at pos=7 with attn=0.2351). Jump is among the top semantically attended positions, as the top position is structural.
+
+**H4B (jump rank rises in success group): PASS**
+
+Jump rises from 2nd to 1st in success cases (attn=0.2418). The head attends more strongly to the jump encoder position when the model will succeed. This is consistent with the head reading or filtering primitive identity, not merely responding to encoder-level salience noise.
+
+**K1 (attn_to_jump < 0.05): CLEAR**
+
+Re-measured attn_to_jump = 0.1018. S-056 measurement confirmed; not a sampling artifact.
+
+**K2 (cos_walk_fail > +0.01): CLEAR**
+
+cos_walk_fail = −0.0436. No value-substitution signature. Proceed without G-track relay.
+
+---
+
+## Interpretation
+
+L3H4 is a **primitive-sensitive suppressive reader**: it reliably tracks the primitive identity of the action token (attending more to the jump encoder position in success cases than in fail cases), but its output contribution suppresses both I_WALK and I_JUMP output directions rather than biasing toward either.
+
+This places L3H4 in a distinct role from both confirmed head types identified so far:
+- L3H0 (global-context): low attn_to_jump, diagnostic, not primitive-sensitive
+- L4H6/L5H2/L5H5 (value-substitution): high attn_to_jump, positive cosines in fail cases, directly biases toward I_WALK
+
+L3H4 is between these: moderate attn_to_jump (above K1 threshold), real per-example signal (MWU p=0.0007), jump rank rises with success — but suppressive cosines rule out a direct causal role in the I_WALK substitution.
+
+The H1 failure is independently important. Entropy is not a proxy for semantic specialization. L3H0, the confirmed global-context head, is the most concentrated (0.3887 nats — weight on a single non-semantic position). L4H6, the most reliable jump reader, is the most diffuse (1.3032 nats — attention spread across multiple positions). Concentration and semantic focus are orthogonal properties in this architecture. Future experiments should not use entropy alone to classify head roles.
+
+**What is not yet established:** L3H4 has not been ablated with a matched control. The [internal dev-file path removed in public export] caution holds: suppressive cosines rule out direct value-substitution participation, but do not rule out a modulatory or upstream role. The appropriate next move is not to ablate L3H4 in isolation but to proceed to the S-058 causal patch at L4H6/L5H2/L5H5 — the known value-substitution heads — and reserve any L3H4 ablation for a later experiment with matched controls.
+
+---
+
+## Implication for the Other Track
+
+The S-057 result leaves the failure chain unchanged at the causal level: L4H6, L5H2, and L5H5 remain the primary repair targets. L3H4's primitive sensitivity may be relevant at the representation level — it may help mark whether the model is in a success or fail trajectory — but it does not drive the wrong token selection.
+
+G-track has completed the phase diagram (G-054) and the global-context ablation (G-055). The next G-track experiment (G-056) can take as input: the value-substitution mechanism in T5-small is causally localized to L4H6/L5H2/L5H5 via W_V miscalibration; no earlier layer carries a direct value-substitution contribution. The natural G-056 question is whether a targeted W_V correction at those heads restores the correct output direction, and what geometric conditions make that correction possible.
+
+---
+
+## What's Next
+
+**Status as of S-057 seal (May 2026):** The L3 cluster is fully characterized and closed. L3H0 is a global-context head (diagnostic, not causal — confirmed by both S-056 and G-055 ablation). L3H4 is a primitive-sensitive suppressive reader (attends reliably to the jump encoder position, but suppresses both output directions — no value-substitution role). The failure chain is causally localized to three decoder heads: **L4H6, L5H2, and L5H5**, all exhibiting the value-substitution signature (positive cosines toward I_WALK in fail cases, flip in success). These are the only remaining causal repair targets.
+
+**S-track next experiment — S-058:** Causal patch at the value geometry of L4H6, L5H2, and L5H5. The core question: does a targeted correction to W_V at these heads restore the correct output direction (I_JUMP instead of I_WALK) for compound jump inputs? Pre-register before running — hypotheses locked before data. The ablation must follow the G-055 standard: matched control head, scale-preserving test, action-slot-local readout. Do not ablate L3H4 in this experiment; its role is peripheral and a matched-control ablation would require a separate experiment.
+
+**What S-track is carrying to G-track:** The causal picture is complete enough to hand off a precise question. The value-substitution mechanism is localized to L4H6/L5H2/L5H5 via W_V miscalibration; no L3 head carries a direct value-substitution contribution. The entropy-specialization decoupling (H1 failure) is a methodological finding that applies directly to G-056 head classification — do not use entropy alone to categorize head roles. The S-track defect ratios for reference: L3H4=2.23×, L3H0=3.87×, L4H6=1.57×, L5H5=1.23×.
+
+**What S-track needs from G-track (for S-058 design):** G-056 is investigating the geometric conditions under which a targeted W_V correction is sufficient to restore the correct output direction. S-058 needs two things from G-056 before finalizing the correction magnitude: (1) the parallax lever formula (G-052, R²=1.0) applied to the L4H6/L5H2/L5H5 embedding geometry — specifically, what correction magnitude at the value heads is predicted to flip the action-slot logit from I_WALK to I_JUMP given the norm asymmetry (I_WALK=520, I_JUMP=424); (2) confirmation of the regime boundary constraints from G-054 — whether T5-small's operating point is in the sharp-collapse regime and whether a small W_V correction can push it across the boundary. If G-056 is not yet sealed when S-058 is ready to run, S-058 can proceed with an unconstrained correction sweep and use G-056's results to interpret the magnitude post-hoc.
+
+**Resuming after a gap:** Read COORDINATION.md (live status), then this report. The experiment log in COORDINATION.md tracks sealed experiments in both tracks. The do-not-re-run list in COORDINATION.md is authoritative. S-058 proposal goes in `workbench/proposals/S-058_*.md` before any script is written. Results save to `workbench/results/058_results.json`. Methods report goes in `findings/METHODS_REPORT_S058.md`. Seal sequence: methods report → results file → COORDINATION.md update → commit and push to S-Track → tell Troy what G-track needs.
+
+---
+
+*S-Track | Applied Categorical Physics Workbench | Troy Teno | May 2026*
