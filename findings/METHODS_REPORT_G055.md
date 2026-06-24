@@ -303,11 +303,11 @@ Quote precisely — do not summarize beyond what is written here.
    S-058 design: activation patching first, weight patching second. Replace the
    value-output tensors of L4H6/L5H2/L5H5 at the action-slot divergence step with
    tensors from a structurally matched success example. Matched pair criteria (from
-   sandbox_017): same command structure, same `around` operator, same action count,
+   [internal dev-file path removed in public export]): same command structure, same `around` operator, same action count,
    same direction pattern where possible, same action-slot location. Only the primitive
    differs (jump vs. trained primitive).
 
-   **S-058 pre-registered primary hypothesis (sandbox_017 formulation):**
+   **S-058 pre-registered primary hypothesis ([internal dev-file path removed in public export] formulation):**
    After activation patching L4H6/L5H2/L5H5, `P(I_JUMP) > P(I_WALK)` at the
    action-slot divergence point in at least 50% of patched fail examples.
    This is a per-example token-competition criterion, not aggregate accuracy.
@@ -358,12 +358,12 @@ is fully embedding-determined.
 **G-track needs nothing from S-track.** G-056 is fully self-contained at toy scale.
 Runs immediately.
 
-**S-track must wait for G-056 before running S-058.** This is the sandbox_017 sequencing
+**S-track must wait for G-056 before running S-058.** This is the [internal dev-file path removed in public export] sequencing
 requirement. S-track drafts the S-058 proposal now. The run gate is G-056's H1/H2
 verdict: if H1 (suppressive head causal), revise S-058 to include L3H4 in the
 intervention; if H2 (suppressive head diagnostic), run S-058 as designed.
 
-**After G-056 seals:** relay H1/H2 verdict to S-track via COORDINATION.md. S-track
+**After G-056 seals:** relay H1/H2 verdict to S-track via the private development coordination notes (not part of this public export). S-track
 then finalizes and runs S-058.
 
 **After S-058 seals:** relay the per-example patching result to G-track. If

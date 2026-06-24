@@ -171,7 +171,7 @@ without that measurement.
 2. S-058 should include an L3H4 control ablation alongside the primary patch. If
    ablating L3H4 changes `P(I_JUMP) vs P(I_WALK)` at the action slot, L3H4 may be
    operating in the causal (inversion) regime. If it produces no change, it is in the
-   diagnostic (suppression) regime. This is sandbox_017's requirement: L3H4 must be
+   diagnostic (suppression) regime. This is [internal dev-file path removed in public export]'s requirement: L3H4 must be
    tested before it is ruled out as a repair target.
 
 3. The G-056 mechanism predicts that if L3H4 is causal, the signature would be:
@@ -190,7 +190,7 @@ without that measurement.
 early-layer head types: neutral/global = diagnostic; mild suppression (α < 1.0) =
 diagnostic; FIN-inversion (α > 1.0) = causal via re-routing mechanism.
 
-**S-track is sealed through S-057. S-058 is drafted but not run.** Per sandbox_017,
+**S-track is sealed through S-057. S-058 is drafted but not run.** Per [internal dev-file path removed in public export],
 S-058 was gated on G-056. The gate is now open.
 
 ---
@@ -207,7 +207,7 @@ S-058 was gated on G-056. The gate is now open.
    regime without direct ablation. S-058 must include an L3H4 control ablation.
 
 3. **S-058 primary experiment:** activation patching at L4H6/L5H2/L5H5. Unchanged.
-   Primary hypothesis (sandbox_017): `P(I_JUMP) > P(I_WALK)` at action-slot divergence
+   Primary hypothesis ([internal dev-file path removed in public export]): `P(I_JUMP) > P(I_WALK)` at action-slot divergence
    in ≥50% of patched fail examples.
 
 4. **S-058 required control (new from G-056):** Ablate L3H4 in isolation (zero its

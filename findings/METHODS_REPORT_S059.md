@@ -160,7 +160,7 @@ Under this corrected formula:
 
 The four largest pro-walk contributors in the fail group are L6H2, L6H6, L5H6, and L6H5 — none of which were predicted as target heads. These all show large flips between fail and success (Δ of +29,000 to +84,000 in pre-LN units), suggesting they may carry more mechanistic weight than the original L4H6/L5H2/L5H5 account predicted.
 
-CLAUDE.md Hard Rule 4 states "T5-small's layer 6 (both encoder and decoder) collapses all signals to near-zero." This observation from earlier experiments (S-049, S-055) referred to cross-attention entropy / Born filter signals — not residual stream contributions. The presence of large L6 contributions here suggests that while L6 cross-attention patterns may be degenerate (collapsed), the L6 heads still add substantial residual stream contributions that project onto the logit direction.
+An earlier project rule (private development notes, not part of this public export) states "T5-small's layer 6 (both encoder and decoder) collapses all signals to near-zero." This observation from earlier experiments (S-049, S-055) referred to cross-attention entropy / Born filter signals — not residual stream contributions. The presence of large L6 contributions here suggests that while L6 cross-attention patterns may be degenerate (collapsed), the L6 heads still add substantial residual stream contributions that project onto the logit direction.
 
 This is a new finding. The LayerNorm-corrected V0.2.0 measurements are needed to verify whether L6 heads dominate even in proper logit units.
 
@@ -217,7 +217,7 @@ where `h_final` is obtained from `decoder_hidden_states[-2][0, 0, :]` at the div
 5. Run V0.2.0; verify reconstruction fraction is ≈ 0.1–0.8 (not 32,000)
 6. Write results to `workbench/results/059_v2_results.json`
 7. Append V0.2.0 verdicts to this methods report (or write a brief addendum)
-8. Update COORDINATION.md; push to S-Track; tell Troy
+8. Update the private development coordination notes (not part of this public export); push to S-Track; tell Troy
 
 ---
 
@@ -259,7 +259,7 @@ Success group:
 K2: CLEAR (by letter; reconstruction still substantially exceeds observed margin)
 ```
 
-**Structural interpretation (sandbox_020/021):** The 28.52× reconstruction fraction is not a fixable bug. A complete logit decomposition requires all residual stream components: cross-attention, self-attention, FFN, embeddings. The cross-attention alone (48 heads) accounts for roughly 3.5% of the total logit margin. A massive opposing correction from FFN/embedding/self-attention produces the small observed margin (−6) from a large cross-attention signal (−171). This near-cancellation is a structural property of the model, not a measurement artifact. Per sandbox_021: "Do not attempt to fix the decomposition further before moving on."
+**Structural interpretation ([internal dev-file path removed in public export]):** The 28.52× reconstruction fraction is not a fixable bug. A complete logit decomposition requires all residual stream components: cross-attention, self-attention, FFN, embeddings. The cross-attention alone (48 heads) accounts for roughly 3.5% of the total logit margin. A massive opposing correction from FFN/embedding/self-attention produces the small observed margin (−6) from a large cross-attention signal (−171). This near-cancellation is a structural property of the model, not a measurement artifact. Per [internal dev-file path removed in public export]: "Do not attempt to fix the decomposition further before moving on."
 
 ### M1 — Per-head δlogit, fail group (V0.2.0, top 20 by |δlogit|)
 
@@ -317,7 +317,7 @@ K2: CLEAR (by letter; reconstruction still substantially exceeds observed margin
 
 **H4 PASS.** |δlogit_L3H0| = 2.98 < 10.41; |δlogit_L3H4| = 7.84 < 10.41.
 
-**Note on H1/H2/H3:** Per sandbox_021, these verdicts cannot be honestly evaluated at 28.52× reconstruction. H3's 30% threshold and H2's 0.20 threshold were specified for a complete logit decomposition; they do not apply to the cross-attention-only partial decomposition.
+**Note on H1/H2/H3:** Per [internal dev-file path removed in public export], these verdicts cannot be honestly evaluated at 28.52× reconstruction. H3's 30% threshold and H2's 0.20 threshold were specified for a complete logit decomposition; they do not apply to the cross-attention-only partial decomposition.
 
 ### V0.2.0 Scientific Findings
 
@@ -339,7 +339,7 @@ K2: CLEAR (by letter; reconstruction still substantially exceeds observed margin
 
 **Current status (May 2026):** S-059 V0.1.0 sealed (LayerNorm mismatch). S-059b V0.2.0 sealed: K1 CLEAR, L6 cluster identified as dominant, reconstruction 28.52× (structural — cross-attn only), H1/H2/H3 not evaluable, L5H2 removed from primary target set.
 
-**S-track next — S-060: Causal ablation.** The decomposition has identified candidates; the causal question requires ablation. Per sandbox_021:
+**S-track next — S-060: Causal ablation.** The decomposition has identified candidates; the causal question requires ablation. Per [internal dev-file path removed in public export]:
 
 Primary targets: **L6H2, L6H6** (dominant calibrated δlogit, largest fail-to-success flips)
 Reference targets: **L4H6, L5H5** (original S-051 targets, directionally confirmed)
@@ -357,7 +357,7 @@ Methodology: within-example neutralization (zero out each head's contribution at
 3. Build script `workbench/experiments/S-060_CAUSAL_ABLATION.py`
 4. Run S-060 in Colab; save results to `workbench/results/060_results.json`
 5. Write `findings/METHODS_REPORT_S060.md`
-6. Update COORDINATION.md; push to S-Track; tell Troy
+6. Update the private development coordination notes (not part of this public export); push to S-Track; tell Troy
 
 ---
 

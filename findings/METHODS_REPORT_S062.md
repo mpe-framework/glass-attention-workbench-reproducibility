@@ -212,7 +212,7 @@ specificity check (apply rank-1 correction, measure effect on in-distribution ex
 orthogonal encoder representations).
 
 ### Resume sequence
-1. Read `COORDINATION.md` for current sync state.
+1. Read the private development coordination notes (not part of this public export) for current sync state.
 2. Read `findings/METHODS_REPORT_S061.md` for mechanism findings.
 3. Read `findings/METHODS_REPORT_S062.md` (this file) for H4 status.
 4. Troy decides: close arc or proceed to S-063.

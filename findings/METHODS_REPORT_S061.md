@@ -6,7 +6,7 @@ Troy Teno | May 2026 | Open Access
 Script: `workbench/experiments/S-061_WV_GEOMETRY_INTERVENTION.py` (V0.1.0)
 Results: `workbench/results/061_results.json`
 Pre-registration: `workbench/proposals/S-061_WV_GEOMETRY_INTERVENTION_PROPOSAL.md`
-H4 supplement: `findings/METHODS_REPORT_S062.md` + `DCRP/sandbox_024_...md`
+H4 supplement: `findings/METHODS_REPORT_S062.md` + [internal dev-file path removed in public export]
 
 ---
 
@@ -265,7 +265,7 @@ difference rather than the mean fail direction alone) may be needed to flip the 
 
 ## H4 Addendum — S-062 Results and Superintendent Interpretation
 
-*Added after S-062 sealed (May 2026). Source: sandbox_024.*
+*Added after S-062 sealed (May 2026). Source: [internal dev-file path removed in public export].*
 
 S-062 fixed the Phase 3 classifier and ran the jointly-corrected model on the available
 success group (n=2 — see §Findings That Did Not Pan Out for why n=2 rather than 25).
@@ -282,7 +282,7 @@ success group (n=2 — see §Findings That Did Not Pan Out for why n=2 rather th
 
 **Script verdict:** H4 FAIL (high) — +1.7853 exceeded the symmetric upper bound of [-0.3, +0.3].
 
-**Superintendent interpretation (sandbox_024):** The H4 FAIL label is a script artifact.
+**Superintendent interpretation ([internal dev-file path removed in public export]):** The H4 FAIL label is a script artifact.
 The [-0.3, +0.3] threshold was specified to catch degradation. The actual result is strictly
 positive — the repair *improved* the success group margin. The degradation test passed
 completely: 0/2 flip regression, 0/2 OOD, K2 CLEAR. No working example was broken.

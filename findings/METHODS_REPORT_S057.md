@@ -25,7 +25,7 @@ S-056 characterized the L3 head cluster and found K1 fires for L3H0: not a jump-
 
 **Groups:** 29 valid fail pairs (30 selected; 1 excluded for divergence-point alignment failure), 25 success pairs. SEED=42.
 
-**Heads measured:** Primary — L3H4. Comparison — L3H0 (confirmed global), L4H6 (confirmed specialist), L5H5 (second specialist anchor, added per sandbox_015).
+**Heads measured:** Primary — L3H4. Comparison — L3H0 (confirmed global), L4H6 (confirmed specialist), L5H5 (second specialist anchor, added per [internal dev-file path removed in public export]).
 
 **Morphism:** Same paired forward pass as S-055 and S-056 — each example run twice (jump command and matched walk command) through model.generate(); cross-attention weights and hidden states collected at action-slot divergence steps.
 
@@ -167,7 +167,7 @@ L3H4 is between these: moderate attn_to_jump (above K1 threshold), real per-exam
 
 The H1 failure is independently important. Entropy is not a proxy for semantic specialization. L3H0, the confirmed global-context head, is the most concentrated (0.3887 nats — weight on a single non-semantic position). L4H6, the most reliable jump reader, is the most diffuse (1.3032 nats — attention spread across multiple positions). Concentration and semantic focus are orthogonal properties in this architecture. Future experiments should not use entropy alone to classify head roles.
 
-**What is not yet established:** L3H4 has not been ablated with a matched control. The sandbox_015 caution holds: suppressive cosines rule out direct value-substitution participation, but do not rule out a modulatory or upstream role. The appropriate next move is not to ablate L3H4 in isolation but to proceed to the S-058 causal patch at L4H6/L5H2/L5H5 — the known value-substitution heads — and reserve any L3H4 ablation for a later experiment with matched controls.
+**What is not yet established:** L3H4 has not been ablated with a matched control. The [internal dev-file path removed in public export] caution holds: suppressive cosines rule out direct value-substitution participation, but do not rule out a modulatory or upstream role. The appropriate next move is not to ablate L3H4 in isolation but to proceed to the S-058 causal patch at L4H6/L5H2/L5H5 — the known value-substitution heads — and reserve any L3H4 ablation for a later experiment with matched controls.
 
 ---
 
@@ -189,7 +189,7 @@ G-track has completed the phase diagram (G-054) and the global-context ablation 
 
 **What S-track needs from G-track (for S-058 design):** G-056 is investigating the geometric conditions under which a targeted W_V correction is sufficient to restore the correct output direction. S-058 needs two things from G-056 before finalizing the correction magnitude: (1) [retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]; (2) confirmation of the regime boundary constraints from G-054 — whether T5-small's operating point is in the sharp-collapse regime and whether a small W_V correction can push it across the boundary. If G-056 is not yet sealed when S-058 is ready to run, S-058 can proceed with an unconstrained correction sweep and use G-056's results to interpret the magnitude post-hoc.
 
-**Resuming after a gap:** Read this report and the COORDINATION.md in the private development repository (not part of this public export). S-058 proposal goes in `workbench/proposals/S-058_*.md` before any script is written. Results save to `workbench/results/058_results.json`. Methods report goes in `findings/METHODS_REPORT_S058.md`.
+**Resuming after a gap:** Read this report and the coordination notes in the private development repository (not part of this public export). S-058 proposal goes in `workbench/proposals/S-058_*.md` before any script is written. Results save to `workbench/results/058_results.json`. Methods report goes in `findings/METHODS_REPORT_S058.md`.
 
 ---
 

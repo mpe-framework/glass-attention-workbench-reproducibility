@@ -3,7 +3,7 @@
 Troy Teno | May 2026 | Open Access
 
 *Written for handoff to the geometry track. Plain language throughout.
-Precise references to sealed findings and formulations in FINDINGS.md.*
+Precise references to sealed findings and formulations are maintained in the private development findings log (not part of this public export).*
 
 ---
 
@@ -339,4 +339,4 @@ but geometrically explained.
 ---
 
 *Applied Categorical Physics Workbench | Troy Teno | May 2026 | All work open access*
-*See FINDINGS.md for locked formulations. See COORDINATION.md for track status.*
+*Locked formulations and track-status coordination are maintained in the private development repository (not part of this public export).*
