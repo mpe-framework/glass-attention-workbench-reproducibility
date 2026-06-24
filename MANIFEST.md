@@ -29,9 +29,9 @@
 
 | File | Description |
 |------|-------------|
-| `findings/METHODS_NOTE_G052.md` | G-052 phase diagram and collapse conditions (redacted) |
-| `findings/METHODS_NOTE_G053.md` | G-053 global head causal results |
-| `findings/METHODS_NOTE_G054.md` | G-054 suppressive head causal results |
+| `findings/METHODS_NOTE_G052.md` | G-052 norm-asymmetry / parallax-lever note — retired calibration (redacted) |
+| `findings/METHODS_NOTE_G053.md` | G-053 layer-peak amplification — null result with mechanistic explanation |
+| `findings/METHODS_NOTE_G054.md` | G-054 collapse conditions / phase diagram — phase transition and super-amplification zone |
 | `findings/METHODS_REPORT_G054.md` | G-054 full methods report |
 | `findings/METHODS_REPORT_G055.md` | G-055 full methods report (redacted) |
 | `findings/METHODS_REPORT_G056.md` | G-056 full methods report (redacted) |

@@ -12,9 +12,12 @@ re-execution.
 pip install -r requirements.txt
 ```
 
-Tested with Python 3.10. The S-track and G-track scripts require `torch`,
-`transformers`, and `datasets` (exact versions in `requirements.txt`). Figure-generation
-scripts require only `matplotlib`, `numpy`, and `pandas`.
+Tested with Python 3.10. The **S-track** scripts require `torch`, `transformers`,
+`datasets`, and `scikit-learn` (exact versions in `requirements.txt`). The **G-track**
+scripts are controlled toy models — mostly pure NumPy on CPU (G-054 additionally builds a
+small `transformers` toy model from config); they require **no** T5-small checkpoint and
+**no** SCAN dataset. Figure-generation scripts require only `matplotlib` and `numpy` (CSV
+reading uses the Python standard library).
 
 ---
 
@@ -50,8 +53,10 @@ The four core G-track experiments are in `workbench/experiments/g_track_export/`
 | `G-056_SUPPRESSIVE_HEAD_CAUSAL.py` | Causal intervention on suppressive head |
 | `G-057_NEAR_CANCELLATION.py` | Two-track near-cancellation sweep |
 
-Each script loads T5-small from Hugging Face and runs against the SCAN dataset. Expected
-runtime: 10–40 minutes per script on GPU; 2–8 hours on CPU.
+These are self-contained controlled toy models: each constructs its own small in-process
+model (pure NumPy, except G-054 which also builds a small `transformers` model from
+config). They do **not** load T5-small and do **not** use the SCAN dataset. Expected
+runtime: seconds to a few minutes per script on CPU; no GPU required.
 
 ```bash
 python workbench/experiments/g_track_export/G-054_PHASE_DIAGRAM.py

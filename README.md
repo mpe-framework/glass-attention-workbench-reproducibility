@@ -66,7 +66,6 @@ findings/
   METHODS_REPORT_G054.md through METHODS_REPORT_G057.md  — 7 G-track reports
 workbench/
   experiments/   — scripts for G-054–G-057 and S-045–S-062
-  MANIFEST.md
 REPRODUCIBILITY.md
 RETIREMENTS_AND_METHOD_LESSONS.md
 requirements.txt
