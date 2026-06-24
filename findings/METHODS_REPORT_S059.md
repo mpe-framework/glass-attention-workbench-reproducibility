@@ -217,7 +217,7 @@ where `h_final` is obtained from `decoder_hidden_states[-2][0, 0, :]` at the div
 5. Run V0.2.0; verify reconstruction fraction is ≈ 0.1–0.8 (not 32,000)
 6. Write results to `workbench/results/059_v2_results.json`
 7. Append V0.2.0 verdicts to this methods report (or write a brief addendum)
-8. Update the private development coordination notes (not part of this public export); push to S-Track; tell Troy
+8. Update the private development coordination notes (not part of this public export)
 
 ---
 
@@ -357,7 +357,7 @@ Methodology: within-example neutralization (zero out each head's contribution at
 3. Build script `workbench/experiments/S-060_CAUSAL_ABLATION.py`
 4. Run S-060 in Colab; save results to `workbench/results/060_results.json`
 5. Write `findings/METHODS_REPORT_S060.md`
-6. Update the private development coordination notes (not part of this public export); push to S-Track; tell Troy
+6. Update the private development coordination notes (not part of this public export)
 
 ---
 
