@@ -115,10 +115,12 @@ Three classes of content are redacted from these files before publication. See
 
 ## What Is Not Re-Executable from This Archive
 
-- **Model weights** are not archived. All scripts download T5-small from Hugging Face
-  (`google/t5-small`) at runtime.
+- **Model weights** are not archived. Base training/fine-tuning scripts may download
+  `google/t5-small`, but the later S-track analysis/repair scripts require the fine-tuned
+  `043_t5_scan_checkpoint`, which is not included. G-track scripts do not require T5-small.
 
-- **SCAN dataset** is not archived. All scripts download it via `datasets` at runtime.
+- **SCAN dataset** is not archived. The S-track scripts that use it download it via
+  `datasets` at runtime; G-track scripts do not use SCAN.
 
 - **Random seeds** were not fixed in some early S-track scripts. Results are expected to
   be stable across seeds at the precision reported in the paper, but exact floating-point
