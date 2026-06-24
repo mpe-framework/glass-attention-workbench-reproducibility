@@ -15,8 +15,7 @@ commands into action sequences. The training data deliberately excluded one prim
 This is the SCAN add_prim_jump benchmark — a clean, guaranteed compositional failure.
 
 The question driving the S-track: *why exactly does T5 fail?* Not in the abstract
-sense that the softmax attention architecture predicts (softmax attention is not a
-monoidal functor — compositional generalization failure is a structural consequence),
+sense that the softmax attention architecture predicts ([Sargsyan attribution removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md] — compositional generalization failure is a structural consequence),
 but in the concrete mechanistic sense. Which part of the model fails? What does it
 do instead? Why does it do that specific wrong thing rather than some other wrong thing?
 
@@ -290,7 +289,7 @@ Every piece is now in place. Here is the full chain in plain language:
 **For the structural account:** The failure is confirmed as categorical and architectural,
 not a capacity limitation. The SCAN interpreter solves every case with a fixed rule.
 T5 at 60M parameters and 100% training accuracy on seen forms still fails 56.8% of
-compound jump test cases. Softmax attention is not a monoidal functor, and compositional
+compound jump test cases. [Sargsyan attribution removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md], and compositional
 generalization failure is the structural consequence.
 
 **For the geometry track (G-track):** The complete mechanism gives the G-track three
