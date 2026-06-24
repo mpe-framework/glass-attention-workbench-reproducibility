@@ -3,6 +3,16 @@
 **Applied Categorical Physics Workbench | Troy Teno | May 2026**
 *Companion to findings/FINDINGS.md F-054. H2 confirmed — phase transition at FIN_WEIGHT≈0.5; super-amplification zone (867×) at transition edge.*
 
+> **Historical sealed note.** This note was sealed at the G-054 stage and is preserved as
+> written; methods notes are not revised after sealing. Its forward-looking "Real-World
+> Implications" and production-facing language — describing the controlled toy model's Born
+> filter ratio as a production "warning threshold," and extrapolating its regimes to
+> T5-small's layer-5 behavior and to "fixing the production failure" — predate the paper's
+> final G-track boundary. The G-track is a controlled analogy that suggests mechanisms in a
+> designed toy model, not a production or T5-small claim; treat such language as sealed
+> historical interpretation, not a current paper claim. See `README.md` and
+> `RETIREMENTS_AND_METHOD_LESSONS.md` for the paper's bounded G-track scope.
+
 ---
 
 ## The Question G-053 Left Open
@@ -110,7 +120,7 @@ The production implication: any model near the collapse boundary for a given con
 
 **The collapse boundary is a production warning threshold.** If the Born filter ratio for a specific head and context type jumps by two or more orders of magnitude compared to a baseline condition, the model is operating near the sharp-collapse regime for that (head, context) pair. This is the condition where small context changes (a few word substitutions, a synonym, a paraphrase) can produce dramatically different internal representations — not because the model has learned a wrong rule, but because the attention collapse is highly context-sensitive at that geometry.
 
-**Layer-5 specificity in T5-small is not arbitrary.** G-054 predicts that T5-small's decoder amplification at layer 5 reflects the sharp-collapse regime completing at exactly that depth. The relevant token (the OOD "jump") has a specific FIN-analog embedding character that places it near the collapse boundary in T5-small's geometry. If you shifted that character (by OOD training, by embedding regularization, or by adding compound-context fine-tuning), you would shift the collapse depth — and potentially move the model out of the sharp-collapse regime entirely.
+**On T5-small's layer-5 specificity (controlled-model analogy).** G-054 suggests, by analogy in the controlled model, that T5-small's decoder amplification at layer 5 may reflect a sharp-collapse regime completing at that depth. The relevant token (the OOD "jump") has a specific FIN-analog embedding character that places it near the collapse boundary in T5-small's geometry. If you shifted that character (by OOD training, by embedding regularization, or by adding compound-context fine-tuning), you would shift the collapse depth — and potentially move the model out of the sharp-collapse regime entirely.
 
 **Norm equalization alone does not fix the collapse.** G-052 showed that the parallax lever is driven by norm asymmetry, and equalized norms collapse the logit gap to near zero. G-054 shows that the FIN-head collapse is a separate mechanism operating at the representational level, not the output level. If you equalize norms (addressing G-052's mechanism) but leave the embedding geometry in the sharp-collapse regime (G-054's mechanism), you address the output amplification but not the representational instability. A model with equalized norms but sharp-collapse geometry will have consistent logit gaps but still produce wildly different internal representations near the transition boundary.
 

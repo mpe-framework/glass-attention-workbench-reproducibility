@@ -294,7 +294,7 @@ Quote precisely — do not summarize beyond what is written here.
    → layer-5 amplification (sharp-collapse regime, G-054) → failure output. This chain
    was complete as of S-051 and has not changed.
 
-3. **S-058 is drafted but NOT run until G-056 reports back.** Sandbox_017 (supervisor)
+3. **S-058 is drafted but NOT run until G-056 reports back.** [internal dev-file path removed in public export] (supervisor)
    requires this sequencing: if G-056 finds that suppressive early heads are causal,
    then L3H4 must be included in the S-058 intervention design. If G-056 finds suppressive
    heads are diagnostic, S-058 focuses cleanly on L4H6/L5H2/L5H5. Pre-register S-058
