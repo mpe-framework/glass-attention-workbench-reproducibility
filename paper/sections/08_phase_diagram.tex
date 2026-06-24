@@ -1,7 +1,7 @@
 \section{Controlled Geometry Reference Model (G-054--G-057)}
 \label{sec:phase-diagram}
 
-The G-track is a series of controlled NumPy toy experiments that demonstrate accessible
+The G-track is a series of controlled toy experiments that demonstrate accessible
 mechanisms in engineered geometry --- where embedding roles, head functions, and parameter
 sweeps are exactly specified.
 The architecture across G-055--G-057 is a 6-layer transformer (NumPy only, no training;
@@ -52,7 +52,7 @@ Figure~\ref{fig:phase-diagram} shows the three-regime structure.
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.82\linewidth]{figures/fig05_three_regime_phase_diagram}
-\caption{Born filter three-regime phase diagram (G-054). Controlled NumPy G-track
+\caption{Born filter three-regime phase diagram (G-054). Controlled G-track
 geometry --- \emph{not} the T5-small production model.
 \texttt{FIN\_WEIGHT} sweeps the bank token's FIN embedding component.
 Three regimes: slow-collapse (${{\approx}}2\times$), sharp-collapse
@@ -186,7 +186,7 @@ the production system.
     L3H4 is neither confirmed causal nor confirmed diagnostic by the G-track experiments.
 
   \item \textbf{Quantitative correspondence between G-track and S-track values.}
-    The G-track uses engineered embeddings, fixed seeds, and NumPy-only computation.
+    The G-track uses engineered embeddings, fixed seeds, and fully specified parameters.
     Its Born filter ratios, $\alpha$ thresholds, and $\gamma$ sweep values are not
     calibrated to T5-small's logit magnitudes, head norms, or training distribution.
     The $867\times$ peak (G-054) and the $9{,}184\times$ measured divergence (G-057)
@@ -194,7 +194,7 @@ the production system.
     magnitude.
 
   \item \textbf{Generalization to other trained architectures.}
-    G-track results are established in controlled NumPy geometry.
+    G-track results are established in controlled toy geometry.
     Whether the three-regime structure, the FIN-annihilation threshold, and the
     near-cancellation divergence appear in transformers with learned weights,
     layer normalization, and full training distributions is an open question.

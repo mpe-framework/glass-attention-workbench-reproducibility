@@ -6,7 +6,7 @@ Source: findings/METHODS_REPORT_G054.md (sealed, May 2026)
 Data:   paper/data/fig05_phase_diagram.csv
 Output: paper/figures/fig05_three_regime_phase_diagram.{pdf,png}
 
-CLAIM BOUNDARY: controlled NumPy G-track geometry only — NOT T5-small.
+CLAIM BOUNDARY: controlled G-track geometry only — NOT T5-small.
 The 867x amplification applies to FIN_WEIGHT=0.3 in the controlled setting.
 Do not extrapolate to production models.
 
@@ -84,7 +84,7 @@ ax.legend(handles=patches, fontsize=8, loc="upper right")
 
 ax.set_title(
     "Born filter three-regime phase diagram (G-054)\n"
-    "Controlled NumPy G-track geometry — NOT T5-small production model\n"
+    "Controlled G-track geometry — NOT T5-small production model\n"
     "Source: findings/METHODS_REPORT_G054.md",
     fontsize=8.5
 )
