@@ -8,8 +8,10 @@ or training procedure.
 The \emph{production track} (S-track) operates on a T5-small transformer fine-tuned on
 the SCAN \texttt{add\_prim\_jump} benchmark and measures real model behavior under controlled
 probing conditions.
-The \emph{controlled geometry track} (G-track) operates on a NumPy-only toy model with
-explicit PPMI--SVD embeddings and fully inspectable weight matrices.
+The \emph{controlled geometry track} (G-track) operates on controlled toy models with
+designed embeddings and fully inspectable parameters: G-055--G-057 are NumPy CPU models,
+and G-054 builds a small transformer-style toy model from an explicit configuration.
+No pretrained checkpoint, T5 weight, or SCAN data is used in the G-track.
 
 The two tracks serve different epistemic roles. The S-track produces the primary mechanistic
 account: it identifies where the failure occurs, quantifies the near-cancellation structure,
@@ -19,7 +21,7 @@ classes of failure mode --- value-direction miscalibration, near-cancellation, a
 compensatory over-correction --- can be induced and measured in a setting where every
 parameter is known.
 The comparison between tracks is analogical and mechanistic, not architectural.
-No PPMI--SVD embedding was supplied to T5; no T5 weight was used in the G-track.
+No G-track embedding was supplied to T5; no T5 weight was used in the G-track.
 
 \subsection{Production Track: T5-small on SCAN \texttt{add\_prim\_jump}}
 
@@ -52,12 +54,12 @@ substituted-walk examples sampled with SEED=42.
 
 \paragraph{Experiment sequence.}
 S-track experiments S-043 through S-062 constitute the full production analysis,
-documented in \texttt{EXPERIMENT\_INDEX.md}.
+documented in the sealed methods reports in \texttt{findings/}.
 S-041 and S-042 were confounded and are recorded as design lessons.
 S-050 was a buggy run (tokenization error) superseded by S-050b.
 S-058, S-059, and S-060 contain methodological findings recorded as method lessons
 (see \S\ref{sec:preregistration}).
-The scripts for S-041 through S-057 are committed to the \texttt{S-Track} branch.
+The scripts for S-041 through S-057 are included in the companion reproducibility repository.
 The scripts for S-058 through S-062 were executed in Google Colab notebooks;
 the canonical numerical results are sealed in the corresponding methods reports
 in \texttt{findings/}.
@@ -71,14 +73,15 @@ production log committed in the repository.
 All paper figure scripts read their plotted numeric values from the committed CSV
 files in \texttt{paper/data/}; no figure script contains hardcoded experimental values.
 
-\subsection{G-Track: Controlled NumPy Geometry}
+\subsection{G-Track: Controlled Toy Geometry}
 
 \paragraph{Design and independence.}
-The G-track model is implemented entirely in NumPy and runs on CPU without GPU
-or external framework dependencies.
-It uses explicit PPMI--SVD embeddings computed from a small controlled vocabulary.
-The full weight structure is inspectable: every matrix in the attention and FFN stack
-is set directly rather than learned from data.
+The G-track models are controlled toy models with designed embeddings and fully
+inspectable parameters. G-055, G-056, and G-057 are implemented in NumPy and run on CPU;
+G-054 builds a small transformer-style toy model from an explicit \texttt{transformers}
+configuration (no pretrained weights are loaded). Embeddings are constructed directly from
+a designed cluster geometry over a small controlled vocabulary rather than learned from
+data, and every matrix in the attention and FFN stack is set explicitly.
 No G-track weight, embedding, or training procedure was shared with or informed by
 the T5-small checkpoint.
 
@@ -100,21 +103,21 @@ The G-track experiments relevant to this paper are G-054, G-055, G-056, and G-05
     FFN over-correction at $\gamma=2.0$ reproduces the G-056 FIN-inversion result
     (51.3\% ablation change), extending the mechanism from value matrices to the FFN path.
 \end{itemize}
-Scripts are committed to the \texttt{G-Track} branch.
+Scripts are included in the companion reproducibility repository.
 Sealed results are in \texttt{findings/METHODS\_REPORT\_GXXX.md} on \texttt{main}.
 G-057 results used in this paper are taken from the sealed methods report;
 no G-057 JSON artifact was recovered from the run archive. The gamma-sweep table in
 \texttt{findings/METHODS\_REPORT\_G057.md} is the canonical record for Fig.~\ref{fig:two-track}.
 
 \paragraph{Embedding-source distinction.}
-The G-track used PPMI--SVD embeddings as a controlled reference geometry.
+The G-track used designed embeddings, constructed from a controlled cluster geometry, as a reference.
 T5-small used a standard learned embedding.
 The significance of the two-track convergence is precisely that the systems did not
 share an embedding implementation yet independently exhibited the same failure-mode
 structure: value-direction miscalibration, near-cancellation, and compensatory
 over-correction. The G-track served as a glass reference geometry --- a controlled
 setting in which failure modes could be induced and measured under known conditions.
-The comparison is structural and mechanistic, not a claim that the PPMI geometry
+The comparison is a structural analogy, not a claim that the controlled toy geometry
 predicts T5 behavior quantitatively.
 
 \subsection{Pre-Registration, Kill Conditions, and Null-Result Policy}
