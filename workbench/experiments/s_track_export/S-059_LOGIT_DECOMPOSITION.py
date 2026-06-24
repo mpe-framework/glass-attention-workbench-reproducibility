@@ -866,7 +866,7 @@ print()
 print(f"  Results: {RESULTS_PATH}")
 print()
 
-# ── Tell Troy what's next ───────────────────────────────────────────────────────────────────────────────
+# ── What's next ───────────────────────────────────────────────────────────────────────────────
 print("─" * 70)
 print("  NEXT STEPS")
 print("─" * 70)
@@ -885,14 +885,14 @@ if not k1_fires and not k2_fires:
     → Value-substitution partially correct but distributed.
     → Report full ranking and relay to G-track for geometric analysis.
 
-  Update COORDINATION.md, push to S-Track, tell Troy.
+  After running: compare outputs to the corresponding sealed methods report in findings/; private coordination files are not included in this public export.
 """)
 elif k1_fires:
     print("""
   K1 FIRED: target heads are pro-jump in fail cases.
   The value-substitution mechanism as characterized is wrong.
   Do NOT proceed to repair experiments.
-  Write methods report, update COORDINATION.md, relay to G-track.
+  Compare outputs to the sealed methods report in findings/; relay to G-track.
 """)
 elif k2_fires:
     print("""

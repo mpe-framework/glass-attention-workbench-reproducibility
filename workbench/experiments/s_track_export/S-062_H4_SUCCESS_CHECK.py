@@ -626,6 +626,5 @@ print(f"\n  H4: {'PASS' if h4_pass else 'FAIL'}  "
       f"K2: {'FIRES' if k2_fires else 'CLEAR'}")
 print(f"\n  Results: {out_path}")
 print("\n" + "─" * 70)
-print("  After running: update findings/METHODS_REPORT_S061.md with H4 result.")
-print("  Update COORDINATION.md; push to S-Track; tell Troy.")
+print("  After running: compare outputs to the corresponding sealed methods report in findings/; private coordination files are not included in this public export.")
 print("─" * 70)

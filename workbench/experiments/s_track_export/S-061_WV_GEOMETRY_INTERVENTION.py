@@ -992,6 +992,5 @@ print(f"  Kill:     K1={'FIRES' if k1_fires else 'CLEAR'}  "
       f"K3={'FIRES' if k3_fires else 'CLEAR'}")
 print(f"\n  Results: {out_path}")
 print("\n" + "─" * 70)
-print("  After running: write findings/METHODS_REPORT_S061.md")
-print("  Update COORDINATION.md; push to S-Track; tell Troy.")
+print("  After running: compare outputs to the corresponding sealed methods report in findings/; private coordination files are not included in this public export.")
 print("─" * 70)
