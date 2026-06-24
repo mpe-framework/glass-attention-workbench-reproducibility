@@ -1,11 +1,14 @@
 # Methods Report — G-057: Near-Cancellation Structure in Attention + FFN Networks
 
 **Applied Categorical Physics Workbench | Troy Teno | May 2026**
-**Status:** Sealed | **Script:** `workbench/experiments/G-057_NEAR_CANCELLATION.py`
+**Status:** Sealed | **Script:** `workbench/experiments/g_track_export/G-057_NEAR_CANCELLATION.py`
 **One-line result:** H4 confirmed — γ=2.0 over-correction reproduces G-056 FIN-inversion
 (51.3% specialist-layer ratio change); H1/H2/H3/H5 null — near-cancellation divergence
 is structurally present but toy's neutral global head produces too small a base signal
 (2.5% causal effect at γ=0) for threshold-level amplification.
+
+> **Historical sealed report.** Three redactions applied:
+> `[retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]`
 
 ---
 
@@ -60,7 +63,7 @@ baseline formula before sealing.
 ### Section 1: Gamma sweep
 
 | γ | ratio_base | ratio_abl | pct_chg | recon_frac |
-|---|-----------|----------|---------|------------|
+|---|-----------|----------|---------|-----------|
 | 0.00 | 3.1098 | 3.1887 | 2.5% | 1.00 |
 | 0.25 | 3.1127 | 3.1887 | 2.4% | 1.04 |
 | 0.50 | 3.1197 | 3.1887 | 2.2% | 1.14 |
@@ -74,7 +77,7 @@ baseline formula before sealing.
 ### Section 2: M2 — FIN-component at bank before vs after layer-2 complex
 
 | γ | fin_before_S | fin_after_S | fin_before_F | fin_after_F |
-|---|-------------|------------|-------------|-------------|
+|---|-------------|------------|-------------|------------|
 | 0.00 | 1.6371 | 3.2252 | 1.0419 | 2.3659 |
 | 0.50 | 1.6371 | 2.4312 | 1.0419 | 1.7039 |
 | 1.00 | 1.6371 | 1.6371 | 1.0419 | 1.0419 |
@@ -230,7 +233,7 @@ toy even if the magnitude requires a more causal head to exceed threshold.
 
 **G-track is sealed through G-057.** The mechanistic arc now covers:
 - G-051: W_V miscalibration — Born filter magnitude separates miscalibrated from calibrated
-- G-052: Parallax lever — [retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]
+- G-052: [retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]
 - G-053: Monotonic decay is the default; mid-layer peak requires specialist-head collapse
 - G-054: Phase transition at FIN_WEIGHT≈0.5; three-regime structure; 867× at transition edge
 - G-055: Neutral global head is diagnostic (4% ablation change)
@@ -251,7 +254,7 @@ toy even if the magnitude requires a more causal head to exceed threshold.
 1. **H4 confirmed (FFN over-correction reproduces G-056 inversion):** The inversion
    mechanism generalizes. This strengthens the case that W_V intervention at L4H6/L5H5
    (which changes the FIN-direction mapping) will propagate through specialist amplification
-   as in G-056. The G-052 parallax formula predicts the exact rotation angle needed.
+   as in G-056. [retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]
 
 2. **H5 directional sign-reversal confirmed (magnitude null):** S-060's L6H2/L6H6
    sign-reversal has a controlled toy-scale directional analog. The sign-reversal is a
@@ -261,21 +264,19 @@ toy even if the magnitude requires a more causal head to exceed threshold.
 
 3. **Near-cancellation architecture implication for W_V repair:** At the operating point
    (production near-cancellation), small changes to the upstream signal (L4H6/L5H5) are
-   magnified. The G-052 parallax formula may underestimate the required W_V rotation if
-   near-cancellation amplifies the effective sensitivity. S-061 should test both the
-   formula-predicted rotation and a sweep around it.
+   magnified. [retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]
+   S-061 should test a sweep of correction magnitudes rather than relying on a single
+   predicted rotation.
 
 ### What G-track needs from S-track
 
 S-061 result (targeted W_V correction at L4H6/L5H5):
 - Did W_V rotation flip I_JUMP > I_WALK within fail trajectories?
-- If yes: what angle was required vs. G-052 formula prediction?
 - Did the corrective heads (L6H2/L6H6) change their behavior after W_V repair?
 
 If S-061 succeeds (W_V rotation restores correct action), the research arc closes at
-the mechanism repair level. G-track's G-052 formula will have predicted the repair
-target. The program will have moved from mechanism identification (S-051) through
-mechanism understanding (G-052/G-054/G-056/G-057) to mechanism repair (S-061).
+the mechanism repair level. The program will have moved from mechanism identification
+(S-051) through mechanism understanding (G-054/G-056/G-057) to mechanism repair (S-061).
 
 ---
 

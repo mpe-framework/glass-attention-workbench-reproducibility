@@ -2,6 +2,15 @@
 **Applied Categorical Physics Workbench**
 Troy Teno | May 2026 | Open Access
 
+> **Historical sealed report.** This report was sealed at the S-057 stage of the
+> experiment sequence. At sealing time, the repair target list included L5H2 alongside
+> L4H6 and L5H5. Subsequent experiments (S-059b, S-060, S-061) revised the causal picture:
+> L5H2 was dropped as a repair target; the final rank-1 W_V repair (S-061) targets L4H6
+> and L5H5 only. The content of this report is preserved exactly as sealed; the
+> "What's Next" section reflects the state of knowledge at sealing time.
+> One redaction applied: `[retired parallax-lever calibration claim removed in public export
+> — see RETIREMENTS_AND_METHOD_LESSONS.md]`
+
 **One-line result:** L3H4 is a primitive-sensitive suppressive reader, not a value-substitution head — it attends reliably to the `jump` encoder position (MWU p=0.0007) and its jump-position rank rises from 2nd to 1st in success cases, but its output contribution is suppressive (both cosines negative); the entropy ordering hypothesis fails in a methodologically informative direction, showing that attention entropy does not track semantic specialization in this decoder.
 
 ---
@@ -16,7 +25,7 @@ S-056 characterized the L3 head cluster and found K1 fires for L3H0: not a jump-
 
 **Groups:** 29 valid fail pairs (30 selected; 1 excluded for divergence-point alignment failure), 25 success pairs. SEED=42.
 
-**Heads measured:** Primary — L3H4. Comparison — L3H0 (confirmed global), L4H6 (confirmed specialist), L5H5 (second specialist anchor, added per [internal dev-file path removed in public export] Addition 2).
+**Heads measured:** Primary — L3H4. Comparison — L3H0 (confirmed global), L4H6 (confirmed specialist), L5H5 (second specialist anchor, added per sandbox_015).
 
 **Morphism:** Same paired forward pass as S-055 and S-056 — each example run twice (jump command and matched walk command) through model.generate(); cross-attention weights and hidden states collected at action-slot divergence steps.
 
@@ -158,7 +167,7 @@ L3H4 is between these: moderate attn_to_jump (above K1 threshold), real per-exam
 
 The H1 failure is independently important. Entropy is not a proxy for semantic specialization. L3H0, the confirmed global-context head, is the most concentrated (0.3887 nats — weight on a single non-semantic position). L4H6, the most reliable jump reader, is the most diffuse (1.3032 nats — attention spread across multiple positions). Concentration and semantic focus are orthogonal properties in this architecture. Future experiments should not use entropy alone to classify head roles.
 
-**What is not yet established:** L3H4 has not been ablated with a matched control. The [internal dev-file path removed in public export] caution holds: suppressive cosines rule out direct value-substitution participation, but do not rule out a modulatory or upstream role. The appropriate next move is not to ablate L3H4 in isolation but to proceed to the S-058 causal patch at L4H6/L5H2/L5H5 — the known value-substitution heads — and reserve any L3H4 ablation for a later experiment with matched controls.
+**What is not yet established:** L3H4 has not been ablated with a matched control. The sandbox_015 caution holds: suppressive cosines rule out direct value-substitution participation, but do not rule out a modulatory or upstream role. The appropriate next move is not to ablate L3H4 in isolation but to proceed to the S-058 causal patch at L4H6/L5H2/L5H5 — the known value-substitution heads — and reserve any L3H4 ablation for a later experiment with matched controls.
 
 ---
 
@@ -178,9 +187,9 @@ G-track has completed the phase diagram (G-054) and the global-context ablation 
 
 **What S-track is carrying to G-track:** The causal picture is complete enough to hand off a precise question. The value-substitution mechanism is localized to L4H6/L5H2/L5H5 via W_V miscalibration; no L3 head carries a direct value-substitution contribution. The entropy-specialization decoupling (H1 failure) is a methodological finding that applies directly to G-056 head classification — do not use entropy alone to categorize head roles. The S-track defect ratios for reference: L3H4=2.23×, L3H0=3.87×, L4H6=1.57×, L5H5=1.23×.
 
-**What S-track needs from G-track (for S-058 design):** G-056 is investigating the geometric conditions under which a targeted W_V correction is sufficient to restore the correct output direction. S-058 needs two things from G-056 before finalizing the correction magnitude: (1) the parallax lever formula (G-052, R²=1.0) applied to the L4H6/L5H2/L5H5 embedding geometry — specifically, what correction magnitude at the value heads is predicted to flip the action-slot logit from I_WALK to I_JUMP given the norm asymmetry (I_WALK=520, I_JUMP=424); (2) confirmation of the regime boundary constraints from G-054 — whether T5-small's operating point is in the sharp-collapse regime and whether a small W_V correction can push it across the boundary. If G-056 is not yet sealed when S-058 is ready to run, S-058 can proceed with an unconstrained correction sweep and use G-056's results to interpret the magnitude post-hoc.
+**What S-track needs from G-track (for S-058 design):** G-056 is investigating the geometric conditions under which a targeted W_V correction is sufficient to restore the correct output direction. S-058 needs two things from G-056 before finalizing the correction magnitude: (1) [retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]; (2) confirmation of the regime boundary constraints from G-054 — whether T5-small's operating point is in the sharp-collapse regime and whether a small W_V correction can push it across the boundary. If G-056 is not yet sealed when S-058 is ready to run, S-058 can proceed with an unconstrained correction sweep and use G-056's results to interpret the magnitude post-hoc.
 
-**Resuming after a gap:** Read COORDINATION.md (live status), then this report. The experiment log in COORDINATION.md tracks sealed experiments in both tracks. The do-not-re-run list in COORDINATION.md is authoritative. S-058 proposal goes in `workbench/proposals/S-058_*.md` before any script is written. Results save to `workbench/results/058_results.json`. Methods report goes in `findings/METHODS_REPORT_S058.md`. Seal sequence: methods report → results file → COORDINATION.md update → commit and push to S-Track → tell Troy what G-track needs.
+**Resuming after a gap:** Read this report and the COORDINATION.md in the private development repository (not part of this public export). S-058 proposal goes in `workbench/proposals/S-058_*.md` before any script is written. Results save to `workbench/results/058_results.json`. Methods report goes in `findings/METHODS_REPORT_S058.md`.
 
 ---
 

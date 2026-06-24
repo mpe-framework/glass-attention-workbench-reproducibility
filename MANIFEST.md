@@ -88,7 +88,7 @@ Three classes of content were removed from exported findings files before public
 
 > `[Sargsyan attribution removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]`
 
-**2. Retired parallax-lever calibration claim.** Any reference to "parallax lever formula (G-052, R²=1.0)," "logit gap = N·cos(θ)," or the arccos threshold derived from that formula is replaced with:
+**2. Retired parallax-lever calibration claim.** Any reference to the retired G-052 parallax-lever calibration (its logit-gap formula and toy-geometry fit) is replaced with:
 
 > `[retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]`
 

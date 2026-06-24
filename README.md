@@ -61,7 +61,7 @@ paper/
   scripts/    — 7 Python scripts to regenerate figures from CSVs
   ARXIV_BUNDLE_MANIFEST.md
 findings/
-  METHODS_REPORT_S043.md through METHODS_REPORT_S062.md  — 18 S-track reports
+  METHODS_REPORT_S043_S051.md through METHODS_REPORT_S062.md  — 9 sealed S-track reports
   METHODS_NOTE_G052.md, METHODS_NOTE_G053.md, METHODS_NOTE_G054.md
   METHODS_REPORT_G054.md through METHODS_REPORT_G057.md  — 7 G-track reports
 workbench/
@@ -99,11 +99,11 @@ Each script reads from `../data/<name>.csv` and writes to `../figures/<name>.pdf
 G-track (G-054–G-057): Pure NumPy, CPU only, no checkpoint needed.
 
 ```bash
-cd workbench/experiments
-python G-054_COLLAPSE_CONDITIONS.py
+cd workbench/experiments/g_track_export
+python G-054_PHASE_DIAGRAM.py
 python G-055_GLOBAL_HEAD_CAUSAL.py
 python G-056_SUPPRESSIVE_HEAD_CAUSAL.py
-python G-057_NEAR_CANCELLATION_GAMMA_SWEEP.py
+python G-057_NEAR_CANCELLATION.py
 ```
 
 S-track (S-045–S-062): Requires the T5-small SCAN checkpoint (~300MB, not included). See `REPRODUCIBILITY.md` for setup instructions. S-058–S-062 are exported as Colab-oriented scripts; canonical numerical results are in the corresponding sealed methods reports in `findings/`.

@@ -1,10 +1,15 @@
 # Methods Report — G-056: Suppressive Head Causal Test
 
 **Applied Categorical Physics Workbench | Troy Teno | May 2026**
-**Status:** Sealed | **Script:** `workbench/experiments/G-056_SUPPRESSIVE_HEAD_CAUSAL_TEST.py`
+**Status:** Sealed | **Script:** `workbench/experiments/g_track_export/G-056_SUPPRESSIVE_HEAD_CAUSAL.py`
 **One-line result:** H1 confirmed — a suppressive head (V = I − α·P_FIN) is causal above
 the FIN-annihilation threshold (α=1.0), producing 42% specialist-layer ratio change vs.
 G-055's 4% neutral baseline; the mechanism is FIN inversion, not suppression.
+
+> **Historical sealed report.** This report was sealed after S-057 and before S-058 ran.
+> The UPDATE section at the bottom of this report was added after S-058 sealed. Two
+> redactions applied: `[retired parallax-lever calibration claim removed in public export
+> — see RETIREMENTS_AND_METHOD_LESSONS.md]`
 
 ---
 
@@ -57,7 +62,7 @@ a residual-removal artifact — it is specific to what the suppressive head was 
 Born filter ratio profile with suppressive head active:
 
 | L0 | L1 | L2 | L3 | L4 | L5 | L6 |
-|----|----|----|----|----|----|----|----|
+|----|----|----|----|----|----|----|
 | 2.894 | 2.895 | 2.897 | 2.897 | 4.216 | 8.058 | 8.092 |
 
 Layer 2 ratio (2.897) is slightly above layer 1 (2.895) — no downward kink. The
@@ -150,7 +155,7 @@ is why it is causal. The neutral head (α=0) does not shift regimes — it is di
 
 G-056 shows suppressive heads are causal *above* the FIN-annihilation threshold. Below
 it (including the neutral case α=0 = G-055), they are diagnostic. The boundary is
-the point where FIN content stops being reduced and starts being inverted — not merely reduced.
+the point where FIN content is annihilated and then inverted — not merely reduced.
 
 L3H4 in T5-small shows mild suppressive cosines: cos_walk_fail = −0.044,
 cos_jump_fail = −0.026. These are small negative values — consistent with partial
@@ -233,7 +238,7 @@ S-058's result.
 
 ### After S-058 seals
 
-Relay to G-track via COORDINATION.md:
+Relay to G-track:
 - Did activation patching at L4H6/L5H2/L5H5 flip `P(I_JUMP) > P(I_WALK)` in ≥50%
   of fail examples? If yes: mechanism confirmed and repaired. Paper-worthy.
 - Did L3H4 control ablation change the result? If yes: L3H4 is in the causal regime
@@ -241,10 +246,6 @@ Relay to G-track via COORDINATION.md:
   the full suppressive-inversion mechanism at production scale.
 - If patching succeeded and L3H4 ablation had no effect: S-051's three-head mechanism
   is confirmed as the complete repair target. Research arc is closed at the mechanism level.
-
-The paper-worthy experiment is S-058. If activation patching at three heads restores
-correct output, the workbench will have moved from mechanism identification to
-mechanism repair. That is the result this program has been building toward.
 
 ---
 
@@ -276,15 +277,13 @@ from fail representations in a way that the targeted patch can only partially co
 **Current state of both tracks after S-058:**
 
 **G-track:** Sealed through G-056. G-057 candidate: W_V correction geometry at toy scale —
-use the parallax lever formula (G-052) to compute the minimum W_V rotation needed to flip
-cosine alignment from I_WALK to I_JUMP at the production norm ratio (520:424). This would
-formalize the theoretical correction target and directly inform S-059 design. No G-track
-action required until S-059 results are available or Troy brings a new question.
+[retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]
+No G-track action required until S-059 results are available or Troy brings a new question.
 
 **S-track:** Sealed through S-058. Next experiment (S-059 candidate): targeted W_V correction
 operating within fail trajectories — modify W_V at L4H6/L5H2/L5H5 directly, without donor
-transplant, to redirect value routing. The G-052 formula predicts the exact angle correction
-needed. If S-059 succeeds (targeted W_V correction flips I_JUMP > I_WALK within fail
+transplant, to redirect value routing. [retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]
+If S-059 succeeds (targeted W_V correction flips I_JUMP > I_WALK within fail
 trajectories), the program will have moved from mechanism identification to mechanism repair.
 
 **What each track needs:**
