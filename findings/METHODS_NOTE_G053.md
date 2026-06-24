@@ -3,6 +3,15 @@
 **Applied Categorical Physics Workbench | Troy Teno | May 2026**
 *Companion to findings/FINDINGS.md F-053. 1/3 confirmed — null result with mechanistic explanation.*
 
+> **Historical sealed note.** This note was sealed at the G-053 stage and is preserved as
+> written; methods notes are not revised after sealing. Its forward-looking "Real-World
+> Implications" and any language extrapolating this controlled toy model to T5-small or to
+> production models — including the norm-asymmetry "parallax lever" framing and statements
+> about what T5-small's geometry "should" look like — predate the paper's final G-track
+> boundary. The G-track is a controlled analogy, not a production or T5-small claim; treat
+> such language as sealed historical interpretation, not a current paper claim. See
+> `README.md` and `RETIREMENTS_AND_METHOD_LESSONS.md` for the paper's bounded G-track scope.
+
 ---
 
 ## The Question We Came In With
@@ -191,8 +200,8 @@ profile the per-layer H1(FIN) ratio and measure:
 This maps the phase transition between "monotonic decay" (no collapse, G-053 regime) and
 "mid-layer peak" (collapse, G-050 regime). Finding the transition point tells us exactly
 how much FIN embedding ambiguity in the geographic state is required to produce the
-layer-5 amplification — and provides a quantitative prediction about what embedding
-geometry in T5-small should look like if its layer-5 amplification is driven by the same
+layer-5 amplification — and suggests, by analogy in the controlled model, what embedding
+geometry in T5-small might look like if its layer-5 amplification is driven by the same
 mechanism.
 
 ---

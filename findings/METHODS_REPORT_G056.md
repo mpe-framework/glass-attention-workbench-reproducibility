@@ -20,7 +20,7 @@ ablation change, equal to a near-identity control. S-057 then identified L3H4 in
 as a *suppressive* head — partial jump specificity, but negative cosines to both I_WALK
 and I_JUMP. G-055 does not answer whether a suppressive head is also diagnostic, or
 whether its active subtraction of FIN content from the residual creates causal downstream
-effects. Sandbox_017 required G-056 to run before S-058 is finalized.
+effects. [internal dev-file path removed in public export] required G-056 to run before S-058 is finalized.
 
 ---
 
