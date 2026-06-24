@@ -131,7 +131,7 @@ The measured ordering in the fail group is L3H0(0.3887) < L5H5(0.9627) < L3H4(1.
 
 **H2 (MWU p < 0.05 for L3H4 attn_to_jump): PASS**
 
-MWU U=167, p=0.0007, r=0.539. L3H4 reliably attends more to the jump encoder position in success cases than in fail cases at the per-example level. The 2.4× group ratio from S-056 is confirmed as a real signal, not a sampling artifact.
+MWU U=167, p=0.0007, r=0.539. L3H4 reliably attends more to the jump encoder position in success cases than in fail cases at the per-example level. The 2.4× group ratio from S-056 is not a sampling artifact.
 
 **H3 (L3H4 cosines suppressive — both negative in fail group): PASS**
 
@@ -189,7 +189,7 @@ G-track has completed the phase diagram (G-054) and the global-context ablation 
 
 **What S-track needs from G-track (for S-058 design):** G-056 is investigating the geometric conditions under which a targeted W_V correction is sufficient to restore the correct output direction. S-058 needs two things from G-056 before finalizing the correction magnitude: (1) [retired parallax-lever calibration claim removed in public export — see RETIREMENTS_AND_METHOD_LESSONS.md]; (2) confirmation of the regime boundary constraints from G-054 — whether T5-small's operating point is in the sharp-collapse regime and whether a small W_V correction can push it across the boundary. If G-056 is not yet sealed when S-058 is ready to run, S-058 can proceed with an unconstrained correction sweep and use G-056's results to interpret the magnitude post-hoc.
 
-**Resuming after a gap:** Read COORDINATION.md (live status), then this report. The experiment log in COORDINATION.md tracks sealed experiments in both tracks. The do-not-re-run list in COORDINATION.md is authoritative. S-058 proposal goes in `workbench/proposals/S-058_*.md` before any script is written. Results save to `workbench/results/058_results.json`. Methods report goes in `findings/METHODS_REPORT_S058.md`. Seal sequence: methods report → results file → COORDINATION.md update → commit and push to S-Track → tell Troy what G-track needs.
+**Resuming after a gap:** Read this report and the COORDINATION.md in the private development repository (not part of this public export). S-058 proposal goes in `workbench/proposals/S-058_*.md` before any script is written. Results save to `workbench/results/058_results.json`. Methods report goes in `findings/METHODS_REPORT_S058.md`.
 
 ---
 
