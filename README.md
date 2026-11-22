@@ -50,6 +50,19 @@ parallax lever retirement.
 
 ---
 
+## New here? Start with the companion
+
+`companion/` is a guided on-ramp, added after the archive was sealed. It does not change
+any sealed finding.
+
+* `companion/glass_head.py` — one attention head built by hand in NumPy: PPMI-SVD embeddings,
+  Q/K/V, softmax, an analytical backward pass checked against finite differences, and a
+  toy rank-1 `W_V` edit. Runs in seconds on a CPU (`pip install numpy`).
+* `companion/HOW_WE_BUILT_IT.md` — a walk-through from that toy head to the T5-small
+  findings in this archive, with exercises.
+
+---
+
 ## Repository structure
 
 ```
