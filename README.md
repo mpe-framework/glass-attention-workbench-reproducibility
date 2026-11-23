@@ -129,5 +129,5 @@ S-track (S-045–S-062): Requires the T5-small SCAN checkpoint (~300MB, not incl
 This public repository is a curated export of a larger private lab archive. See `MANIFEST.md` for what is included, what is excluded, and the redaction rules applied to the sealed methods reports.
 
 ## Status
-This is a sealed reproducibility archive for the paper. Issues and discussions are disabled.
+This is a sealed reproducibility archive for the paper. The sealed findings do not change, but questions and corrections are welcome in Discussions.
 For questions, see the paper or contact the authors via [email/etc].
