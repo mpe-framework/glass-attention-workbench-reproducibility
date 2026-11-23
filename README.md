@@ -130,4 +130,4 @@ This public repository is a curated export of a larger private lab archive. See 
 
 ## Status
 This is a sealed reproducibility archive for the paper. The sealed findings do not change, but questions and corrections are welcome in Discussions.
-Author: Troy Teno — on X at [@TroyTeno](https://x.com/TroyTeno).
+Author: Troy Teno — on X at [@troyteno](https://x.com/troyteno).
